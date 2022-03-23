@@ -1,0 +1,110 @@
+.app-main-tabs-component {
+    width: 100%;
+    > .tabs-header-container {
+        background: #5a6675;
+        border-bottom: 0px;
+        width: 100%;
+        
+        > .tabs-header {
+            order: 2;
+            justify-content: stretch;
+            max-width: 100%;
+            overflow: hidden;
+            overflow-x: auto;
+            @include custom-scroll(
+                1px,
+                #5a6675,
+                #5a6675,
+                #5a6675 
+            );
+
+            > * {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0px 13px;
+                cursor: pointer;
+                border-right: 1px solid #727c89;
+                margin: 0px;
+                color: white;
+                font-weight: normal;
+                [data-object-name$="-color"].orange {
+                    width: 10px;
+                    height: 10px;
+                    background: orange;
+                    border-radius: 2px;
+                    margin-right: 5px;
+                }
+                [data-object-name$="-color"].blue {
+                    width: 10px;
+                    height: 10px;
+                    background: blue;
+                    border-radius: 2px;
+                    margin-right: 5px;
+                }
+                [data-object-name$="-color"].gray {
+                    width: 10px;
+                    height: 10px;
+                    background: gray;
+                    border-radius: 2px;
+                    margin-right: 5px;
+                }
+                [data-object-name$="-text"] {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                [data-object-name$="-close"] {
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 10px;
+                    opacity: 0;
+                    background: transparent;
+                    svg {
+                        width: 12px;
+                        height: 12px;
+                    }
+                    &:hover {
+                        opacity: .99;
+                    }
+                }
+                &.tab-selected {
+                    background: white;
+                    border-bottom: 0px;
+                    color: black;
+                    &.secondary {
+                        background: #F5F6FA;
+                    }
+                }
+                
+            }
+        }
+        > .tabs-links {
+            order: 1;
+            padding-left: 0px;
+            margin-right: 0px;
+            [data-object-name="search-button"] {
+                padding: 0px 13px;
+                cursor: pointer;
+                padding-left: 24px;
+                padding-right: 24px;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    path, rect {
+                        stroke: white;
+                    }
+                }
+            }
+        }
+    }
+    >.tabs-container {
+        padding-top: 0px;
+        > .app-component-pane {
+            padding: 20px 60px 0 60px;
+            &.secondary {
+                background: #F5F6FA;
+            }
+        }
+    }
+}

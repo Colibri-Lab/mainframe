@@ -1,0 +1,13 @@
+<div ComponentName="App.Modules.MainFrame.Header">
+        
+    <component Component="Colibri.UI.Icon" name="buhsoft-icon" icon="url(/res/img/mainframe-logo-buhsoft.svg)" />
+    <component Component="Colibri.UI.Icon" name="gb247-icon" icon="url(/res/img/mainframe-logo-gb247.svg)" />
+    <component Component="App.Modules.MainFrame.MainMenu" name="header-menu" shown="true" binding="app.settings.mainframe.menu" />
+    <component Component="App.Modules.MainFrame.MainMenu" name="header-links" shown="true" binding="app.settings.mainframe.links" />
+        
+    <component Component="App.Modules.MainFrame.CompaniesDropDown" name="companies-dropdown" binding="app.authorization.orgs"  />
+    <component Component="App.Modules.MainFrame.ProfileDropDown" name="profile-dropdown" binding="app.authorization.menu"  />
+    <component Component="App.Modules.MainFrame.CometDropDown" name="comet-dropdown" binding="app.authorization.events"  />
+    <component Component="App.Modules.MainFrame.ArchiveDropDown" name="archive-dropdown" binding="app.settings.mainframe.archive"  />
+
+</div>

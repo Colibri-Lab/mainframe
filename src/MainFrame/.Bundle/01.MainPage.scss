@@ -1,0 +1,27 @@
+.main-page {
+    &.app-component-shown {
+        display: grid;
+    }
+    // grid-template-rows: 60px calc(100% - 60px);
+    grid-template-rows: 42px calc(100% - 42px);
+
+    background: #ffffff;
+
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+
+    @include custom-scroll(
+        $scrollbar-size,
+        $scrollbar-thumb-color,
+        $scrollbar-track-color,
+        $scrollbar-thumb-hover-color
+    );
+
+    [data-object-name="page-content"] {
+        padding: 0px 60px 20px;
+    }
+
+    
+}

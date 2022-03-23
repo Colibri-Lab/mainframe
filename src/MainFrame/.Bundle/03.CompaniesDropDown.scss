@@ -1,0 +1,65 @@
+.app-companiesdropdown-component {
+    &.app-component-shown {
+        animation-name: fadein;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+    }
+
+    max-height: calc(100% - 120px);
+    min-height: 300px;
+    width: 300px;
+
+    grid-template-rows: 50px calc(100% - 50px);
+
+    [data-object-name="search"] {
+        border: solid 1px #d1d7e9;
+    }
+    
+    [data-object-name="list"] {
+
+        border-top: 1px solid #e0e3ea;
+
+        max-height: 500px;
+        width: 100%;
+        height: 100%;
+        
+        padding-bottom: 0px;
+
+        display: grid;
+        grid-template-rows: calc(100% - 40px) 40px;
+
+
+        .app-component-list-group {
+            > div {
+                .app-component-list-item {
+                    border-bottom: 0px;
+                    &[data-route="/neworg/"] {
+                        color: #4ab648;
+                    }
+                }
+
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            &[data-object-name="orgs"] {
+                overflow: auto;
+                .app-component-selected {
+                    background: rgb(66, 149, 250);
+                    color: #ffffff;
+                    &:hover {
+                        background: rgb(66, 149, 250);
+                        color: #ffffff;
+                    }
+                }
+            }
+            &[data-object-name="addnew"] {
+                border-top: 1px solid #e0e3ea;
+            }
+        }        
+    }
+
+}

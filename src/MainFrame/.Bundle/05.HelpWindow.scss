@@ -1,0 +1,137 @@
+.app-help-window-component {
+
+    background: rgba(0,0,0,.5);
+
+    .help-window-container {
+        box-shadow: 0 0 20px rgba(0,0,0,.3);
+        
+        [data-object-name="tabs"] {
+            
+            background: #FFFFFF;
+            border: 1px solid #D9DCE3;
+            border-radius: 3px;
+
+            margin-right: 10px;
+
+            button {
+                padding: 6px 12px;
+                height: 32px;
+                color: #000000;
+                background: transparent;
+                border: 0px;
+                border-right: 1px solid #D9DCE3;
+                &:last-child {
+                    border-right: 0px;
+                } 
+                &.-selected {
+                    background: #0095FF;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        [data-object-name="buttons"] {
+            padding: 16px 30px 16px;
+            [data-object-name] {
+                width: auto;
+            }
+            [data-object-name="info"] {
+                align-items: center;
+                justify-content: flex-start;
+                [data-object-name="phone-icon"] {
+                    margin-right: 10px;
+                }
+                [data-object-name="text"] {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        [data-object-name="split"] {
+            padding: 16px 30px 16px;
+            height: 200px;
+            .app-component-split-handler {
+                border-left: 1px solid #EAEAEA;
+                background: transparent;
+                width: 5px;
+            }
+            .app-component-split-left {
+                flex: 0 0 61%;
+                .app-textarea-component {
+                    textarea {
+                        width: 100%;
+                        height: 100%;
+                        outline: none;
+                        resize: none;
+                        padding: 5px 10px 5px 10px;
+                    }
+                }
+            }
+            .app-component-split-right {
+                padding-left: 30px;
+                .app-component-pane {
+                    span {
+                        display: block;
+                        padding-bottom: 6px;
+                    }
+                }
+            }
+        }
+
+        [data-object-name="files-pane"] {
+            padding: 20px 30px 16px;
+            .app-component-input-type-file {
+                background-color: rgb(246, 247, 249);
+                border: 0px;
+                color: #000000;
+                padding: 8px 16px;
+            }
+                
+            [data-object-name="info"] {
+                margin-top: 10px;
+                [data-object-name="text"] {
+                    margin-bottom: 10px;
+                    width: 100%;
+                    color: #9da5be;
+                }
+            }
+        }
+
+
+    }
+    .help-window-footer {
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        padding: 16px 30px 16px;
+
+        button {
+            font-family: ProximaNova;
+            font-size: 14px;
+            height: 32px;
+            width: 85px;
+            border: unset;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .btn-send {
+            background-color: #50C14E;
+            color: #FFFFFF;
+            border: 1px solid rgba(80, 193, 78, 0.05);
+            margin-right: 10px;
+        }
+
+        .btn-send[disabled] {
+            background-color: #DEE0E4;
+        }
+
+        .btn-cancel {
+            color: #435466;
+            background-color: #FFFFFF;
+            border: 1px solid #D1D7E9;
+            //border-color: #D1D7E9;
+        }
+
+    }
+}
