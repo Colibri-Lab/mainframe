@@ -149,7 +149,7 @@ App.Modules.MainFrame.MainMenu.Item = class extends Colibri.UI.Component {
     }
 
     get hasmenu() {
-        return this._dropdown.children > 2;
+        return this._dropdown.children > 1;
     }
 
     Open() {
@@ -387,7 +387,6 @@ App.Modules.MainFrame.MainMenu.JsonRenderer = class extends Colibri.UI.Renderer 
             dropdown.class && popup.AddClass(dropdown.class);
             popup.route = dropdown.index;
             popup.title = dropdown.description;
-            popup.elementID = dropdown.ident;
             popup.enabled = dropdown.enabled || (dropdown.children && Object.countKeys(dropdown.children) > 0);
             if(dropdown.message) {
                 popup.dropdown.message = dropdown.message;
@@ -406,7 +405,6 @@ App.Modules.MainFrame.MainMenu.JsonRenderer = class extends Colibri.UI.Renderer 
                 subMenu.title = menu.description;
                 menu.class && subMenu.AddClass(menu.class);
                 subMenu.enabled = menu.enabled|| (menu.children && Object.countKeys(menu.children) > 0);
-                subMenu.elementID = dropdown.ident;
                 if(!subMenu.enabled) {
                     subMenu.toolTip = 'Раздел вам недоступен';
                 }
@@ -419,7 +417,6 @@ App.Modules.MainFrame.MainMenu.JsonRenderer = class extends Colibri.UI.Renderer 
                     let item = subMenu.AddItem(jitem.name);
                     item.title = jitem.description;                    
                     item.enabled = jitem.enabled;
-                    item.elementID = jitem.ident;
                     if(!jitem.enabled) {
                         item.toolTip = 'Раздел вам недоступен';
                         item.help = null;

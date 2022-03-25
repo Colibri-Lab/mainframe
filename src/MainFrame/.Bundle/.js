@@ -56,16 +56,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
                     window.landing && App.Router.Navigate('/', {});
                 });
             }
-            App.Router.AddRoutePattern('/companies/', (url, options) => {
-                if(window.landing) {
-                    window.mainManu.ShowCompaniesDropDown();
-                    App.Router.Navigate('/', {});
-                }
-                else {
-                    this._mainPage && this._mainPage.ShowCompaniesDropDown();
-                }
-            });
-            App.Router.AddRoutePattern('/profile/', (url, options) => {
+            App.Router.AddRoutePattern('/lk/', (url, options) => {
                 if(window.landing) {
                     window.mainManu.ShowProfilesDropDown();
                     App.Router.Navigate('/', {});
@@ -73,19 +64,6 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
                 else {
                     this._mainPage && this._mainPage.ShowProfilesDropDown();
                 }
-            });
-            App.Router.AddRoutePattern('/archive/', (url, options) => {
-                if(window.landing) {
-                    window.mainManu.ShowArchiveDropDown();
-                    App.Router.Navigate('/', {});
-                }
-                else {
-                    this._mainPage && this._mainPage.ShowArchiveDropDown();
-                }
-            });
-            App.Router.AddRoutePattern('/demo/', (url, options) => {
-                window.open('https://' + App.Store.Query('app.settings.hosts.demo'));
-                App.Router.Navigate('/', {});
             });
             
         });

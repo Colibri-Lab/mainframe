@@ -5,23 +5,13 @@ App.Modules.MainFrame.Header = class extends Colibri.UI.FlexBox {
 
         this.AddClass('app-main-page-header-component');
 
-        App.Store.AddPathHandler('app.settings.hosts', (data) => {
-            const hosts = App.Store.Query('app.settings.hosts');
-            if(hosts && document.domain == hosts.bo) {
-                this.Find('buhsoft-icon').Show();
-            }
-            else {
-                this.Find('gb247-icon').Show();
-            }                
-        });
-
         this.Find('header-menu').AddHandler('DropDownMenuShown', (event, args) => {
             this.HideAll();
         });
         this.Find('header-menu').AddHandler('MenuItemClicked', (event, args) => {
             this.HideAll();
             if(args.item.route) {
-                App.Router.Navigate('/app' + args.item.route, {});
+                App.Router.Navigate(args.item.route, {});
             }
         });
         this.Find('header-links').AddHandler('MenuItemClicked', (event, args) => {
@@ -32,16 +22,6 @@ App.Modules.MainFrame.Header = class extends Colibri.UI.FlexBox {
                 App.Router.Navigate(args.item.route, {});
             }
         });
-        this.Find('companies-dropdown').AddHandler('ItemClicked', (event, args) => {
-            if(args.item.tag.route.indexOf('http') > -1) {
-                window.open(args.item.tag.route);
-            }
-            else {
-                App.Router.Navigate(args.item.tag.route, {});
-            }
-            args.domEvent.stopPropagation();
-            return false;
-        });
         this.Find('profile-dropdown').AddHandler('ItemClicked', (event, args) => {
             if(args.item.tag.route.indexOf('http') > -1) {
                 window.open(args.item.tag.route);
@@ -49,25 +29,6 @@ App.Modules.MainFrame.Header = class extends Colibri.UI.FlexBox {
             else {
                 App.Router.Navigate(args.item.tag.route, {});
             }
-            args.domEvent.stopPropagation();
-            return false;
-        });
-        this.Find('archive-dropdown').AddHandler('ItemClicked', (event, args) => {
-
-            if(args.item.tag.route === 'message') {
-                App.Browser.Set('archive-message');
-                args.item.Dispose();
-                this.ShowArchiveDropDown();
-            }
-            else {
-                if(args.item.tag.route.indexOf('http') > -1) {
-                    window.open(args.item.tag.route);
-                }
-                else {
-                    App.Router.Navigate(args.item.tag.route, {});
-                }    
-            }
-
             args.domEvent.stopPropagation();
             return false;
         });
@@ -81,30 +42,9 @@ App.Modules.MainFrame.Header = class extends Colibri.UI.FlexBox {
 
     HideAll() {
         const dropdown = this.Find('profile-dropdown');
-        const dropdown2 = this.Find('companies-dropdown');
         const dropdown3 = this.Find('comet-dropdown');
-        const dropdown4 = this.Find('archive-dropdown');
         dropdown.Hide();
-        dropdown2.Hide();
         dropdown3.Hide();
-        dropdown4.Hide();
-    }
-
-    ShowCompaniesDropDown() {
-
-        if(!this.Find('header-links/company')) {
-            return;
-        }
-
-        this.Find('header-menu').ClosePopups();
-        this.HideAll();
-        
-        const itembounds = this.Find('header-links/company').container.bounds();
-        const dropdown = this.Find('companies-dropdown');
-        dropdown.Show();
-        dropdown
-            .container
-            .css({left: (itembounds.left + itembounds.width - dropdown.width) + 'px', top: itembounds.top + 35 + 'px'});
     }
 
     ShowProfilesDropDown() {
@@ -150,25 +90,6 @@ App.Modules.MainFrame.Header = class extends Colibri.UI.FlexBox {
         dropdown
             .container
             .css({left: (itembounds.left) + 'px', top: itembounds.top + 35 + 'px'});
-
-    }
-
-    ShowArchiveDropDown() {
-        
-        if(!this.Find('header-links/archive')) {
-            return;
-        }
-        
-        this.Find('header-menu').ClosePopups();
-        this.HideAll();
-
-        const itembounds = this.Find('header-links/archive').container.bounds();
-        const dropdown = this.Find('archive-dropdown');
-        dropdown.Show();
-        const dropdownbounds = dropdown.container.bounds();
-        dropdown
-            .container
-            .css({left: (itembounds.left + itembounds.width - dropdown.width) + 'px', top: itembounds.top + 35 + 'px'});
 
     }
 

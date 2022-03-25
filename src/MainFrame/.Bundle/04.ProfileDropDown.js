@@ -25,7 +25,7 @@ App.Modules.MainFrame.ProfileDropDown = class extends Colibri.UI.DropDown {
         if(menuData.ads !== undefined) {
             data.push({name: 'ads', label: '-', children: menuData.ads || []});
         }
-        data.push({name: 'logout', label: '-', children: [{title: 'Выйти из сервисов Актиона', route: '/logout/'}]});
+        data.push({name: 'logout', label: '-', children: [{title: 'Выход', route: '/logout/'}]});
 
         const renderer = new Colibri.UI.List.JsonRenderer(this._list, data);
         renderer.Render();

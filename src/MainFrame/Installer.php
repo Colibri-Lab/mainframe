@@ -71,8 +71,7 @@ class Installer
         $sourcePath = $path.'/src/MainFrame/web/res/img/';
         $targetDir = './web/res/img/';
 
-        copy($sourcePath.'mainframe-logo-buhsoft.svg', $targetDir.'mainframe-logo-buhsoft.svg');
-        copy($sourcePath.'mainframe-logo-gb247.svg', $targetDir.'mainframe-logo-gb247.svg');
+        copy($sourcePath.'mainframe-logo-colibri.svg', $targetDir.'mainframe-logo-colibri.svg');
  
         print_r('Установка завершена'."\n");
  
