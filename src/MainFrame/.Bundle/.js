@@ -25,22 +25,6 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
             }
         });
 
-        App.Comet.AddHandler('MessageReceived', (event, args) => {
-            if(args.message.data.handle.indexOf('/personnel') !== -1) {
-                const events = {
-                    'Заявление на отпуск': 'F9C021CA-A651-4E47-8E26-521D59B1B1ED',
-                    'Заявление на вычет': '5AFE8181-1247-4EFF-BC0A-4E393AE1A701',
-                    'Запрос документов': '11CE355D-CBED-4042-BB81-812C79914042',
-                    'Уведомление об отсутствии': '6A167674-A088-4B8A-A0DD-F52070ED6CA0',
-                    'Изменение данных': '5CDEC211-ADF3-4BCF-B553-94727905D226',
-                    'Произвольный запрос': 'CC027FBE-35F5-4DC7-B039-A207BC08D642'
-                };
-                if(events[args.message.data.message]) {
-                    App.SendEventToCRM('kadr', events[args.message.data.message]);
-                }
-            }
-        });
-
         App.AddHandler('ApplicationReady', (event, args) => {
             if(!window.landing) {                
                 this.Render(document.body);                
