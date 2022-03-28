@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.repeatme.online/colibrilab/core.git",
-                "reference": "cd3da2a507e69108d3145ad8e2ac06c55d79e333"
+                "reference": "ea1756e0ab15cfe436f67af07fe1645a722345b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.repeatme.online/api/v4/projects/2/packages/composer/archives/colibri/core.zip?sha=cd3da2a507e69108d3145ad8e2ac06c55d79e333",
-                "reference": "cd3da2a507e69108d3145ad8e2ac06c55d79e333",
+                "url": "https://gitlab.repeatme.online/api/v4/projects/2/packages/composer/archives/colibri/core.zip?sha=ea1756e0ab15cfe436f67af07fe1645a722345b7",
+                "reference": "ea1756e0ab15cfe436f67af07fe1645a722345b7",
                 "shasum": ""
             },
             "require": {
