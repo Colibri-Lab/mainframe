@@ -6,6 +6,7 @@
     "license": "proprietary",
     "minimum-stability": "dev",
     "require": {
+        "php": ">=8.0.0",
         "colibri/core": "dev-master",
         "colibri/ui": "dev-master"
     },
