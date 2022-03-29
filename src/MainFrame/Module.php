@@ -36,6 +36,8 @@ class Module extends BaseModule
      */
     public static $instance = null;
 
+    private $_userModule;
+
     /**
      * Инициализация модуля
      * @return void
@@ -46,12 +48,27 @@ class Module extends BaseModule
 
     }
 
+    public function UserModule()
+    {
+        if($this->_userModule) {
+            return $this->_userModule;
+        }
+
+        $className = $this->Config()->Query('config.user-module')->GetValue();
+        if(App::$moduleManager->$className) {
+            $this->_userModule = App::$moduleManager->$className;
+        }
+
+        return $this->_userModule;
+
+    }
+
     /**
      * Вызывается для получения Меню болванкой
      */
     public function GetTopmostMenu($hideExecuteCommand = true) {
         
-        $menu = Item::Create('app', 'Приложение', '', false, '');
+        $menu = Item::Create('mainframe', 'Приложение', '', false, '');
         $modulesList = App::$moduleManager->list;
         foreach($modulesList as $module) {
             if(is_object($module) && method_exists($module, 'GetTopmostMenu') && !($module instanceof self)) {
@@ -60,6 +77,25 @@ class Module extends BaseModule
         }
 
         return $menu->children;
+    }
+
+    public function GetPermissions()
+    {
+        $menu = $this->GetTopmostMenu(false);
+
+        $permissions = [];
+        $permissions['mainframe'] = 'Основное окно';
+        foreach($menu as $item) {
+            $permissions['mainframe.'.$item->name] = $item->description;
+            foreach($item->children as $item2) {
+                $permissions['mainframe.'.$item->name.'.'.$item2->name] = $item2->description;
+                foreach($item2->children as $item3) {
+                    $permissions['mainframe.'.$item->name.'.'.$item2->name.'.'.$item3->name] = $item3->description;
+                }
+            }
+        }
+
+        return $permissions;
     }
  
 

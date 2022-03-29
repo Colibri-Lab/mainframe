@@ -14,23 +14,25 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
         console.log('Initializing module MainFrame');
         
-        App.Store.AddPathHandler('app.authorization.user', (userData) => {
-            if(userData && userData.id && userData.id > 0) {       
-                // рисуем для монолита
-                if(window.landing && !window.mainManu && document.querySelector('.app-menu-component-container')) {
-                    window.mainManu = new App.Modules.MainFrame.Header('app-module-header', document.querySelector('.app-menu-component-container')); 
-                    window.mainManu.shown = true;
-                }
-                this.FrameSettings();
-            }
-        });
 
         App.AddHandler('ApplicationReady', (event, args) => {
-            if(!window.landing) {                
-                this.Render(document.body);                
-            }
+
+            App.Store.AddPathHandler('app.settings', (settings) => {
+
+                const renderHandler = (userData) => (userData && userData.id && userData.id > 0) && this.Render(document.body, userData);
+                const userStorePoint = settings.mainframe['user-store'];
+                const userData = App.Store.Query(userStorePoint);
+                if(userData && userData.id && userData.id > 0) {
+                    renderHandler(userData);
+                }
+                else {
+                    App.Store.AddPathHandler(userStorePoint, renderHandler);
+                }
+        
+            });
+            this.FrameSettings();
                 
-            App.Router.AddRoutePattern('/app', (url, options) => {
+            App.Router.AddRoutePattern('/mainframe', (url, options) => {
                 MainFrame.Execute(url, options);
                 window.landing && App.Router.Navigate('/', {});
             });
@@ -54,23 +56,15 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
     }
 
-    Render(container) {
+    Render(container, userData) {
         if(this._mainPage) {
             return;
         }
 
         console.log('Rendering Module MainFrame');
+        
         this._mainPage = new App.Modules.MainFrame.MainPage('mainpage', container);
-
-        App.Store.AddPathHandler('app.authorization.user', (userData) => {
-            if(userData && userData.id && userData.id > 0) {       
-                this.ShowMainPage(userData);
-            }     
-            else {
-                this._mainPage.Dispose();
-            }            
-        });        
-
+        this.ShowMainPage(userData);
 
     }
 
