@@ -109,7 +109,7 @@ App.Modules.MainFrame.MainMenu.Item = class extends Colibri.UI.Component {
         this._title = new Colibri.UI.TextSpan('title', this);
         this._title.shown = true;
         this._dropdown = new App.Modules.MainFrame.Dropdown('dropdown', this);
-
+        
         this._title.AddHandler('Clicked', (event, args) => this.Dispatch('TitleClicked', args));
         this._dropdown.AddHandler('CloseButtonClicked', (event, args) => { this.Close(); });
         this._dropdown.AddHandler('MenuItemClicked', (event, args) => this.Dispatch('MenuItemClicked', args));
@@ -180,6 +180,7 @@ App.Modules.MainFrame.Dropdown = class extends Colibri.UI.Component {
     constructor(name, container) {
         super(name, container, '<div></div>');
         this.AddClass('app-dropdown-item-component');
+        this.handleClickedOut = true;
 
         this._closeButton = new Colibri.UI.Icon('close-button', this);
         this._closeButton.value = Colibri.UI.CloseIcon;        
@@ -318,6 +319,9 @@ App.Modules.MainFrame.Menu.Item = class extends Colibri.UI.Component {
         const iconhover = new Colibri.UI.Icon('help-icon-hover', this._help);
         iconhover.value = Colibri.UI.HelpIconHover;
 
+        this._description = new Colibri.UI.TextSpan('description', this);
+        this._description.shown = false;
+
         this.shown = true;
 
     }
@@ -340,6 +344,14 @@ App.Modules.MainFrame.Menu.Item = class extends Colibri.UI.Component {
     }
     get title() {
         return this._href.html;
+    }
+
+    set description(value) {
+        this._description.html = value;
+        this._description.shown = !!value;
+    }
+    get description() {
+        return this._description.html;
     }
 
     set help(value) {
@@ -386,7 +398,7 @@ App.Modules.MainFrame.MainMenu.JsonRenderer = class extends Colibri.UI.Renderer 
             let popup = this._object.AddItem(dropdown.name);
             dropdown.class && popup.AddClass(dropdown.class);
             popup.route = dropdown.index;
-            popup.title = dropdown.description;
+            popup.title = dropdown.title;
             popup.enabled = dropdown.enabled || (dropdown.children && Object.countKeys(dropdown.children) > 0);
             if(dropdown.message) {
                 popup.dropdown.message = dropdown.message;
@@ -402,7 +414,7 @@ App.Modules.MainFrame.MainMenu.JsonRenderer = class extends Colibri.UI.Renderer 
             children && children.forEach((menu) => {
 
                 let subMenu = popup.dropdown.AddMenu(menu.name);
-                subMenu.title = menu.description;
+                subMenu.title = menu.title;
                 menu.class && subMenu.AddClass(menu.class);
                 subMenu.enabled = menu.enabled|| (menu.children && Object.countKeys(menu.children) > 0);
                 if(!subMenu.enabled) {
@@ -415,7 +427,8 @@ App.Modules.MainFrame.MainMenu.JsonRenderer = class extends Colibri.UI.Renderer 
                 children && children.forEach((jitem) => {
 
                     let item = subMenu.AddItem(jitem.name);
-                    item.title = jitem.description;                    
+                    item.title = jitem.title;                    
+                    item.description = jitem.description;
                     item.enabled = jitem.enabled;
                     if(!jitem.enabled) {
                         item.toolTip = 'Раздел вам недоступен';

@@ -126,9 +126,13 @@
                     align-items: center;
                     justify-content: flex-start;
                     padding-bottom: 10px;
+                    flex-wrap: wrap;
+                    max-width: 350px;
+                    position: relative;
 
                     [data-object-name="important"] {
                         position: absolute;
+                        top: 3px;
                         margin-left: -15px;
                         width: 7px;
                         height: 10px;
@@ -149,6 +153,28 @@
 
                         &.ui-disabled {
                             color: #ADB2C2;
+                        }
+                    }
+
+                    [data-object-name="description"] {
+                        &.app-component-shown {
+                            display: block;
+                        }
+                        max-width: 350px;
+                        color: #ADB2C2;
+                        font-size: 12px;
+                        font-weight: normal;
+                        line-height: 1.43;
+                        border: 1px solid #ededed;
+                        padding: 10px 20px;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    &:hover {
+                        [data-object-name="description"] {
+                            color: #63666e;
+                            border: 1px solid #c7c7c7;
                         }
                     }
 

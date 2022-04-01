@@ -76,7 +76,15 @@ class Module extends BaseModule
         $modulesList = App::$moduleManager->list;
         foreach ($modulesList as $module) {
             if (is_object($module) && method_exists($module, 'GetTopmostMenu') && !($module instanceof self)) {
-                $menu->Add($module->GetTopmostMenu($hideExecuteCommand));
+                $items = $module->GetTopmostMenu($hideExecuteCommand);
+                if($items instanceof Item) {
+                    $menu->Add($items);
+                }
+                else if(is_array($items)) {
+                    foreach($items as $item) {
+                        $menu->Add($item);
+                    }
+                }
             }
         }
 

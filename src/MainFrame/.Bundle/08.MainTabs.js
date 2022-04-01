@@ -2,6 +2,7 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     constructor(name, container, element) {
         super(name, container, Colibri.UI.Templates['App.Modules.MainFrame.MainTabs']);
         this.AddClass('app-main-tabs-component');
+        this.handleResize = true;
 
         this.Children('search-button').AddHandler('Clicked', (event, args) => this.Dispatch('SearchButtonClicked'));
 
