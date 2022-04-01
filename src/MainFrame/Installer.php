@@ -44,6 +44,14 @@ class Installer
             return;
         }
         copy($configPath, $configTargetPath);
+
+        $configPath = $path.'/src/MainFrame/config-template/mainframe-menu.yaml';
+        $configTargetPath = $configDir.'mainframe-menu.yaml';
+        if(file_exists($configTargetPath)) {
+            print_r('Файл конфигурации найден, пропускаем настройку'."\n");
+            return;
+        }
+        copy($configPath, $configTargetPath);
  
         // нужно прописать в модули
         $modulesTargetPath = $configDir.'modules.yaml';

@@ -21,6 +21,8 @@ use Colibri\Utils\Debug;
 use App\Modules\Authorization\Module as AuthorizationModule;
 use App\Modules\MainFrame\Controllers\Controller;
 use Colibri\Utils\Menu\Item;
+use Colibri\Utils\Config\ConfigException;
+use Colibri\Utils\Config\Config;
 
 
 /**
@@ -72,7 +74,26 @@ class Module extends BaseModule
     public function GetTopmostMenu(bool $hideExecuteCommand = true): Item|array
     {
 
-        $menu = Item::Create('mainframe', 'Приложение', '', false, '');
+        try {
+            $menu = Module::$instance->Config()->Query('config.menu')->AsArray();
+        }
+        catch(ConfigException $e) {
+            $menu = null;
+        }
+
+        if(!$menu) {
+            $menu = Item::Create('mainframe', 'Приложение', '', '', false, '');
+        }
+        else {
+            $menu = Item::FromArray($menu);
+        }
+
+        $menu->Add(Item::Create('more', 'ЕЩЕ', '', '', false, '')->Add(
+            Item::Create('tools', 'Инструменты', '', '', false, '')->Add(
+                Item::Create('menu', 'Редактор меню', 'Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты', '', true, 'MainFrame.RouteTo("/menu/")')
+            )
+        ));
+
         $modulesList = App::$moduleManager->list;
         foreach ($modulesList as $module) {
             if (is_object($module) && method_exists($module, 'GetTopmostMenu') && !($module instanceof self)) {
@@ -87,6 +108,10 @@ class Module extends BaseModule
                 }
             }
         }
+
+        // сохраняем меню в настроечный файл
+        $config = new Config($menu->ToArray());
+        $config->Save('mainframe-menu.yaml');
 
         return $menu->children;
     }
