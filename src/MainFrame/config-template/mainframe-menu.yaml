@@ -41,7 +41,7 @@ children:
       description: Структура проекта, папки и конечные страницы, публикация данных
       class: ""
       important: false
-      execute: Sites.RouteTo("/sites/structure/")
+      execute: Sites.RouteTo("/structure/")
       index: /mainframe/struct/sites/structure/
       enabled: true
       children: []
@@ -50,7 +50,7 @@ children:
       description: Редактор материалов, которые содержатся в хранилищах данных
       class: ""
       important: false
-      execute: Sites.RouteTo("/sites/storages/")
+      execute: Sites.RouteTo("/storages/")
       index: /mainframe/struct/sites/storages/
       enabled: true
       children: []
@@ -59,7 +59,7 @@ children:
       description: 'Справочники, '
       class: ""
       important: false
-      execute: Sites.RouteTo("/sites/references/")
+      execute: Sites.RouteTo("/references/")
       index: /mainframe/struct/sites/references/
       enabled: true
       children: []
