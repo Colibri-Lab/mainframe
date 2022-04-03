@@ -43,16 +43,24 @@ class Installer
             print_r('Файл конфигурации найден, пропускаем настройку'."\n");
             return;
         }
-        copy($configPath, $configTargetPath);
-
+        if($mode === 'local') {
+            symlink($configPath, $configTargetPath);
+        }
+        else {
+            copy($configPath, $configTargetPath);
+        }
         $configPath = $path.'/src/MainFrame/config-template/mainframe-menu.yaml';
         $configTargetPath = $configDir.'mainframe-menu.yaml';
         if(file_exists($configTargetPath)) {
             print_r('Файл конфигурации найден, пропускаем настройку'."\n");
             return;
         }
-        copy($configPath, $configTargetPath);
- 
+        if($mode === 'local') {
+            symlink($configPath, $configTargetPath);
+        }
+        else {
+            copy($configPath, $configTargetPath);
+        } 
         // нужно прописать в модули
         $modulesTargetPath = $configDir.'modules.yaml';
         $modulesConfigContent = file_get_contents($modulesTargetPath);
@@ -72,15 +80,23 @@ class Installer
         $scriptsPath = $path.'/src/MainFrame/bin/';
         $binDir = './bin/';
  
-        copy($scriptsPath.'mainframe-migrate.sh', $binDir.'mainframe-migrate.sh');
-
+        if($mode === 'local') {
+            symlink($scriptsPath.'mainframe-migrate.sh', $binDir.'mainframe-migrate.sh');
+        }
+        else {
+            copy($scriptsPath.'mainframe-migrate.sh', $binDir.'mainframe-migrate.sh');
+        }
         print_r('Копирование изображений'."\n");
 
         $sourcePath = $path.'/src/MainFrame/web/res/img/';
         $targetDir = './web/res/img/';
 
-        copy($sourcePath.'mainframe-logo-colibri.svg', $targetDir.'mainframe-logo-colibri.svg');
- 
+        if($mode === 'local') {
+            symlink($sourcePath.'mainframe-logo-colibri.svg', $targetDir.'mainframe-logo-colibri.svg');
+        }
+        else {
+            copy($sourcePath.'mainframe-logo-colibri.svg', $targetDir.'mainframe-logo-colibri.svg');
+        } 
         print_r('Установка завершена'."\n");
  
     }
