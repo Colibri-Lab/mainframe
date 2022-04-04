@@ -82,7 +82,7 @@ class Module extends BaseModule
         }
 
         if(!$menu) {
-            $menu = Item::Create('mainframe', 'Приложение', '', '', false, '');
+            $menu = Item::Create('mainframe', 'Приложение', 'Функции приложения', '', false, '');
         }
         else {
             $menu = Item::FromArray($menu);
@@ -121,13 +121,13 @@ class Module extends BaseModule
         $menu = $this->GetTopmostMenu(false);
 
         $permissions = [];
-        $permissions['mainframe'] = 'Основное окно';
+        $permissions['mainframe'] = 'Основное меню';
         foreach ($menu as $item) {
-            $permissions['mainframe.' . $item->name] = $item->description;
+            $permissions['mainframe.' . $item->name] = $item->title;
             foreach ($item->children as $item2) {
-                $permissions['mainframe.' . $item->name . '.' . $item2->name] = $item2->description;
+                $permissions['mainframe.' . $item->name . '.' . $item2->name] = $item2->title;
                 foreach ($item2->children as $item3) {
-                    $permissions['mainframe.' . $item->name . '.' . $item2->name . '.' . $item3->name] = $item3->description;
+                    $permissions['mainframe.' . $item->name . '.' . $item2->name . '.' . $item3->name] = $item3->title;
                 }
             }
         }

@@ -26,16 +26,6 @@ children:
     index: /mainframe/struct/sites/
     enabled: true
     children:
-    - name: settings
-      title: Настройки
-      description: Настройки сайта<br />Здесь можно отредактировать некоторые настройки,
-        предварительно созданные менеджером в менеджере настроек
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/settings/")
-      index: /mainframe/struct/sites/settings/
-      enabled: true
-      children: []
     - name: structure
       title: Структура сайта
       description: Структура проекта, папки и конечные страницы, публикация данных
@@ -45,22 +35,32 @@ children:
       index: /mainframe/struct/sites/structure/
       enabled: true
       children: []
-    - name: storages
+    - name: data
       title: Материалы
       description: Редактор материалов, которые содержатся в хранилищах данных
       class: ""
       important: false
-      execute: Sites.RouteTo("/storages/")
-      index: /mainframe/struct/sites/storages/
+      execute: Sites.RouteTo("/data/")
+      index: /mainframe/struct/sites/data/
       enabled: true
       children: []
     - name: references
       title: Справочники
-      description: 'Справочники, '
+      description: Справочники
       class: ""
       important: false
       execute: Sites.RouteTo("/references/")
       index: /mainframe/struct/sites/references/
+      enabled: true
+      children: []
+    - name: settings
+      title: Настройки
+      description: Настройки сайта<br />Здесь можно отредактировать некоторые настройки,
+        предварительно созданные менеджером в менеджере настроек
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/settings/settings/")
+      index: /mainframe/struct/sites/settings/
       enabled: true
       children: []
   - name: files
@@ -102,6 +102,35 @@ children:
   index: /mainframe/dev/
   enabled: true
   children:
+  - name: sites
+    title: Данные
+    description: ""
+    class: ""
+    important: false
+    execute: ""
+    index: /mainframe/dev/sites/
+    enabled: true
+    children:
+    - name: storages
+      title: Хранилища
+      description: Редактор хранилищ данных. Создавайте хранилища для материалов используя
+        удобный интерфейс
+      class: ""
+      important: false
+      execute: Sites.RouteTo("/settings/data/storages/")
+      index: /mainframe/dev/sites/storages/
+      enabled: true
+      children: []
+    - name: sources
+      title: Источники данных
+      description: Создайте справочники. Внимание! Справочник - это не хранилище,
+        таблица для хранения данных должна уже существовать
+      class: ""
+      important: false
+      execute: Sites.RouteTo("/settings/data/sources/")
+      index: /mainframe/dev/sites/sources/
+      enabled: true
+      children: []
   - name: settings
     title: Настройки
     description: ""
@@ -167,35 +196,6 @@ children:
       important: false
       execute: Tools.RouteTo("/themes/nightmode/")
       index: /mainframe/dev/view/nightmode/
-      enabled: true
-      children: []
-  - name: sites
-    title: Данные
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/dev/sites/
-    enabled: true
-    children:
-    - name: storages
-      title: Хранилища
-      description: Редактор хранилищ данных. Создавайте хранилища для материалов используя
-        удобный интерфейс
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/settings/data/storages/")
-      index: /mainframe/dev/sites/storages/
-      enabled: true
-      children: []
-    - name: sources
-      title: Источники данных
-      description: Создайте справочники. Внимание! Справочник - это не хранилище,
-        таблица для хранения данных должна уже существовать
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/settings/data/sources/")
-      index: /mainframe/dev/sites/sources/
       enabled: true
       children: []
 - name: more
