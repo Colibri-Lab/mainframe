@@ -1,13 +1,88 @@
 ---
 name: mainframe
 title: Приложение
-description: ""
+description: Функции приложения
 class: ""
 important: false
 execute: ""
 index: /mainframe/
 enabled: true
 children:
+- name: more
+  title: ЕЩЕ
+  description: ""
+  class: ""
+  important: false
+  execute: ""
+  index: /mainframe/more/
+  enabled: true
+  children:
+  - name: tools
+    title: Инструменты
+    description: ""
+    class: ""
+    important: false
+    execute: ""
+    index: /mainframe/more/tools/
+    enabled: true
+    children:
+    - name: menu
+      title: Редактор меню
+      description: Редактор древовидного меню панели администратора. Можно поменять
+        местами, скрыть или отобразить некоторые пункты
+      class: ""
+      important: false
+      execute: MainFrame.RouteTo("/menu/")
+      index: /mainframe/more/tools/menu/
+      enabled: true
+      children: []
+    - name: backup
+      title: Слепки системы
+      description: Создайте точку восстановления на случай критических ситуаций. В
+        дальнейшем можно будет вернуть данные из полученного файла
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/backup/")
+      index: /mainframe/more/tools/backup/
+      enabled: true
+      children: []
+    - name: execute
+      title: Выполнить
+      description: Выполнить код (PHP). Внимание! Код исполняется в окружении всего
+        проекта, возможны необратимые повреждения!
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/execute/")
+      index: /mainframe/more/tools/execute/
+      enabled: true
+      children: []
+  - name: security
+    title: Безопасность
+    description: ""
+    class: ""
+    important: false
+    execute: ""
+    index: /mainframe/more/security/
+    enabled: true
+    children:
+    - name: profile
+      title: Личный кабинет
+      description: Ваш личный кабинет - профиль. Можно изменить ФИО и аватар
+      class: ""
+      important: false
+      execute: Security.RouteTo("/profile/")
+      index: /mainframe/more/security/profile/
+      enabled: true
+      children: []
+    - name: users
+      title: Администрирование
+      description: Административная панель, пользователи и роли
+      class: ""
+      important: false
+      execute: Security.RouteTo("/administrate/")
+      index: /mainframe/more/security/users/
+      enabled: true
+      children: []
 - name: struct
   title: Структура
   description: ""
@@ -141,7 +216,7 @@ children:
     enabled: true
     children:
     - name: remote
-      title: Удаленный сервер
+      title: Удаленное файловое хранилище
       description: Настройки удаленного хранилища файлов. Адрес и тип подключения
       class: ""
       important: false
@@ -196,81 +271,6 @@ children:
       important: false
       execute: Tools.RouteTo("/themes/nightmode/")
       index: /mainframe/dev/view/nightmode/
-      enabled: true
-      children: []
-- name: more
-  title: ЕЩЕ
-  description: ""
-  class: ""
-  important: false
-  execute: ""
-  index: /mainframe/more/
-  enabled: true
-  children:
-  - name: security
-    title: Безопасность
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/more/security/
-    enabled: true
-    children:
-    - name: profile
-      title: Личный кабинет
-      description: Ваш личный кабинет - профиль. Можно изменить ФИО и аватар
-      class: ""
-      important: false
-      execute: Security.RouteTo("/profile/")
-      index: /mainframe/more/security/profile/
-      enabled: true
-      children: []
-    - name: users
-      title: Администрирование
-      description: Административная панель, пользователи и роли
-      class: ""
-      important: false
-      execute: Security.RouteTo("/administrate/")
-      index: /mainframe/more/security/users/
-      enabled: true
-      children: []
-  - name: tools
-    title: Инструменты
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/more/tools/
-    enabled: true
-    children:
-    - name: backup
-      title: Слепки системы
-      description: Создайте точку восстановления на случай критических ситуаций. В
-        дальнейшем можно будет вернуть данные из полученного файла
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/backup/")
-      index: /mainframe/more/tools/backup/
-      enabled: true
-      children: []
-    - name: execute
-      title: Выполнить
-      description: Выполнить код (PHP). Внимание! Код исполняется в окружении всего
-        проекта, возможны необратимые повреждения!
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/execute/")
-      index: /mainframe/more/tools/execute/
-      enabled: true
-      children: []
-    - name: menu
-      title: Редактор меню
-      description: Редактор древовидного меню панели администратора. Можно поменять
-        местами, скрыть или отобразить некоторые пункты
-      class: ""
-      important: false
-      execute: MainFrame.RouteTo("/menu/")
-      index: /mainframe/more/tools/menu/
       enabled: true
       children: []
 ...
