@@ -125,8 +125,13 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
 
     OpenStoredTabs() {
 
-        Colibri.Common.Tick(this._tabLocations, 1000, (v) => {
-            location.hash = v.hash;
+        const hash = location.hash;
+        location.hash = '#';
+        Colibri.Common.Delay(100).then(() => {
+            this._tabLocations.forEach((v) => {
+                App.Router.Navigate(v.hash, {}, true, true);
+            });
+            location.hash = hash;
         });
 
     }

@@ -59,7 +59,7 @@ children:
         предварительно созданные менеджером в менеджере настроек
       class: ""
       important: false
-      execute: Tools.RouteTo("/settings/settings/")
+      execute: Tools.RouteTo("/settings/data/")
       index: /mainframe/struct/sites/settings/
       enabled: true
       children: []
@@ -117,7 +117,7 @@ children:
         удобный интерфейс
       class: ""
       important: false
-      execute: Sites.RouteTo("/settings/data/storages/")
+      execute: Sites.RouteTo("/storages/")
       index: /mainframe/dev/sites/storages/
       enabled: true
       children: []
@@ -127,7 +127,7 @@ children:
         таблица для хранения данных должна уже существовать
       class: ""
       important: false
-      execute: Sites.RouteTo("/settings/data/sources/")
+      execute: Sites.RouteTo("/sources/")
       index: /mainframe/dev/sites/sources/
       enabled: true
       children: []
