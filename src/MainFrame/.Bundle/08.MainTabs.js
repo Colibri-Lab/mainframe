@@ -21,6 +21,7 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     _registerEvents() {
         super._registerEvents();
         this.RegisterEvent('SearchButtonClicked', false, 'Когда нажата кнопка поиска');
+        
     }
 
     _createTabButton(name, title, color, closable, componentContainer, closeClicked = null) {
@@ -38,11 +39,14 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
             tabButton.Dispose();
             componentContainer.Dispose();
 
-            if(currentIndex == 0) {
+            if(currentIndex == 0 && this.tabsCount > 0) {
                 this.selectedIndex = 0;
             }
-            else {
+            else if(currentIndex > 0) {
                 this.selectedIndex = currentIndex - 1;
+            }
+            else {
+                this.Dispatch('SelectionChanged', {domEvent: args.domEvent, name: null}); 
             }
 
             args.domEvent.stopPropagation();

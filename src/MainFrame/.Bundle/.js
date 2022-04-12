@@ -34,22 +34,12 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
                 
             App.Router.AddRoutePattern('/mainframe', (url, options) => {
                 MainFrame.Execute(url, options);
-                window.landing && App.Router.Navigate('/', {});
             });
-            if(!window.landing) {
-                App.Router.AddRoutePattern('/need-help/', (url, options) => {
-                    this._mainPage && this._mainPage.ShowHelpWindow();
-                    window.landing && App.Router.Navigate('/', {});
-                });
-            }
+            App.Router.AddRoutePattern('/need-help/', (url, options) => {
+                this._mainPage && this._mainPage.ShowHelpWindow();
+            });
             App.Router.AddRoutePattern('/lk/', (url, options) => {
-                if(window.landing) {
-                    window.mainManu.ShowProfilesDropDown();
-                    App.Router.Navigate('/', {});
-                }
-                else {
-                    this._mainPage && this._mainPage.ShowProfilesDropDown();
-                }
+                this._mainPage && this._mainPage.ShowProfilesDropDown();
             });
             
         });

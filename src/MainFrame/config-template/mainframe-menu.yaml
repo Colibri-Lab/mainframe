@@ -121,15 +121,6 @@ children:
     index: /mainframe/dev/settings/
     enabled: true
     children:
-    - name: remote
-      title: Удаленное файловое хранилище
-      description: Настройки удаленного хранилища файлов. Адрес и тип подключения
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/remote/")
-      index: /mainframe/dev/settings/remote/
-      enabled: true
-      children: []
     - name: manager
       title: Настройки сайта
       description: Менеджер настроек. Можно создать настройку, которую в дальнейшем
