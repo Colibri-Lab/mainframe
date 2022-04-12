@@ -38,7 +38,12 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
             tabButton.Dispose();
             componentContainer.Dispose();
 
-            this.selectedIndex = currentIndex - 1;
+            if(currentIndex == 0) {
+                this.selectedIndex = 0;
+            }
+            else {
+                this.selectedIndex = currentIndex - 1;
+            }
 
             args.domEvent.stopPropagation();
             args.domEvent.preventDefault();

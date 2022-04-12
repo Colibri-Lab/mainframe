@@ -88,11 +88,15 @@ class Module extends BaseModule
             $menu = Item::FromArray($menu);
         }
 
-        $menu->Add(Item::Create('more', 'ЕЩЕ', '', '', false, '')->Add(
-            Item::Create('tools', 'Инструменты', '', '', false, '')->Add(
-                Item::Create('menu', 'Редактор меню', 'Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты', '', true, 'MainFrame.RouteTo("/menu/")')
+        $menu->Add([
+            Item::Create('struct', 'Структура', '', 'green', false, ''),
+            Item::Create('dev', 'Разработка', '', 'orange', false, ''),
+            Item::Create('more', 'ЕЩЕ', '', '', false, '')->Add(
+                Item::Create('tools', 'Инструменты', '', '', false, '')->Add(
+                    Item::Create('menu', 'Редактор меню', 'Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты', '', true, 'MainFrame.RouteTo("/menu/")')
+                )
             )
-        ));
+        ]);
 
         $modulesList = App::$moduleManager->list;
         foreach ($modulesList as $module) {

@@ -8,6 +8,148 @@ execute: ""
 index: /mainframe/
 enabled: true
 children:
+- name: struct
+  title: Структура
+  description: ""
+  class: ""
+  important: false
+  execute: ""
+  index: /mainframe/struct/
+  enabled: true
+  children:
+  - name: sites
+    title: Сайты и разделы
+    description: ""
+    class: ""
+    important: false
+    execute: ""
+    index: /mainframe/struct/sites/
+    enabled: true
+    children:
+    - name: structure
+      title: Структура сайта
+      description: Структура проекта, папки и конечные страницы, публикация данных
+      class: ""
+      important: false
+      execute: Sites.RouteTo("/structure/")
+      index: /mainframe/struct/sites/structure/
+      enabled: true
+      children: []
+    - name: data
+      title: Материалы
+      description: Редактор материалов, которые содержатся в хранилищах данных
+      class: ""
+      important: false
+      execute: Sites.RouteTo("/data/")
+      index: /mainframe/struct/sites/data/
+      enabled: true
+      children: []
+    - name: settings
+      title: Настройки
+      description: Настройки сайта<br />Здесь можно отредактировать некоторые настройки,
+        предварительно созданные менеджером в менеджере настроек
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/settings/data/")
+      index: /mainframe/struct/sites/settings/
+      enabled: true
+      children: []
+  - name: files
+    title: Файлы
+    description: ""
+    class: ""
+    important: false
+    execute: ""
+    index: /mainframe/struct/files/
+    enabled: true
+    children:
+    - name: disk
+      title: На сервере
+      description: Файлы находящиеся на текущем сервере, на локальной машине. Можно
+        добавить или удалить ненужные файлы. Внимание! При удалении файлов, нужно
+        учесть, что некоторые строки в хранилищах могут ссылаться на них
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/files/disk/")
+      index: /mainframe/struct/files/disk/
+      enabled: true
+      children: []
+    - name: remote
+      title: Удаленные
+      description: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или
+        очистить их при необходимости
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/files/remote/")
+      index: /mainframe/struct/files/remote/
+      enabled: true
+      children: []
+- name: dev
+  title: Разработка
+  description: ""
+  class: ""
+  important: false
+  execute: ""
+  index: /mainframe/dev/
+  enabled: true
+  children:
+  - name: sites
+    title: Данные
+    description: ""
+    class: ""
+    important: false
+    execute: ""
+    index: /mainframe/dev/sites/
+    enabled: true
+    children:
+    - name: storages
+      title: Хранилища
+      description: Редактор хранилищ данных. Создавайте хранилища для материалов используя
+        удобный интерфейс
+      class: ""
+      important: false
+      execute: Sites.RouteTo("/storages/")
+      index: /mainframe/dev/sites/storages/
+      enabled: true
+      children: []
+  - name: settings
+    title: Настройки
+    description: ""
+    class: ""
+    important: false
+    execute: ""
+    index: /mainframe/dev/settings/
+    enabled: true
+    children:
+    - name: remote
+      title: Удаленное файловое хранилище
+      description: Настройки удаленного хранилища файлов. Адрес и тип подключения
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/settings/remote/")
+      index: /mainframe/dev/settings/remote/
+      enabled: true
+      children: []
+    - name: manager
+      title: Настройки сайта
+      description: Менеджер настроек. Можно создать настройку, которую в дальнейшем
+        использовать при разработке или выводе информации на проекте
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/settings/manager/")
+      index: /mainframe/dev/settings/manager/
+      enabled: true
+      children: []
+    - name: notices
+      title: Шаблоны сообщений
+      description: Создайте шаблоны сообщений для общения с пользователем посредством
+        электронной почты
+      class: ""
+      important: false
+      execute: Tools.RouteTo("/settings/notices/")
+      index: /mainframe/dev/settings/notices/
+      enabled: true
+      children: []
 - name: more
   title: ЕЩЕ
   description: ""
@@ -83,174 +225,13 @@ children:
       index: /mainframe/more/security/users/
       enabled: true
       children: []
-- name: struct
-  title: Структура
-  description: ""
-  class: ""
-  important: false
-  execute: ""
-  index: /mainframe/struct/
-  enabled: true
-  children:
-  - name: sites
-    title: Сайты и разделы
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/struct/sites/
-    enabled: true
-    children:
-    - name: structure
-      title: Структура сайта
-      description: Структура проекта, папки и конечные страницы, публикация данных
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/structure/")
-      index: /mainframe/struct/sites/structure/
-      enabled: true
-      children: []
-    - name: data
-      title: Материалы
-      description: Редактор материалов, которые содержатся в хранилищах данных
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/data/")
-      index: /mainframe/struct/sites/data/
-      enabled: true
-      children: []
-    - name: references
-      title: Справочники
-      description: Справочники
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/references/")
-      index: /mainframe/struct/sites/references/
-      enabled: true
-      children: []
-    - name: settings
-      title: Настройки
-      description: Настройки сайта<br />Здесь можно отредактировать некоторые настройки,
-        предварительно созданные менеджером в менеджере настроек
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/data/")
-      index: /mainframe/struct/sites/settings/
-      enabled: true
-      children: []
-  - name: files
-    title: Файлы
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/struct/files/
-    enabled: true
-    children:
-    - name: disk
-      title: На сервере
-      description: Файлы находящиеся на текущем сервере, на локальной машине. Можно
-        добавить или удалить ненужные файлы. Внимание! При удалении файлов, нужно
-        учесть, что некоторые строки в хранилищах могут ссылаться на них
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/files/disk/")
-      index: /mainframe/struct/files/disk/
-      enabled: true
-      children: []
-    - name: remote
-      title: Удаленные
-      description: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или
-        очистить их при необходимости
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/files/remote/")
-      index: /mainframe/struct/files/remote/
-      enabled: true
-      children: []
-- name: dev
-  title: Разработка
-  description: ""
-  class: ""
-  important: false
-  execute: ""
-  index: /mainframe/dev/
-  enabled: true
-  children:
-  - name: sites
-    title: Данные
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/dev/sites/
-    enabled: true
-    children:
-    - name: storages
-      title: Хранилища
-      description: Редактор хранилищ данных. Создавайте хранилища для материалов используя
-        удобный интерфейс
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/storages/")
-      index: /mainframe/dev/sites/storages/
-      enabled: true
-      children: []
-    - name: sources
-      title: Источники данных
-      description: Создайте справочники. Внимание! Справочник - это не хранилище,
-        таблица для хранения данных должна уже существовать
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/sources/")
-      index: /mainframe/dev/sites/sources/
-      enabled: true
-      children: []
-  - name: settings
-    title: Настройки
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/dev/settings/
-    enabled: true
-    children:
-    - name: remote
-      title: Удаленное файловое хранилище
-      description: Настройки удаленного хранилища файлов. Адрес и тип подключения
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/remote/")
-      index: /mainframe/dev/settings/remote/
-      enabled: true
-      children: []
-    - name: manager
-      title: Настройки сайта
-      description: Менеджер настроек. Можно создать настройку, которую в дальнейшем
-        использовать при разработке или выводе информации на проекте
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/manager/")
-      index: /mainframe/dev/settings/manager/
-      enabled: true
-      children: []
-    - name: notices
-      title: Шаблоны сообщений
-      description: Создайте шаблоны сообщений для общения с пользователем посредством
-        электронной почты
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/notices/")
-      index: /mainframe/dev/settings/notices/
-      enabled: true
-      children: []
   - name: view
     title: Внешний вид
     description: ""
     class: ""
     important: false
     execute: ""
-    index: /mainframe/dev/view/
+    index: /mainframe/more/view/
     enabled: true
     children:
     - name: themes
@@ -260,7 +241,7 @@ children:
       class: ""
       important: false
       execute: Tools.RouteTo("/themes/site/")
-      index: /mainframe/dev/view/themes/
+      index: /mainframe/more/view/themes/
       enabled: true
       children: []
     - name: nightmode
@@ -270,7 +251,7 @@ children:
       class: ""
       important: false
       execute: Tools.RouteTo("/themes/nightmode/")
-      index: /mainframe/dev/view/nightmode/
+      index: /mainframe/more/view/nightmode/
       enabled: true
       children: []
 ...
