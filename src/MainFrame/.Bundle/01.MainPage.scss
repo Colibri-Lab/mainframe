@@ -1,12 +1,5 @@
 .main-page {
-    &.app-component-shown {
-        display: grid;
-    }
-    // grid-template-rows: 60px calc(100% - 60px);
-    grid-template-rows: 42px calc(100% - 42px);
-
-    background: #ffffff;
-
+    
     width: 100%;
     height: 100%;
 
@@ -19,9 +12,60 @@
         $scrollbar-thumb-hover-color
     );
 
-    [data-object-name="page-content"] {
-        padding: 0px 60px 20px;
+    > [data-object-name="split"] {
+        width: 100%;
+        height: 100%;
+        > .app-component-split-left {
+            flex: 0 0 10%;
+        }
+        > .app-component-split-right {
+            
+        }
+        > .app-component-split-handler {
+            flex: 0 0 7px;
+            width: 7px;
+            background: #024F7B;
+        }
     }
 
-    
+    [data-object-name="left-pane"] {
+        background: #024F7B;
+        &.app-component-shown {
+            display: grid;
+        }
+        grid-template-rows: 75px calc(100% - 75px);
+    }
+
+    [data-object-name="menu"] {
+        padding: 10px;
+        > .nodes > .node > div:not([data-object-name]) span {
+            color: #ffffff;
+        }
+        .nodes .node > div:not([data-object-name]).selected {
+            background: #233a52;
+        }
+        .nodes .node > div:not([data-object-name]):hover {
+            background: #4f749b;
+        }
+        .nodes .node > div:not([data-object-name]) .expander {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.5H2C1.17157 0.5 0.5 1.17157 0.5 2V10C0.5 10.8284 1.17157 11.5 2 11.5H10C10.8284 11.5 11.5 10.8284 11.5 10V2C11.5 1.17157 10.8284 0.5 10 0.5Z' stroke='white'/%3E%3Cpath d='M8.76929 5.53845H3.23083C2.97593 5.53845 2.76929 5.74509 2.76929 5.99999V5.99999C2.76929 6.25489 2.97593 6.46153 3.23083 6.46153H8.76929C9.02419 6.46153 9.23083 6.25489 9.23083 5.99999C9.23083 5.74509 9.02419 5.53845 8.76929 5.53845Z' fill='white'/%3E%3Cpath d='M5.99999 2.76923H5.99999C5.74509 2.76923 5.53845 2.97586 5.53845 3.23076V8.76923C5.53845 9.02413 5.74509 9.23077 5.99999 9.23077C6.25489 9.23077 6.46153 9.02413 6.46153 8.76923V3.23076C6.46153 2.97586 6.25489 2.76923 5.99999 2.76923Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+        .nodes .expanded > div:not([data-object-name]) > .expander {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.5H2C1.17157 0.5 0.5 1.17157 0.5 2V10C0.5 10.8284 1.17157 11.5 2 11.5H10C10.8284 11.5 11.5 10.8284 11.5 10V2C11.5 1.17157 10.8284 0.5 10 0.5Z' stroke='white'/%3E%3Cpath d='M8.76904 5.53845H3.23058C2.97568 5.53845 2.76904 5.74509 2.76904 5.99999V5.99999C2.76904 6.25489 2.97568 6.46153 3.23058 6.46153H8.76904C9.02394 6.46153 9.23058 6.25489 9.23058 5.99999C9.23058 5.74509 9.02394 5.53845 8.76904 5.53845Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+        .nodes .is-leaf > div:not([data-object-name]) > .expander {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.5H2C1.17157 0.5 0.5 1.17157 0.5 2V10C0.5 10.8284 1.17157 11.5 2 11.5H10C10.8284 11.5 11.5 10.8284 11.5 10V2C11.5 1.17157 10.8284 0.5 10 0.5Z' stroke='white'/%3E%3Cpath d='M8 6C8 4.89543 7.10457 4 6 4C4.89543 4 4 4.89543 4 6C4 7.10457 4.89543 8 6 8C7.10457 8 8 7.10457 8 6Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+        .node {
+            span {
+                color: #ffffff;
+            }
+        }
+        svg {
+            path {
+                fill: #ffffff;
+            }
+        }
+    }
+
 }

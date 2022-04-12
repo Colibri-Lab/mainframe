@@ -1,7 +1,7 @@
 .app-main-tabs-component {
     width: 100%;
     > .tabs-header-container {
-        background: #4f7083;
+        background: #024F7B;
         border-bottom: 0px;
         width: 100%;
 
@@ -17,9 +17,9 @@
             overflow-x: auto;
             @include custom-scroll(
                 1px,
-                #4f7083,
-                #97aab4,
-                #97aab4);
+                #024F7B,
+                #4081a7,
+                #4081a7);
 
             > * {
                 display: flex;
@@ -27,30 +27,17 @@
                 justify-content: center;
                 padding: 0px 13px;
                 cursor: pointer;
-                border-right: 1px solid #5c8094;
+                border-right: 1px solid #4081a7;
                 margin: 0px;
                 color: white;
                 font-weight: normal;
-                [data-object-name$="-color"].orange {
-                    width: 10px;
-                    height: 10px;
-                    background: orange;
-                    border-radius: 2px;
+                [data-object-name$="-icon"] {
                     margin-right: 5px;
-                }
-                [data-object-name$="-color"].blue {
-                    width: 10px;
-                    height: 10px;
-                    background: blue;
-                    border-radius: 2px;
-                    margin-right: 5px;
-                }
-                [data-object-name$="-color"].gray {
-                    width: 10px;
-                    height: 10px;
-                    background: gray;
-                    border-radius: 2px;
-                    margin-right: 5px;
+                    svg {
+                        path {
+                            fill: #ffffff;
+                        }
+                    }
                 }
                 [data-object-name$="-text"] {
                     white-space: nowrap;
@@ -75,8 +62,12 @@
                     background: white;
                     border-bottom: 0px;
                     color: black;
-                    &.secondary {
-                        background: #F5F6FA;
+                    [data-object-name$="-icon"] {
+                        svg {
+                            path {
+                                fill: #000000;
+                            }
+                        }
                     }
                 }
                 
@@ -102,13 +93,6 @@
         }
     }
     >.tabs-container {
-        padding-top: 0px;
-        > .app-component-pane {
-            padding: 20px 60px 0 57px;
-            overflow: auto;
-            &.secondary {
-                background: #F5F6FA;
-            }
-        }
+        padding: 20px;
     }
 }

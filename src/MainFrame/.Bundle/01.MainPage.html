@@ -1,4 +1,9 @@
 <div ComponentName="App.Modules.MainFrame.MainPage" class="main-page">
-    <component Component="App.Modules.MainFrame.Header" name="app-module-header" shown="true" />
-    <component Component="App.Modules.MainFrame.MainTabs" name="page-content-tabs" shown="true" />
+    <component Component="Colibri.UI.Split" shown="true" name="split">
+        <component Component="Colibri.UI.Pane" name="left-pane" shown="true">
+            <component Component="App.Modules.MainFrame.UserProfile" name="user" shown="true" />        
+            <component Component="App.Modules.MainFrame.MainMenuTree" name="menu" shown="true" binding="app.settings.mainframe.menu" />    
+        </component>
+        <component Component="App.Modules.MainFrame.MainTabs" shown="true" name="main-tabs" />
+    </component>
 </div>

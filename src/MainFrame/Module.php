@@ -89,12 +89,10 @@ class Module extends BaseModule
         }
 
         $menu->Add([
-            Item::Create('struct', 'Структура', '', 'green', false, ''),
-            Item::Create('dev', 'Разработка', '', 'orange', false, ''),
-            Item::Create('more', 'ЕЩЕ', '', '', false, '')->Add(
-                Item::Create('tools', 'Инструменты', '', '', false, '')->Add(
-                    Item::Create('menu', 'Редактор меню', 'Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты', '', true, 'MainFrame.RouteTo("/menu/")')
-                )
+            Item::Create('struct', 'Структура', '', 'App.Modules.MainFrame.Icons.StructureIcon', ''),
+            Item::Create('dev', 'Разработка', '', 'App.Modules.MainFrame.Icons.DevIcon', ''),
+            Item::Create('more', 'Инструменты', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')->Add(
+                Item::Create('menu', 'Редактор меню', 'Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты', 'App.Modules.MainFrame.Icons.MenuIcon', '')
             )
         ]);
 

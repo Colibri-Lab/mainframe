@@ -2,247 +2,148 @@
 name: mainframe
 title: Приложение
 description: Функции приложения
-class: ""
-important: false
 execute: ""
+icon: ""
 index: /mainframe/
 enabled: true
 children:
 - name: struct
   title: Структура
   description: ""
-  class: ""
-  important: false
   execute: ""
+  icon: App.Modules.MainFrame.Icons.StructureIcon
   index: /mainframe/struct/
   enabled: true
   children:
-  - name: sites
-    title: Сайты и разделы
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/struct/sites/
+  - name: structure
+    title: Структура сайта
+    description: Структура проекта, папки и конечные страницы, публикация данных
+    execute: App.Modules.Sites.StructurePage
+    icon: App.Modules.Sites.Icons.FoldersIcon
+    index: /mainframe/struct/structure/
     enabled: true
-    children:
-    - name: structure
-      title: Структура сайта
-      description: Структура проекта, папки и конечные страницы, публикация данных
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/structure/")
-      index: /mainframe/struct/sites/structure/
-      enabled: true
-      children: []
-    - name: data
-      title: Материалы
-      description: Редактор материалов, которые содержатся в хранилищах данных
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/data/")
-      index: /mainframe/struct/sites/data/
-      enabled: true
-      children: []
-    - name: settings
-      title: Настройки
-      description: Настройки сайта<br />Здесь можно отредактировать некоторые настройки,
-        предварительно созданные менеджером в менеджере настроек
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/data/")
-      index: /mainframe/struct/sites/settings/
-      enabled: true
-      children: []
-  - name: files
-    title: Файлы
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/struct/files/
+    children: []
+  - name: data
+    title: Материалы
+    description: Редактор материалов, которые содержатся в хранилищах данных
+    execute: App.Modules.Sites.DataPage
+    icon: App.Modules.Sites.Icons.StoragesIcon
+    index: /mainframe/struct/data/
     enabled: true
-    children:
-    - name: disk
-      title: На сервере
-      description: Файлы находящиеся на текущем сервере, на локальной машине. Можно
-        добавить или удалить ненужные файлы. Внимание! При удалении файлов, нужно
-        учесть, что некоторые строки в хранилищах могут ссылаться на них
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/files/disk/")
-      index: /mainframe/struct/files/disk/
-      enabled: true
-      children: []
-    - name: remote
-      title: Удаленные
-      description: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или
-        очистить их при необходимости
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/files/remote/")
-      index: /mainframe/struct/files/remote/
-      enabled: true
-      children: []
+    children: []
+  - name: settings
+    title: Настройки
+    description: Настройки сайта<br />Здесь можно отредактировать некоторые настройки,
+      предварительно созданные менеджером в менеджере настроек
+    execute: App.Modules.Tools.SettingsDataPage
+    icon: App.Modules.Tools.Icons.SettingsIcon
+    index: /mainframe/struct/settings/
+    enabled: true
+    children: []
+  - name: disk
+    title: Файлы на диске
+    description: Файлы находящиеся на текущем сервере, на локальной машине. Можно
+      добавить или удалить ненужные файлы. Внимание! При удалении файлов, нужно учесть,
+      что некоторые строки в хранилищах могут ссылаться на них
+    execute: App.Modules.Tools.FilesPage
+    icon: App.Modules.Tools.Icons.FilesIcon
+    index: /mainframe/struct/disk/
+    enabled: true
+    children: []
+  - name: remote
+    title: Хранилище медиа
+    description: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или
+      очистить их при необходимости
+    execute: App.Modules.Tools.RemoteFilesSettingsPage
+    icon: App.Modules.Tools.Icons.FilesIcon
+    index: /mainframe/struct/remote/
+    enabled: true
+    children: []
 - name: dev
   title: Разработка
   description: ""
-  class: ""
-  important: false
   execute: ""
+  icon: App.Modules.MainFrame.Icons.DevIcon
   index: /mainframe/dev/
   enabled: true
   children:
-  - name: sites
-    title: Данные
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/dev/sites/
+  - name: storages
+    title: Хранилища
+    description: Редактор хранилищ данных. Создавайте хранилища для материалов используя
+      удобный интерфейс
+    execute: App.Modules.Sites.StoragesPage
+    icon: App.Modules.Sites.Icons.StoragesIcon
+    index: /mainframe/dev/storages/
     enabled: true
-    children:
-    - name: storages
-      title: Хранилища
-      description: Редактор хранилищ данных. Создавайте хранилища для материалов используя
-        удобный интерфейс
-      class: ""
-      important: false
-      execute: Sites.RouteTo("/storages/")
-      index: /mainframe/dev/sites/storages/
-      enabled: true
-      children: []
-  - name: settings
-    title: Настройки
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/dev/settings/
+    children: []
+  - name: manager
+    title: Настройки сайта
+    description: Менеджер настроек. Можно создать настройку, которую в дальнейшем
+      использовать при разработке или выводе информации на проекте
+    execute: App.Modules.Tools.SettingsManagerPage
+    icon: App.Modules.Tools.Icons.SettingsIcon
+    index: /mainframe/dev/manager/
     enabled: true
-    children:
-    - name: manager
-      title: Настройки сайта
-      description: Менеджер настроек. Можно создать настройку, которую в дальнейшем
-        использовать при разработке или выводе информации на проекте
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/manager/")
-      index: /mainframe/dev/settings/manager/
-      enabled: true
-      children: []
-    - name: notices
-      title: Шаблоны сообщений
-      description: Создайте шаблоны сообщений для общения с пользователем посредством
-        электронной почты
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/settings/notices/")
-      index: /mainframe/dev/settings/notices/
-      enabled: true
-      children: []
+    children: []
+  - name: notices
+    title: Шаблоны сообщений
+    description: Создайте шаблоны сообщений для общения с пользователем посредством
+      электронной почты
+    execute: App.Modules.Tools.NoticesPage
+    icon: App.Modules.Tools.Icons.NoticesIcon
+    index: /mainframe/dev/notices/
+    enabled: true
+    children: []
 - name: more
-  title: ЕЩЕ
+  title: Инструменты
   description: ""
-  class: ""
-  important: false
   execute: ""
+  icon: App.Modules.MainFrame.Icons.MoreIcon
   index: /mainframe/more/
   enabled: true
   children:
-  - name: tools
-    title: Инструменты
-    description: ""
-    class: ""
-    important: false
+  - name: menu
+    title: Редактор меню
+    description: Редактор древовидного меню панели администратора. Можно поменять
+      местами, скрыть или отобразить некоторые пункты
     execute: ""
-    index: /mainframe/more/tools/
+    icon: App.Modules.MainFrame.Icons.MenuIcon
+    index: /mainframe/more/menu/
     enabled: true
-    children:
-    - name: menu
-      title: Редактор меню
-      description: Редактор древовидного меню панели администратора. Можно поменять
-        местами, скрыть или отобразить некоторые пункты
-      class: ""
-      important: false
-      execute: MainFrame.RouteTo("/menu/")
-      index: /mainframe/more/tools/menu/
-      enabled: true
-      children: []
-    - name: backup
-      title: Слепки системы
-      description: Создайте точку восстановления на случай критических ситуаций. В
-        дальнейшем можно будет вернуть данные из полученного файла
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/backup/")
-      index: /mainframe/more/tools/backup/
-      enabled: true
-      children: []
-    - name: execute
-      title: Выполнить
-      description: Выполнить код (PHP). Внимание! Код исполняется в окружении всего
-        проекта, возможны необратимые повреждения!
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/execute/")
-      index: /mainframe/more/tools/execute/
-      enabled: true
-      children: []
-  - name: security
-    title: Безопасность
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/more/security/
+    children: []
+  - name: users
+    title: Пользователи и роли
+    description: Административная панель, пользователи и роли
+    execute: App.Modules.Security.AdministratePage
+    icon: App.Modules.Security.Icons.UserAndRolesIcon
+    index: /mainframe/more/users/
     enabled: true
-    children:
-    - name: profile
-      title: Личный кабинет
-      description: Ваш личный кабинет - профиль. Можно изменить ФИО и аватар
-      class: ""
-      important: false
-      execute: Security.RouteTo("/profile/")
-      index: /mainframe/more/security/profile/
-      enabled: true
-      children: []
-    - name: users
-      title: Администрирование
-      description: Административная панель, пользователи и роли
-      class: ""
-      important: false
-      execute: Security.RouteTo("/administrate/")
-      index: /mainframe/more/security/users/
-      enabled: true
-      children: []
-  - name: view
-    title: Внешний вид
-    description: ""
-    class: ""
-    important: false
-    execute: ""
-    index: /mainframe/more/view/
+    children: []
+  - name: backup
+    title: Слепки системы
+    description: Создайте точку восстановления на случай критических ситуаций. В дальнейшем
+      можно будет вернуть данные из полученного файла
+    execute: App.Modules.Tools.BackupPage
+    icon: App.Modules.Tools.Icons.BackupIcon
+    index: /mainframe/more/backup/
     enabled: true
-    children:
-    - name: themes
-      title: Темы сайта
-      description: Настройте внешний вид сайта. Можно создать новую тему, или отредактировать
-        существующую
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/themes/site/")
-      index: /mainframe/more/view/themes/
-      enabled: true
-      children: []
-    - name: nightmode
-      title: Темный режим панели администратора
-      description: Настройка темной темы панели администратора. Можно изменить цвета
-        выделений, цвет подложки и т.д.
-      class: ""
-      important: false
-      execute: Tools.RouteTo("/themes/nightmode/")
-      index: /mainframe/more/view/nightmode/
-      enabled: true
-      children: []
+    children: []
+  - name: execute
+    title: Выполнить
+    description: Выполнить код (PHP). Внимание! Код исполняется в окружении всего
+      проекта, возможны необратимые повреждения!
+    execute: App.Modules.Tools.ExecutePHPPage
+    icon: App.Modules.Tools.Icons.ExecuteIcon
+    index: /mainframe/more/execute/
+    enabled: true
+    children: []
+  - name: themes
+    title: Темы сайта
+    description: Настройте внешний вид сайта. Можно создать новую тему, или отредактировать
+      существующую
+    execute: App.Modules.Tools.ThemesPage
+    icon: App.Modules.Tools.Icons.ThemesIcon
+    index: /mainframe/more/themes/
+    enabled: true
+    children: []
 ...

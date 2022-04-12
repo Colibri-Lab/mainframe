@@ -4,18 +4,22 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
         this.AddClass('app-main-tabs-component');
         this.handleResize = true;
 
-        this.Children('search-button').AddHandler('Clicked', (event, args) => this.Dispatch('SearchButtonClicked'));
+        this._localStore = [];
 
-        this.AddHandler('Resized', (event, args) => {
-            this.header.css('width', (window.innerWidth - this.links.bounds().outerWidth) + 'px');
-        });
-        Colibri.Common.Wait(() => this.links.isConnected && this.links.bounds().outerWidth > 0, 15000, 200).then(() => this.Dispatch('Resized')); 
+        this.Children('search-button').AddHandler('Clicked', (event, args) => this.Dispatch('SearchButtonClicked'));
 
         this.header.addEventListener('mousewheel', (e) => {
             this.header.scrollLeft += e.deltaY;
             return false;
         });
 
+        this.RestoreFromLocalStore();
+
+    }
+
+    set width(value) {
+        super.width = value;
+        this.header.css('width', (super.width - this.links.bounds().outerWidth) + 'px');
     }
 
     _registerEvents() {
@@ -24,20 +28,28 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
         
     }
 
-    _createTabButton(name, title, color, closable, componentContainer, closeClicked = null) {
-        const tabButton = new App.Modules.MainFrame.MainTabs.Button(name, this.header);
+    _createTabButton(title, route, icon, containerComponent) {
+        const tabButton = new App.Modules.MainFrame.MainTabs.Button(route.replaceAll('/', '_'), this.header);
         tabButton.value = title;
-        tabButton.closable = closable;
+        tabButton.closable = true;
         tabButton.parent = this;
-        tabButton.color = color;
-        tabButton.contentContainer = componentContainer;
-        componentContainer.tabButton = tabButton;
+        tabButton.icon = icon;
+        tabButton.tag = {title: title, route: route, icon: icon, container: containerComponent};
+        tabButton.AddHandler('MouseUp', (event, args) => {
+            console.log(args.domEvent.button);
+            if(args.domEvent.button === 1) {
+                tabButton.Dispatch('CloseClicked', args);
+            }
+        });
         tabButton.AddHandler('CloseClicked', (event, args) => {
+
+            this.RemoveFromLocalStore(route);
+
             const currentIndex = tabButton.container.index();
 
-            closeClicked && closeClicked();
             tabButton.Dispose();
-            componentContainer.Dispose();
+            containerComponent.Dispose();
+
 
             if(currentIndex == 0 && this.tabsCount > 0) {
                 this.selectedIndex = 0;
@@ -56,16 +68,57 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
         tabButton.AddHandler('Clicked', (event, args) => {
             return this.Dispatch('TabClicked', {domEvent: args.domEvent, tab: event.sender}); 
         });
+        this.Dispatch('TabClicked', {tab: tabButton});
         return tabButton;
     }
     
-    AddTab(name, title, color, closable, componentContainer, closeClicked = null, index = null) {
-        const tabButton = this._createTabButton(name, title, color, closable, componentContainer, closeClicked);
-        this.Children(tabButton.name, tabButton, index, this.header);
-        this.Children(componentContainer.name, componentContainer);
-        this.header.scrollLeft = tabButton.container.bounds().left - this.links.bounds().outerWidth;
+    AddTab(title, route, icon, containerComponent) {
+
+        const tabName = route.replaceAll('/', '_');
+        let tabButton = this.Children(tabName); 
+        if(tabButton) {
+            this.selectedTab = tabName;
+        }
+        else {
+            const container = new containerComponent(tabName + '_container', this.container);
+            tabButton = this._createTabButton(title, route, icon, container);
+            this.Children(tabButton.name, tabButton, undefined, this.header);
+            this.Children(container.name, container);
+            this.header.scrollLeft = tabButton.container.bounds().left - this.links.bounds().outerWidth;
+            this.selectedIndex = this.tabsCount - 1;
+
+            this.SaveToLocalStore(route);
+
+        }
+
     }
 
+    RemoveFromLocalStore(route) {
+        const index = this._localStore.indexOf(route);
+        this._localStore.splice(index, 1);
+        window.localStorage.setItem('open-tabs', JSON.stringify(this._localStore));
+    }
+
+    SaveToLocalStore(route) {
+        const index = this._localStore.indexOf(route);
+        if(index !== -1) {
+            return;
+        }
+    
+        this._localStore.push(route);
+        window.localStorage.setItem('open-tabs', JSON.stringify(this._localStore));
+    }
+
+    RestoreFromLocalStore() {
+        this._localStore = JSON.parse(window.localStorage.getItem('open-tabs'));
+        if(!Array.isArray(this._localStore)) {
+            this._localStore = [];
+        }
+    }
+
+    get savedTabs() {
+        return this._localStore;
+    }
 
 }
 
@@ -75,12 +128,12 @@ App.Modules.MainFrame.MainTabs.Button = class extends Colibri.UI.Button {
         super(name, container);
         this.AddClass('app-tab-button-component');
 
-        this._colorObject = new Colibri.UI.TextSpan(this.name + '-color', this);
+        this._iconObject = new Colibri.UI.Icon(this.name + '-icon', this);
         this._textObject = new Colibri.UI.TextSpan(this.name + '-text', this);
         this._closeObject = new Colibri.UI.Icon(this.name + '-close', this);
         this._closeObject.value = Colibri.UI.CloseIcon;
 
-        this._colorObject.shown = this._textObject.shown = this._closeObject.shown = true;
+        this._iconObject.shown = this._textObject.shown = this._closeObject.shown = true;
 
         this._color = null;
 
@@ -105,13 +158,12 @@ App.Modules.MainFrame.MainTabs.Button = class extends Colibri.UI.Button {
         this._closeObject.shown = value;
     }
 
-    set color(value) {
-        this._color = value;
-        this._colorObject.AddClass(value);
+    set icon(value) {
+        this._iconObject.value = value;
     }
 
-    get color() {
-        return this._color;
+    get icon() {
+        return this._iconObject.icon;
     }
 
     get value() {
