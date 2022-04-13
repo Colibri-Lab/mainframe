@@ -48,7 +48,6 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
             tabButton.Dispose();
             containerComponent.Dispose();
 
-
             if(currentIndex == 0 && this.tabsCount > 0) {
                 this.selectedIndex = 0;
             }
@@ -64,9 +63,14 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
             return false;
         });
         tabButton.AddHandler('Clicked', (event, args) => {
-            return this.Dispatch('TabClicked', {domEvent: args.domEvent, tab: event.sender}); 
+            return this.Dispatch('TabClicked', {domEvent: args?.domEvent, tab: event.sender}); 
         });
         this.Dispatch('TabClicked', {tab: tabButton});
+        tabButton.Redirect = (route) => {
+            this.ReplaceInLocalStore(tabButton.tag.route, route);
+            tabButton.tag.route = route;
+            this.Dispatch('SelectionChanged', {tab: tabButton}); 
+        };
         return tabButton;
     }
     
@@ -80,6 +84,7 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
         else {
             const container = new containerComponent(tabName + '_container', this.container);
             tabButton = this._createTabButton(title, route, icon, container);
+            container.tab = tabButton;
             this.Children(tabButton.name, tabButton, undefined, this.header);
             this.Children(container.name, container);
             this.header.scrollLeft = tabButton.container.bounds().left - this.links.bounds().outerWidth;
@@ -94,6 +99,17 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     RemoveFromLocalStore(route) {
         const index = this._localStore.indexOf(route);
         this._localStore.splice(index, 1);
+        window.localStorage.setItem('open-tabs', JSON.stringify(this._localStore));
+    }
+
+    ReplaceInLocalStore(route1, route2) {
+
+        const index = this._localStore.indexOf(route1);
+        if(index === -1) {
+            return;
+        }
+    
+        this._localStore.splice(index, 1, route2);
         window.localStorage.setItem('open-tabs', JSON.stringify(this._localStore));
     }
 

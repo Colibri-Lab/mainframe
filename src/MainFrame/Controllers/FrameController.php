@@ -51,7 +51,8 @@ class FrameController extends Controller
                     ],
                 ],
             ]),
-            'hosts' => $appConfig->Query('hosts')->AsArray()
+            'hosts' => $appConfig->Query('hosts')->AsArray(),
+            'res' => '/'.$appConfig->Query('res')->GetValue()
         ]);
 
 

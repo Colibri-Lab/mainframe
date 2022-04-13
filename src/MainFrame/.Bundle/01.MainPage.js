@@ -121,8 +121,12 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     __nodesLoaded(event, args) {
         for(const route of this._tabs.savedTabs) {
             for(const node of this._menu.allNodes) {
-                if(node.tag.index == route) {
-                    MainFrame.OpenTab(node.tag.title, node.tag.index, eval(node.tag.icon), eval(node.tag.execute));
+                let check = route;
+                if(route.indexOf('?') !== -1) {
+                    check = check.split('?')[0];
+                }
+                if(node.tag.index === check) {
+                    MainFrame.OpenTab(node.tag.title, route, eval(node.tag.icon), eval(node.tag.execute));
                     break;
                 }
             };
