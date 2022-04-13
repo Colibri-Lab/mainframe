@@ -87,9 +87,8 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         }
 
         const menuItem = node?.tag;
-        
         MainFrame.OpenTab(menuItem.title, menuItem.index, eval(menuItem.icon), eval(menuItem.execute));
-
+        
     }
 
     __toolbarButtonClicked(event, args) {
@@ -99,8 +98,12 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         }
 
         const menuItem = button?.tag;
-        MainFrame.OpenTab(menuItem.title, menuItem.index, eval(menuItem.icon), eval(menuItem.execute));
-
+        if(!menuItem) {
+            Security.ShowProfileWindow();
+        }
+        else {
+            MainFrame.OpenTab(menuItem.title, menuItem.index, eval(menuItem.icon), eval(menuItem.execute));
+        }
     }
 
     __logoutClicked(event, args) {
