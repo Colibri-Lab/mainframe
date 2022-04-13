@@ -56,6 +56,11 @@
                     }
                     &:hover {
                         opacity: .99;
+                        svg {
+                            path {
+                                fill: #ffffff;
+                            }
+                        }
                     }
                 }
                 &.tab-selected {
@@ -69,6 +74,15 @@
                             }
                         }
                     }
+                    [data-object-name$="-close"] {
+                        opacity: .99;
+                        svg {
+                            path {
+                                fill: #000000;
+                            }
+                        }
+                    }
+                    
                 }
                 
             }
@@ -77,19 +91,7 @@
             order: 1;
             padding-left: 0px;
             margin-right: 0px;
-            [data-object-name="search-button"] {
-                padding: 0px 13px;
-                cursor: pointer;
-                padding-left: 20px;
-                padding-right: 20px;
-                svg {
-                    width: 16px;
-                    height: 16px;
-                    path, rect {
-                        stroke: white;
-                    }
-                }
-            }
+            border-left: 1px solid #4081a7;
         }
     }
     >.tabs-container {

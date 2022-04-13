@@ -6,8 +6,6 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
 
         this._localStore = [];
 
-        this.Children('search-button').AddHandler('Clicked', (event, args) => this.Dispatch('SearchButtonClicked'));
-
         this.header.addEventListener('mousewheel', (e) => {
             this.header.scrollLeft += e.deltaY;
             return false;
