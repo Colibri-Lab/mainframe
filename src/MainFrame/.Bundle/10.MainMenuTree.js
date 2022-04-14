@@ -17,6 +17,7 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
             newNode.text = item.title;
             newNode.isLeaf = item.children.length == 0;
             newNode.icon = eval(item.icon);
+            // newNode.toolTip = item.description;
             newNode.tag = item;
             
             this._renderLevel(item.children, newNode);

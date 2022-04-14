@@ -55,8 +55,16 @@ children:
     description: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или
       очистить их при необходимости
     execute: App.Modules.Tools.RemoteFilesSettingsPage
-    icon: App.Modules.Tools.Icons.FilesIcon
+    icon: App.Modules.Tools.Icons.RemoteFilesIcon
     index: /mainframe/struct/remote/
+    enabled: true
+    children: []
+  - name: pockets
+    title: Кошельки
+    description: Список кошельков, менеджмент и всякая фигня
+    execute: App.Modules.Pocket.PocketsPage
+    icon: App.Modules.Pocket.Icons.PocketIcon
+    index: /mainframe/struct/pockets/
     enabled: true
     children: []
 - name: dev
@@ -72,7 +80,7 @@ children:
     description: Редактор хранилищ данных. Создавайте хранилища для материалов используя
       удобный интерфейс
     execute: App.Modules.Sites.StoragesPage
-    icon: App.Modules.Sites.Icons.StoragesIcon
+    icon: App.Modules.Sites.Icons.StoragesManageIcon
     index: /mainframe/dev/storages/
     enabled: true
     children: []
@@ -144,6 +152,14 @@ children:
     execute: App.Modules.Tools.ThemesPage
     icon: App.Modules.Tools.Icons.ThemesIcon
     index: /mainframe/more/themes/
+    enabled: true
+    children: []
+  - name: pockets
+    title: Настройки кошельков
+    description: Настройки системы оплаты
+    execute: App.Modules.Pocket.SettingsPage
+    icon: App.Modules.Pocket.Icons.PocketsSettingsIcon
+    index: /mainframe/more/pockets/
     enabled: true
     children: []
 ...
