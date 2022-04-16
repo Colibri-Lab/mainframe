@@ -102,6 +102,7 @@ class Installer
         $targetDir = './web/res/img/';
 
         self::_copyOrSymlink($mode, $sourcePath, $targetDir, 'mainframe-logo-colibri.svg', 'mainframe-logo-colibri.svg');
+        self::_copyOrSymlink($mode, $sourcePath, $targetDir, 'loading-icon.svg', 'loading-icon.svg');
         print_r('Установка завершена'."\n");
  
     }

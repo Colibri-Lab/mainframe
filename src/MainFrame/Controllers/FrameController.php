@@ -26,9 +26,8 @@ class FrameController extends Controller
         $menu = Module::$instance->GetTopmostMenu(true);
 
         $result = array_merge(
-            $appConfig->Query('settings')->AsArray(),
-        [
-            'mainframe' => array_merge($mainframeConfig->Query('config')->AsArray(), [
+            $mainframeConfig->Query('config')->AsArray(), 
+            [
                 'menu' => $menu,
                 'links' => [
                     (object)[
@@ -50,11 +49,8 @@ class FrameController extends Controller
                         'enabled' => true
                     ],
                 ],
-            ]),
-            'hosts' => $appConfig->Query('hosts')->AsArray(),
-            'res' => '/'.$appConfig->Query('res')->GetValue()
-        ]);
-
+            ]
+        );
 
         return $this->Finish(200, 'Settings', $result);
     }

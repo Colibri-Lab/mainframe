@@ -17,10 +17,13 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
         App.AddHandler('ApplicationReady', (event, args) => {
 
-            App.Store.AddPathHandler('app.settings', (settings) => {
+            App.Store.AddPathHandler('app.settings.mainframe', (settings) => {
+                if(!settings || Object.countKeys(settings) == 0) {
+                    return;
+                }
 
-                const renderHandler = (userData) => (userData && userData.id && userData.id > 0) && this.Render(document.body, settings.mainframe['user-store']);
-                const userStorePoint = settings.mainframe['user-store'];
+                const renderHandler = (userData) => (userData && userData.id && userData.id > 0) && this.Render(document.body, settings['user-store']);
+                const userStorePoint = settings['user-store'];
                 const userData = App.Store.Query(userStorePoint);
                 if(userData && userData.id && userData.id > 0) {
                     renderHandler(userData);
@@ -66,7 +69,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         this.Call('Frame', 'Settings').then((response) => {
 
             if(response.status == 200) {
-                App.Store.Set('app.settings', response.result);
+                App.Store.Set('app.settings.mainframe', response.result);
             }
             else {
                 App.Notices.Add({
