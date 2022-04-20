@@ -67,6 +67,22 @@ children:
     index: /mainframe/struct/pockets/
     enabled: true
     children: []
+  - name: commerce-catalogue
+    title: Каталог
+    description: Список категорий, торговые марки
+    execute: App.Modules.Commerce.CataloguePage
+    icon: App.Modules.Commerce.Icons.CatalogueIcon
+    index: /mainframe/struct/commerce-catalogue/
+    enabled: true
+    children: []
+  - name: commerce-products
+    title: Товары/Предложения
+    description: Предложения магазинов
+    execute: App.Modules.Commerce.ProductsPage
+    icon: App.Modules.Commerce.Icons.ProductsIcon
+    index: /mainframe/struct/commerce-products/
+    enabled: true
+    children: []
 - name: dev
   title: Разработка
   description: ""
@@ -160,6 +176,14 @@ children:
     execute: App.Modules.Pocket.SettingsPage
     icon: App.Modules.Pocket.Icons.PocketsSettingsIcon
     index: /mainframe/more/pockets/
+    enabled: true
+    children: []
+  - name: commerce
+    title: Настройки магаина
+    description: Настройки системы оплаты
+    execute: App.Modules.Commerce.SettingsPage
+    icon: App.Modules.Commerce.Icons.CommerceSettingsIcon
+    index: /mainframe/more/commerce/
     enabled: true
     children: []
 ...
