@@ -186,4 +186,12 @@ children:
     index: /mainframe/more/commerce/
     enabled: true
     children: []
+  - name: lang
+    title: Настройки языков
+    description: Настройки языков, интерфейсные тексты
+    execute: App.Modules.Lang.SettingsPage
+    icon: App.Modules.Lang.Icons.LangSettingsIcon
+    index: /mainframe/more/lang/
+    enabled: true
+    children: []
 ...
