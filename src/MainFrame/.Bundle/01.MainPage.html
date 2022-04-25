@@ -1,19 +1,19 @@
 <div ComponentName="App.Modules.MainFrame.MainPage" class="main-page">
-    <component Component="Colibri.UI.Split" shown="true" name="split">
-        <component Component="Colibri.UI.Pane" name="left-pane" shown="true">
-            <component Component="Colibri.UI.Pane" name="expanded" shown="true">
-                <component Component="App.Modules.Security.UserProfile" name="user" shown="true" />        
-                <component Component="App.Modules.MainFrame.MainMenuTree" name="menu" shown="true" binding="app.settings.mainframe.menu" />
-            </component>
-            <component Component="App.Modules.MainFrame.MainMenuToolbar" name="collapsed" shown="false" orientation="vertical" binding="app.settings.mainframe.menu" />
-        </component>
-        <component Component="App.Modules.MainFrame.MainTabs" shown="true" name="main-tabs">
+    <Split shown="true" name="split">
+        <Pane name="left-pane" shown="true">
+            <Pane name="expanded" shown="true">
+                <App.Modules.Security.UserProfile name="user" shown="true" />        
+                <App.Modules.MainFrame.MainMenuTree name="menu" shown="true" binding="app.settings.mainframe.menu" />
+            </Pane>
+            <App.Modules.MainFrame.MainMenuToolbar name="collapsed" shown="false" orientation="vertical" binding="app.settings.mainframe.menu" />
+        </Pane>
+        <App.Modules.MainFrame.MainTabs shown="true" name="main-tabs">
             <component-links>
-                <component Component="Colibri.UI.Icon" name="toolbar-button-collapse" shown="true" iconSVG="App.Modules.MainFrame.Icons.ToolbarIcon" fill="white" />
-                <component Component="Colibri.UI.Icon" name="toolbar-button-expand" shown="false" iconSVG="App.Modules.MainFrame.Icons.MenuIcon" fill="white" />
-                <component Component="Colibri.UI.Icon" name="search-button" shown="true" iconSVG="Colibri.UI.SearchIcon" />
+                <Icon name="toolbar-button-collapse" shown="true" iconSVG="App.Modules.MainFrame.Icons.ToolbarIcon" fill="white" />
+                <Icon name="toolbar-button-expand" shown="false" iconSVG="App.Modules.MainFrame.Icons.MenuIcon" fill="white" />
+                <Icon name="search-button" shown="true" iconSVG="Colibri.UI.SearchIcon" />
             </component-links>
-        </component>
+        </App.Modules.MainFrame.MainTabs>
 
-    </component>
+    </Split>
 </div>
