@@ -1,1 +1,5 @@
+user-store: app.security.user
+user-module: security
 
+menu: include(mainframe-menu.yaml)
+  
