@@ -194,4 +194,12 @@ children:
     index: /mainframe/more/lang/
     enabled: true
     children: []
+  - name: carrier-gate
+    title: Настройки CarrierGate
+    description: Настройки CarrierGate
+    execute: App.Modules.CarrierGate.SettingsPage
+    icon: App.Modules.CarrierGate.Icons.CarrierGateSettingsIcon
+    index: /mainframe/more/carrier-gate/
+    enabled: true
+    children: []
 ...
