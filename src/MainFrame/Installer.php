@@ -6,6 +6,46 @@ namespace App\Modules\MainFrame;
 class Installer
 {
 
+    private static function _loadConfig($file): array
+    {
+        return yaml_parse_file($file);
+    }
+
+    private static function _saveConfig($file, $config): void
+    {
+        yaml_emit_file($file, $config, \YAML_UTF8_ENCODING, \YAML_ANY_BREAK);
+    }
+
+    private static function _getMode($file): string
+    {
+        $appConfig = self::_loadConfig($file);
+        return $appConfig['mode'];
+    }
+
+    private static function _injectIntoModuleConfig($file): void
+    {
+
+        $modules = self::_loadConfig($file);
+        foreach($modules['entries'] as $entry) {
+            if($entry['name'] === 'MainFrame') {
+                return;
+            }
+        }
+
+        $modules['entries'][] = [
+            'name' => 'MainFrame',
+            'entry' => '\MainFrame\Module',
+            'desc' => 'Основное окно административного интерфейса',
+            'enabled' => true,
+            'visible' => false,
+            'for' => ['manage'],
+            'config' => 'include(/config/mainframe.yaml)'
+        ];
+
+        self::_saveConfig($file, $modules);
+
+    }
+
     private static function _copyOrSymlink($mode, $pathFrom, $pathTo, $fileFrom, $fileTo, $forceCopy = false): void 
     {
         print_r('Копируем '.$mode.' '.$pathFrom.' '.$pathTo.' '.$fileFrom.' '.$fileTo."\n");
@@ -43,70 +83,35 @@ class Installer
         print_r('Установка и настройка модуля Основное окно Бухсофт'."\n");
  
         $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir').'/';
-        $configDir = './config/';
- 
-        if(!file_exists($configDir.'app.yaml')) {
-            print_r('Не найден файл конфигурации app.yaml'."\n");
-            return;
-        }
- 
-        $mode = 'dev';
-        $appYamlContent = file_get_contents($configDir.'app.yaml');
-        if(preg_match('/mode: (\w+)/', $appYamlContent, $matches) >=0 ) {
-            $mode = $matches[1];
-        }
- 
         $operation = $event->getOperation();
         $installedPackage = $operation->getPackage();
         $targetDir = $installedPackage->getName();
         $path = $vendorDir.$targetDir;
         $configPath = $path.'/src/MainFrame/config-template/';
- 
-        // копируем конфиг
-        print_r('Копируем файл конфигурации'."\n");
-        if(file_exists($configDir.'mainframe.yaml')) {
-            print_r('Файл конфигурации найден, пропускаем настройку'."\n");
-            return;
-        }
-        self::_copyOrSymlink($mode, $configPath, $configDir, 'module-'.$mode.'.yaml', 'mainframe.yaml');
+        $configDir = './config/';
 
-        if(file_exists($configDir.'mainframe-menu.yaml')) {
-            print_r('Файл конфигурации найден, пропускаем настройку'."\n");
+        if(!file_exists($configDir.'app.yaml')) {
+            print_r('Не найден файл конфигурации app.yaml'."\n");
             return;
         }
+ 
+        $mode = self::_getMode($configDir.'app.yaml');
+
+        // копируем конфиг
+        print_r('Копируем файлы конфигурации'."\n");
+        self::_copyOrSymlink($mode, $configPath, $configDir, 'module-'.$mode.'.yaml', 'mainframe.yaml');
         self::_copyOrSymlink($mode, $configPath, $configDir, 'mainframe-menu.yaml', 'mainframe-menu.yaml', true);
 
-        // нужно прописать в модули
-        $modulesTargetPath = $configDir.'modules.yaml';
-        $modulesConfigContent = file_get_contents($modulesTargetPath);
-        if(strstr($modulesConfigContent, '- name: MainFrame') !== false) {
-            print_r('Модуль сконфигурирован, пропускаем'."\n");
-            return;
-        }
- 
-        $modulesConfigContent = $modulesConfigContent.'
-  - name: MainFrame
-    entry: \MainFrame\Module
-    enabled: true
-    desc: Основное окно административного интерфейса
-    visible: true
-    for:
-      - manage
-    config: include(/config/mainframe.yaml)';
-        file_put_contents($modulesTargetPath, $modulesConfigContent);
+        print_r('Встраиваем модуль'."\n");
+        self::_injectIntoModuleConfig($configDir.'modules.yaml');
  
         print_r('Установка скриптов'."\n");
-        $scriptsPath = $path.'/src/MainFrame/bin/';
-        $binDir = './bin/';
- 
-        self::_copyOrSymlink($mode, $scriptsPath, $binDir, 'mainframe-migrate.sh', 'mainframe-migrate.sh');
+        self::_copyOrSymlink($mode, $path.'/src/MainFrame/bin/', './bin/', 'mainframe-migrate.sh', 'mainframe-migrate.sh');
+
         print_r('Копирование изображений'."\n");
+        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './web/res/img/', 'mainframe-logo-colibri.svg', 'mainframe-logo-colibri.svg');
+        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './web/res/img/', 'loading-icon.svg', 'loading-icon.svg');
 
-        $sourcePath = $path.'/src/MainFrame/web/res/img/';
-        $targetDir = './web/res/img/';
-
-        self::_copyOrSymlink($mode, $sourcePath, $targetDir, 'mainframe-logo-colibri.svg', 'mainframe-logo-colibri.svg');
-        self::_copyOrSymlink($mode, $sourcePath, $targetDir, 'loading-icon.svg', 'loading-icon.svg');
         print_r('Установка завершена'."\n");
  
     }
