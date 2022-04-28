@@ -6,7 +6,7 @@ namespace App\Modules\MainFrame;
 class Installer
 {
 
-    private static function _copyOrSymlink($mode, $pathFrom, $pathTo, $fileFrom, $fileTo): void 
+    private static function _copyOrSymlink($mode, $pathFrom, $pathTo, $fileFrom, $fileTo, $forceCopy = false): void 
     {
         print_r('Копируем '.$mode.' '.$pathFrom.' '.$pathTo.' '.$fileFrom.' '.$fileTo."\n");
         if(!file_exists($pathFrom.$fileFrom)) {
@@ -19,7 +19,7 @@ class Installer
             return;
         }
 
-        if($mode === 'local') {
+        if($mode === 'local' && !$forceCopy) {
             shell_exec('ln -s '.realpath($pathFrom.$fileFrom).' '.$pathTo.($fileTo != $fileFrom ? $fileTo : ''));
         }
         else {
@@ -74,7 +74,7 @@ class Installer
             print_r('Файл конфигурации найден, пропускаем настройку'."\n");
             return;
         }
-        self::_copyOrSymlink($mode, $configPath, $configDir, 'mainframe-menu.yaml', 'mainframe-menu.yaml');
+        self::_copyOrSymlink($mode, $configPath, $configDir, 'mainframe-menu.yaml', 'mainframe-menu.yaml', true);
 
         // нужно прописать в модули
         $modulesTargetPath = $configDir.'modules.yaml';
