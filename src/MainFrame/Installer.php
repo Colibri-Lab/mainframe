@@ -26,10 +26,15 @@ class Installer
     {
 
         $modules = self::_loadConfig($file);
-        foreach($modules['entries'] as $entry) {
-            if($entry['name'] === 'MainFrame') {
-                return;
+        if(is_array($modules['entries'])) {
+            foreach($modules['entries'] as $entry) {
+                if($entry['name'] === 'MainFrame') {
+                    return;
+                }
             }
+        }
+        else {
+            $modules['entries'] = [];
         }
 
         $modules['entries'][] = [
