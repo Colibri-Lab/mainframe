@@ -88,7 +88,7 @@ class Installer
   - name: MainFrame
     entry: \MainFrame\Module
     enabled: true
-    desc: Основное окно
+    desc: Основное окно административного интерфейса
     visible: true
     for:
       - manage
