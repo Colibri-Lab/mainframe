@@ -88,6 +88,10 @@ class Installer
   - name: MainFrame
     entry: \MainFrame\Module
     enabled: true
+    desc: Основное окно
+    visible: true
+    for:
+      - manage
     config: include(/config/mainframe.yaml)';
         file_put_contents($modulesTargetPath, $modulesConfigContent);
  
