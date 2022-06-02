@@ -9,6 +9,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
     }
 
     InitializeModule() {
+        super.InitializeModule();
 
         this._mainPage = null;
 

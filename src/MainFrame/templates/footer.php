@@ -7,7 +7,8 @@ if(App::$domainKey === 'manage') {
             Colibri.Web.Router.RouteOnHash, 
             Colibri.IO.Request.RequestEncodeTypeEncrypted, 
             false, 
-            true
+            true,
+            location.protocol + '//' + document.domain
         );
     </script>
 <?php
