@@ -89,10 +89,10 @@ class Module extends BaseModule
         }
 
         $menu->Add([
-            Item::Create('struct', 'Структура', '', 'App.Modules.MainFrame.Icons.StructureIcon', ''),
-            Item::Create('dev', 'Разработка', '', 'App.Modules.MainFrame.Icons.DevIcon', ''),
-            Item::Create('more', 'Инструменты', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')->Add(
-                Item::Create('menu', 'Редактор меню', 'Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты', 'App.Modules.MainFrame.Icons.MenuIcon', '')
+            Item::Create('struct', '#{mainframe-menu-struct;Структура}', '', 'App.Modules.MainFrame.Icons.StructureIcon', ''),
+            Item::Create('dev', '#{mainframe-menu-dev;Разработка}', '', 'App.Modules.MainFrame.Icons.DevIcon', ''),
+            Item::Create('more', '#{mainframe-menu-more;Инструменты}', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')->Add(
+                Item::Create('menu', '#{mainframe-menu-more-menu;Редактор меню}', '#{mainframe-menu-more-menu;Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты}', 'App.Modules.MainFrame.Icons.MenuIcon', '')
             )
         ]);
 
@@ -111,8 +111,10 @@ class Module extends BaseModule
             }
         }
 
+        $menuArray = $menu->ToArray();
+
         // сохраняем меню в настроечный файл
-        $config = new Config($menu->ToArray());
+        $config = new Config($menuArray);
         $config->Save('mainframe-menu.yaml');
 
         return $menu->children;

@@ -1,0 +1,25 @@
+---
+mainframe-menu-struct:
+  en: Structure
+  ru: Структура
+  hy: Կառուցվածքը
+mainframe-menu-dev:
+  en: Development
+  ru: Разработка
+  hy: Մշակում
+mainframe-menu-more:
+  en: Tools
+  ru: Инструменты
+  hy: Գործիքներ
+mainframe-menu-more-menu:
+  en: Menu Editor
+  ru: Редактор меню
+  hy: Մենյու խմբագիր
+mainframe-menu-more-menu-desc:
+  en: Editor of the tree menu of the admin panel. You can swap, hide or display some
+    items
+  ru: Редактор древовидного меню панели администратора. Можно поменять местами, скрыть
+    или отобразить некоторые пункты
+  hy: 'Կառավարիչի վահանակի ծառի մենյուի խմբագիր: Դուք կարող եք փոխել տեղերը, թաքցնել
+    կամ ցուցադրել որոշ կետեր'
+...

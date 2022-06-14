@@ -24,6 +24,11 @@ class FrameController extends Controller
         $mainframeConfig = Module::$instance->Config();
 
         $menu = Module::$instance->GetTopmostMenu(true);
+        
+        if(App::$moduleManager->lang) {
+            $menu = App::$moduleManager->lang->ParseArray($menu);
+        }
+
 
         $result = array_merge(
             $mainframeConfig->Query('config')->AsArray(), 

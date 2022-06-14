@@ -106,6 +106,7 @@ class Installer
         print_r('Копируем файлы конфигурации'."\n");
         self::_copyOrSymlink($mode, $configPath, $configDir, 'module-'.$mode.'.yaml', 'mainframe.yaml');
         self::_copyOrSymlink($mode, $configPath, $configDir, 'mainframe-menu.yaml', 'mainframe-menu.yaml', true);
+        self::_copyOrSymlink($mode, $configPath, $configDir, 'mainframe-langtexts.yaml', 'mainframe-langtexts.yaml', true);
 
         print_r('Встраиваем модуль'."\n");
         self::_injectIntoModuleConfig($configDir.'modules.yaml');
@@ -116,6 +117,7 @@ class Installer
         print_r('Копирование изображений'."\n");
         self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './web/res/img/', 'mainframe-logo-colibri.svg', 'mainframe-logo-colibri.svg');
         self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './web/res/img/', 'loading-icon.svg', 'loading-icon.svg');
+        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/css/', './web/res/css/', 'mainframe-styles.scss', 'mainframe-styles.scss');
 
         print_r('Установка завершена'."\n");
  
