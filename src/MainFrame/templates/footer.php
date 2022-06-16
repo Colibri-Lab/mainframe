@@ -8,7 +8,7 @@ if(App::$domainKey === 'manage') {
             Colibri.IO.Request.RequestEncodeTypeEncrypted, 
             false, 
             true,
-            location.protocol + '//' + document.domain
+            location.protocol + '//' + location.host
         );
     </script>
 <?php
