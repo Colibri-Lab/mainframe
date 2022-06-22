@@ -33,7 +33,28 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
             messageDate.value = data.date.toDate().Age();
             messageRemove.AddHandler('Clicked', (event, args) => {
                 App.Comet.RemoveMessage(data);
+                args.domEvent.stopPropagation();
+                args.domEvent.preventDefault();
+                return false;
             });
+            if(data.message.exec) {
+                messageContainer.AddHandler('Clicked', (event, args) => {
+                    let exec = data.message.exec;
+                    try {
+                        exec = eval(exec);
+                    }
+                    catch(e) {}
+
+                    this._listShadowClicked(event, args);
+
+                    exec && exec(data);
+
+                    args.domEvent.stopPropagation();
+                    args.domEvent.preventDefault();
+                    return false;
+    
+                });
+            }
         };
 
         this._list.AddHandler('ShadowClicked', (event, args) => this._listShadowClicked(event, args));
