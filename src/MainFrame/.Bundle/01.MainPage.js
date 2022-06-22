@@ -13,7 +13,8 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         this._user = this.Children('split/left-pane/expanded/user');
         this._tabs = this.Children('split/main-tabs');
 
-        this._searchButton = this._tabs.Children('search-button');
+        // <Icon name="search-button" shown="true" iconSVG="Colibri.UI.SearchIcon" />
+        // this._searchButton = this._tabs.Children('search-button');
         this._toolbarButtonExpand = this._tabs.Children('toolbar-button-expand');
         this._toolbarButtonCollapse = this._tabs.Children('toolbar-button-collapse');
 
@@ -25,7 +26,7 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         this._menu.AddHandler('NodesLoaded', (event, args) => this.__nodesLoaded(event, args));
         this._tabs.AddHandler('SelectionChanged', (event, args) => this.__tabsClicked(event, args));
 
-        this._searchButton.AddHandler('Clicked', (event, args) => this.__searchButtonClicked(event, args));
+        // this._searchButton.AddHandler('Clicked', (event, args) => this.__searchButtonClicked(event, args));
         this._toolbarButtonExpand.AddHandler('Clicked', (event, args) => this.__toolbarExpandButtonClicked(event, args));
         this._toolbarButtonCollapse.AddHandler('Clicked', (event, args) => this.__toolbarCollapseButtonClicked(event, args));
 
@@ -54,9 +55,10 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     get Menu() {
         return this._menu;
     }
-    __searchButtonClicked(event, args) {
 
-    }
+    // __searchButtonClicked(event, args) {
+
+    // }
 
     __toolbarExpandButtonClicked(event, args) {
         this._toolbarButtonCollapse.shown = true;
