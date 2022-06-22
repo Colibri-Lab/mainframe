@@ -1,0 +1,79 @@
+.app-commet-message-list-component {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+
+    &.app-component-shown {
+        display:grid;
+    }
+    grid-template-rows: 100%;
+
+    .app-component-list-group {
+        height: 100%;
+        padding: 10px 0px;
+        >div {
+            overflow: auto;
+            height: 100%;
+            padding: 0px;
+            @include custom-scroll($scrollbar-size, $scrollbar-track-color, $scrollbar-thumb-color, $scrollbar-thumb-hover-color);
+        }
+    }
+
+    .app-component-list-item {
+        padding: 10px;
+        .app-component-flexbox {
+            flex-wrap: nowrap;
+            [data-object-name="s"] {
+                .app-component-shown {
+                    display: block;
+                }
+                font-size: 14px;
+            }
+            [data-object-name="i"] {
+                flex: 0 0 14px;
+                height: 14px;
+                margin-right: 10px;
+            }
+            [data-object-name="r"] {
+                flex: 0 0 18px;
+                height: 18px;
+                margin-left: auto;
+                margin-top: -2px;
+            }
+            [data-object-name="dc"] {
+                margin-top: 4px;
+                align-items: center;
+                justify-content: space-between; 
+
+                [data-object-name="d"], [data-object-name="f"] {
+                    &.app-component-shown {
+                        display: block;
+                    }
+                    white-space: nowrap;
+                    font-size: 12px;
+                    color: gray;                    
+                }
+            }
+        }
+    }
+    
+
+}
+
+.app-comet-button-component {
+    
+    .app-indicator-component {
+        position: absolute;
+        height: 13px !important;
+        width: 13px !important;
+        margin: -12px 0px 0px 12px;
+        font-size:9px;
+        background: red;
+    }
+
+}
