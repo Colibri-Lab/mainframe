@@ -12,6 +12,7 @@ use App\Modules\MainFrame\Module;
 use Throwable;
 use Colibri\Web\PayloadCopy;
 use Colibri\Web\RequestCollection;
+use Colibri\Common\NoLangHelper;
 
 class FrameController extends Controller
 
@@ -28,10 +29,16 @@ class FrameController extends Controller
         if(App::$moduleManager->lang) {
             $menu = App::$moduleManager->lang->ParseArray($menu);
         }
+        else {
+            $menu = NoLangHelper::ParseArray($menu);
+        }
 
 
+        $config = $mainframeConfig->Query('config')->AsArray();
+        unset($config['texts']);
+        
         $result = array_merge(
-            $mainframeConfig->Query('config')->AsArray(), 
+            $config, 
             [
                 'menu' => $menu,
                 'links' => [

@@ -10,17 +10,21 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
     _renderLevel(list, parent) {
 
         list.forEach((item) => {
-            let newNode = this.FindNode(parent.name + '_' + item.name);
-            if(!newNode) {
-                newNode = parent.nodes.Add(parent.name + '_' + item.name);
+            try {
+
+                let newNode = this.FindNode(parent.name + '_' + item.name);
+                if(!newNode) {
+                    newNode = parent.nodes.Add(parent.name + '_' + item.name);
+                }
+                newNode.text = item.title;
+                newNode.isLeaf = item.children.length == 0;
+                newNode.icon = eval(item.icon);
+                // newNode.toolTip = item.description;
+                newNode.tag = item;
+                
+                this._renderLevel(item.children, newNode);
             }
-            newNode.text = item.title;
-            newNode.isLeaf = item.children.length == 0;
-            newNode.icon = eval(item.icon);
-            // newNode.toolTip = item.description;
-            newNode.tag = item;
-            
-            this._renderLevel(item.children, newNode);
+            catch(e) {}
 
         });
 
