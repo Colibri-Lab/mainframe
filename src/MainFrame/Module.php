@@ -23,6 +23,7 @@ use App\Modules\MainFrame\Controllers\Controller;
 use Colibri\Utils\Menu\Item;
 use Colibri\Utils\Config\ConfigException;
 use Colibri\Utils\Config\Config;
+use Colibri\Utils\Logs\Logger;
 
 
 /**
@@ -91,10 +92,11 @@ class Module extends BaseModule
         $menu->Add([
             Item::Create('struct', '#{mainframe-menu-struct;Структура}', '', 'App.Modules.MainFrame.Icons.StructureIcon', ''),
             Item::Create('dev', '#{mainframe-menu-dev;Разработка}', '', 'App.Modules.MainFrame.Icons.DevIcon', ''),
-            Item::Create('more', '#{mainframe-menu-more;Инструменты}', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')->Add(
-                Item::Create('menu', '#{mainframe-menu-more-menu;Редактор меню}', '#{mainframe-menu-more-menu;Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты}', 'App.Modules.MainFrame.Icons.MenuIcon', '')
-            )
+            Item::Create('more', '#{mainframe-menu-more;Инструменты}', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')
         ]);
+        // ->Add(
+        //     Item::Create('menu', '#{mainframe-menu-more-menu;Редактор меню}', '#{mainframe-menu-more-menu;Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты}', 'App.Modules.MainFrame.Icons.MenuIcon', '')
+        // )
 
         $modulesList = App::$moduleManager->list;
         foreach ($modulesList as $module) {
@@ -139,6 +141,9 @@ class Module extends BaseModule
         return $permissions;
     }
 
+    public function Backup(Logger $logger, string $path) {
+        // Do nothing        
+    }
 
 
 }

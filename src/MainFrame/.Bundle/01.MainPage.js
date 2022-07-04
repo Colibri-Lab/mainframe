@@ -140,7 +140,7 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
             App.Router.Navigate('', {});
         }
         else {
-            App.Router.Navigate(args.tab.tag.route, {});
+            App.Router.Navigate(args.tab.tag.route, {}, false);
         }
     }
 

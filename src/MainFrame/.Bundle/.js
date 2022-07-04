@@ -14,7 +14,10 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         this._mainPage = null;
 
         console.log('Initializing module MainFrame');
+
+        this.RegisterEvent('RouteHandled', false, 'Когда произошел переход');
         
+        App.Router.AddRoutePattern('/mainframe/', (url, options) => this.__routeHandled(url, options));
 
         App.AddHandler('ApplicationReady', (event, args) => {
 
@@ -34,10 +37,18 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
                 }
         
             });
+
             this.FrameSettings();
                 
         });
 
+    }
+
+    __routeHandled(url, options) {
+        url = url.trim('/').replaceAll('mainframe/', '');
+        const node = this._mainPage.Menu.FindNode('menu_' + url.replaceAll('/', '_'));
+        this._mainPage.Menu.Select(node);
+        App.Router.Navigate('/', {}, true, true);
     }
 
     Render(container, userData) {
@@ -85,6 +96,10 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
     OpenTab(title, route, icon, containerComponent) {
         this._mainPage.Tabs.AddTab(title, route, icon, containerComponent);
+    }
+
+    get MainPage() {
+        return this._mainPage;
     }
 
 }
