@@ -1,16 +1,10 @@
 ---
 mainframe-menu-struct:
   ru: Структура
-  en: Structure
-  hy: Կառուցվածքը
 mainframe-menu-dev:
   ru: Разработка
-  en: Development
-  hy: Մշակում
 mainframe-menu-more:
   ru: Инструменты
-  en: Tools
-  hy: Գործիքներ
 mainframe-menu-more-menu:
   ru: Редактор меню
   en: Menu Editor
