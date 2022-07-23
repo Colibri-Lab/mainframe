@@ -100,6 +100,11 @@ class Installer
             return;
         }
  
+        // берем точку входа
+        $webRoot = \getenv('COLIBRI_WEBROOT');
+        if(!$webRoot) {
+            $webRoot = 'web'; 
+        }
         $mode = self::_getMode($configDir.'app.yaml');
 
         // копируем конфиг
@@ -115,9 +120,9 @@ class Installer
         self::_copyOrSymlink($mode, $path.'/src/MainFrame/bin/', './bin/', 'mainframe-migrate.sh', 'mainframe-migrate.sh');
 
         print_r('Копирование изображений'."\n");
-        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './web/res/img/', 'mainframe-logo-colibri.svg', 'mainframe-logo-colibri.svg');
-        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './web/res/img/', 'loading-icon.svg', 'loading-icon.svg');
-        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/css/', './web/res/css/', 'mainframe-styles.scss', 'mainframe-styles.scss');
+        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './'.$webRoot.'/res/img/', 'mainframe-logo-colibri.svg', 'mainframe-logo-colibri.svg');
+        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/img/', './'.$webRoot.'/res/img/', 'loading-icon.svg', 'loading-icon.svg');
+        self::_copyOrSymlink($mode, $path.'/src/MainFrame/web/res/css/', './'.$webRoot.'/res/css/', 'mainframe-styles.scss', 'mainframe-styles.scss');
 
         print_r('Установка завершена'."\n");
  
