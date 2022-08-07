@@ -2,17 +2,9 @@
 
 namespace App\Modules\MainFrame\Controllers;
 
-use Colibri\App;
-use Colibri\Common\Encoding;
-use Colibri\Common\StringHelper;
-use Colibri\Data\DataAccessPoint;
-use Colibri\Utils\Debug;
-use App\Modules\Authorization\Module as AuthModule;
 use App\Modules\MainFrame\Module;
-use Throwable;
 use Colibri\Web\PayloadCopy;
 use Colibri\Web\RequestCollection;
-use Colibri\Common\NoLangHelper;
 
 class FrameController extends Controller
 
@@ -21,19 +13,10 @@ class FrameController extends Controller
     public function Settings(RequestCollection $get, RequestCollection $post, ?PayloadCopy $payload = null): object
     {
 
-        $appConfig = App::$config;
         $mainframeConfig = Module::$instance->Config();
 
         $menu = Module::$instance->GetTopmostMenu(true);
         
-        if(App::$moduleManager->lang) {
-            $menu = App::$moduleManager->lang->ParseArray($menu);
-        }
-        else {
-            $menu = NoLangHelper::ParseArray($menu);
-        }
-
-
         $config = $mainframeConfig->Query('config')->AsArray();
         unset($config['texts']);
         
