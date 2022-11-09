@@ -24,7 +24,7 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
                 
                 this._renderLevel(item.children, newNode);
             }
-            catch(e) {}
+            catch(e) { }
 
         });
 
