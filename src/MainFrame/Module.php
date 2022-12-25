@@ -90,12 +90,12 @@ class Module extends BaseModule
         }
 
         $menu->Add([
-            Item::Create('struct', '#{mainframe-menu-struct;Структура}', '', 'App.Modules.MainFrame.Icons.StructureIcon', ''),
-            Item::Create('dev', '#{mainframe-menu-dev;Разработка}', '', 'App.Modules.MainFrame.Icons.DevIcon', ''),
-            Item::Create('more', '#{mainframe-menu-more;Инструменты}', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')
+            Item::Create('struct', '#{mainframe-menu-struct}', '', 'App.Modules.MainFrame.Icons.StructureIcon', ''),
+            Item::Create('dev', '#{mainframe-menu-dev}', '', 'App.Modules.MainFrame.Icons.DevIcon', ''),
+            Item::Create('more', '#{mainframe-menu-more}', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')
         ]);
         // ->Add(
-        //     Item::Create('menu', '#{mainframe-menu-more-menu;Редактор меню}', '#{mainframe-menu-more-menu;Редактор древовидного меню панели администратора. Можно поменять местами, скрыть или отобразить некоторые пункты}', 'App.Modules.MainFrame.Icons.MenuIcon', '')
+        //     Item::Create('menu', '#{mainframe-menu-more-menu}', '#{mainframe-menu-more-menu}', 'App.Modules.MainFrame.Icons.MenuIcon', '')
         // )
 
         $modulesList = App::$moduleManager->list;
