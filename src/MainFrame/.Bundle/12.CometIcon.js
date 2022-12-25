@@ -9,7 +9,7 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
         this._list = new Colibri.UI.List(this.name + '_list', document.body);
         this._list.AddClass('app-commet-message-list-component');
         this._group = this._list.AddGroup('group', '');
-        this._group.noItemsText = '#{app-comet-messages-empty;Сообщений нет}';
+        this._group.noItemsText = '#{mainframe-comet-messages-empty}';
         this._list.__renderItemContent = (data, item) => {
             const messageContainer = new Colibri.UI.FlexBox('s', item);
             const messageIcon = new Colibri.UI.Icon('i', messageContainer);
