@@ -31,7 +31,7 @@ App.Modules.MainFrame.MainMenuToolbar = class extends Colibri.UI.Toolbar {
         icon.icon = 'url(/res/img/mainframe-logo-colibri.svg)';
         icon.shown = true;
         icon.tag = null;
-        icon.toolTip = 'Личный кабинет';
+        icon.toolTip = '#{mainframe-userprofile}';
 
         this._renderLevel(data, this);
 
