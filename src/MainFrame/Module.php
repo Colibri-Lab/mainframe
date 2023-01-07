@@ -40,7 +40,7 @@ class Module extends BaseModule
      *
      * @var Module
      */
-    public static ?Module $instance = null;
+    public static ? Module $instance = null;
 
     private mixed $_userModule = null;
 
@@ -77,15 +77,13 @@ class Module extends BaseModule
 
         try {
             $menu = Module::$instance->Config()->Query('config.menu')->AsArray();
-        }
-        catch(ConfigException $e) {
+        } catch (ConfigException $e) {
             $menu = null;
         }
 
-        if(!$menu) {
-            $menu = Item::Create('mainframe', 'Приложение', 'Функции приложения', '', false, '');
-        }
-        else {
+        if (!$menu) {
+            $menu = Item::Create('mainframe', 'Приложение', 'Функции приложения', '', '');
+        } else {
             $menu = Item::FromArray($menu);
         }
 
@@ -102,11 +100,10 @@ class Module extends BaseModule
         foreach ($modulesList as $module) {
             if (is_object($module) && method_exists($module, 'GetTopmostMenu') && !($module instanceof self)) {
                 $items = $module->GetTopmostMenu($hideExecuteCommand);
-                if($items instanceof Item) {
+                if ($items instanceof Item) {
                     $menu->Add($items);
-                }
-                else if(is_array($items)) {
-                    foreach($items as $item) {
+                } elseif (is_array($items)) {
+                    foreach ($items as $item) {
                         $menu->Add($item);
                     }
                 }
@@ -141,7 +138,8 @@ class Module extends BaseModule
         return $permissions;
     }
 
-    public function Backup(Logger $logger, string $path) {
+    public function Backup(Logger $logger, string $path)
+    {
         // Do nothing        
     }
 
