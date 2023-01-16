@@ -3,7 +3,7 @@
 
 
 /**
- * Search
+ * Backend mainframe module package
  *
  * @author Author Name <author.name@action-media.ru>
  * @copyright 2019 Colibri
@@ -27,10 +27,8 @@ use Colibri\Utils\Logs\Logger;
 
 
 /**
- * Описание модуля
+ * Backend mainframe module
  * @package App\Modules\MainFrame
- *
- *
  */
 class Module extends BaseModule
 {
@@ -45,7 +43,7 @@ class Module extends BaseModule
     private mixed $_userModule = null;
 
     /**
-     * Инициализация модуля
+     * Initializes the module
      * @return void
      */
     public function InitializeModule(): void
@@ -54,6 +52,10 @@ class Module extends BaseModule
 
     }
 
+    /**
+     * Returns the User provider module
+     * @return mixed
+     */
     public function UserModule(): mixed
     {
         if ($this->_userModule) {
@@ -70,7 +72,7 @@ class Module extends BaseModule
     }
 
     /**
-     * Вызывается для получения Меню болванкой
+     * Returns a topmost menu for backend
      */
     public function GetTopmostMenu(bool $hideExecuteCommand = true): Item|array
     {
@@ -119,6 +121,10 @@ class Module extends BaseModule
         return $menu->children;
     }
 
+    /**
+     * Returns a permissions for module
+     * @return array
+     */
     public function GetPermissions(): array
     {
         $menu = $this->GetTopmostMenu(false);
@@ -138,6 +144,12 @@ class Module extends BaseModule
         return $permissions;
     }
 
+    /**
+     * Backups module data
+     * @param Logger $logger
+     * @param string $path
+     * @return void
+     */
     public function Backup(Logger $logger, string $path)
     {
         // Do nothing        

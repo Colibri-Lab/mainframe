@@ -6,9 +6,19 @@ use App\Modules\MainFrame\Module;
 use Colibri\Web\PayloadCopy;
 use Colibri\Web\RequestCollection;
 
+/**
+ * Main frame controller
+ */
 class FrameController extends Controller
 {
 
+    /**
+     * Returns the settings of frame
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param PayloadCopy|null $payload
+     * @return object
+     */
     public function Settings(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {
 
@@ -49,6 +59,13 @@ class FrameController extends Controller
         return $this->Finish(200, 'Settings', $result);
     }
 
+    /**
+     * Executes a frame command
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param PayloadCopy|null $payload
+     * @return object
+     */
     public function Execute(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {
 
