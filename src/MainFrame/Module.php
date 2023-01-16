@@ -11,19 +11,12 @@
  */
 namespace App\Modules\MainFrame;
 
-
 use Colibri\App;
-use Colibri\Common\VariableHelper;
-use Colibri\Data\DataAccessPoint;
 use Colibri\Modules\Module as BaseModule;
-use Colibri\Utils\Cache\Mem;
-use Colibri\Utils\Debug;
-use App\Modules\Authorization\Module as AuthorizationModule;
-use App\Modules\MainFrame\Controllers\Controller;
-use Colibri\Utils\Menu\Item;
-use Colibri\Utils\Config\ConfigException;
 use Colibri\Utils\Config\Config;
+use Colibri\Utils\Config\ConfigException;
 use Colibri\Utils\Logs\Logger;
+use Colibri\Utils\Menu\Item;
 
 
 /**
