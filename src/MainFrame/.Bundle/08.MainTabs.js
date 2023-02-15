@@ -179,6 +179,21 @@ App.Modules.MainFrame.MainTabs.Button = class extends Colibri.UI.Button {
         return this._iconObject.icon;
     }
 
+    /**
+     * Icon object name
+     * @type {string}
+     */
+    get iconSVG() {
+        return this._iconObject.iconSVG;
+    }
+    /**
+     * Icon object name
+     * @type {string}
+     */
+    set iconSVG(value) {
+        this._iconObject.iconSVG = value;
+    }
+
     get value() {
         return this._textObject.value;
     }

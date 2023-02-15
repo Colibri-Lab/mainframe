@@ -32,14 +32,14 @@
                 color: white;
                 font-weight: normal;
                 [data-object-name$="-icon"] {
-                    margin-right: 5px;
                     svg {
-                        path {
+                        path, circle {
                             fill: #ffffff;
                         }
                     }
                 }
-                [data-object-name$="-text"] {
+                [data-object-name$="-text"]:not(:empty) {
+                    margin-left: 5px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -69,8 +69,8 @@
                     color: black;
                     [data-object-name$="-icon"] {
                         svg {
-                            path {
-                                fill: #000000;
+                            path, circle {
+                                fill: #024F7B;
                             }
                         }
                     }
