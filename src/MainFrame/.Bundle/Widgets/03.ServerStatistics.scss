@@ -5,6 +5,7 @@
     }
 
     [data-object-name="split"] {
+        width: 100%;
         .app-component-split-left {
             flex: 0 0 60%;
         }
@@ -16,6 +17,7 @@
     [data-object-name="processes"] {
         width: 200px;
         height: 150px;
+        overflow: hidden;
     }
 
     .app-fields-viewer-component {
