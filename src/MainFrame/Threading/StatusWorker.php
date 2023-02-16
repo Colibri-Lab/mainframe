@@ -62,8 +62,9 @@ class StatusWorker extends BaseWorker
     {
 
         $objects = [];
-        foreach(App::$dataAccessPoints as $name => $point) {
-
+        $accessPoints = App::$dataAccessPoints->accessPoints;
+        foreach($accessPoints->points as $name => $pv) {
+            $point = App::$dataAccessPoints->Get($name);
             $object = [];
             $reader = $point->Query('show status');
             while($r = $reader->Read()) {
