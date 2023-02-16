@@ -1,2 +1,6 @@
----
-...
+mainframe-php-scripts-statistics-widget-title:
+  ru: Данные о состоянии кода
+  en: Code status data
+mainframe-mysql-statistics-widget-title:
+  ru: Статистика базы данных
+  en: Database statistics

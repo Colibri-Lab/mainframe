@@ -1,0 +1,81 @@
+mainframe-widgets-databasesstatistics-title:
+  ru: Статистика используемых баз данных
+  en: Used databases statistics
+mainframe-widgets-fpmstatistics-sec: {}
+mainframe-widgets-databasestatistics-uptime-desc:
+  ru: Аптайм
+  en: Uptime
+mainframe-widgets-databasestatistics-uptime-note:
+  ru: Количество секунд, в течение которых сервер был включен
+  en: The number of seconds the server has been up
+mainframe-widgets-databasestatistics-uptime-unit:
+  ru: секунд
+  en: seconds
+mainframe-widgets-databasestatistics-uptime-unit\: {}
+mainframe-widgets-databasestatistics-table_locks_immediate-desc:
+  ru: Запросы на блокировку
+  en: Lock requests
+mainframe-widgets-databasestatistics-table_locks_immediate-note:
+  ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен
+    немедленно
+  en: Number of times a table lock request can be granted immediately
+mainframe-widgets-databasestatistics-select_scan-desc:
+  ru: Сканирование при выборке
+  en: Full scan on joins
+mainframe-widgets-databasestatistics-select_scan-note:
+  ru: Количество объединений, которые выполнили полное сканирование первой таблицы.
+  en: The number of joins that performed a full scan on the first table.
+mainframe-widgets-databasestatistics-select_full_join-desc:
+  en: Merge scan
+  ru: Сканирование при обьеденении
+mainframe-widgets-databasestatistics-select_full_join-note:
+  ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не
+    используют индексы
+  en: Number of joins performing table scans because they don't use indexes
+mainframe-widgets-databasestatistics-slow_queries-desc:
+  en: Slow Queries
+  ru: Медленные запросы
+mainframe-widgets-databasestatistics-slow_queries-note:
+  ru: Количество запросов, которые заняли более long_query_time секунд
+  en: Number of queries that took more than long_query_time seconds
+mainframe-widgets-databasestatistics-queries-desc:
+  ru: Запросы
+  en: Queries
+mainframe-widgets-databasestatistics-queries-note:
+  ru: Количество запросов, выполненных сервером
+  en: Number of requests made by the server
+mainframe-widgets-databasestatistics-opened_files-desc:
+  ru: Открытые файлы
+  en: Opened files
+mainframe-widgets-databasestatistics-opened_files-նօտե: {}
+mainframe-widgets-databasestatistics-opened_files-нотno: {}
+mainframe-widgets-databasestatistics-opened_files-note:
+  ru: Количество файлов, которые были открыты
+  en: Number of files that have been opened
+mainframe-widgets-databasestatistics-open_tables-desc:
+  ru: Открытые таблицы
+  en: Opened tables
+mainframe-widgets-databasestatistics-open_tables-note:
+  ru: Количество столов, которые открыты
+  en: Number of tables that are open
+mainframe-widgets-databasestatistics-max_used_connections-desc:
+  ru: Открытые подключения
+  en: Open connections
+mainframe-widgets-databasestatistics-max_used_connections-note:
+  ru: Максимальное количество подключений, которые использовались одновременно с
+    момента запуска сервера
+  en: The maximum number of connections that have been in use at the same time
+    since the server started
+mainframe-widgets-databasestatistics-aborted_clients-desc:
+  ru: Сброшенные подключения
+  en: Aborted connections
+mainframe-widgets-databasestatistics-aborted_clients-note:
+  ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не
+    закрыв соединение должным образом
+  en: The number of connections that were aborted because the client died without
+    properly closing the connection
+mainframe-widgets-databasestatistics-notes:
+  ru: Отображены переменные, которые влияют на производительность и поведение базы
+    данных. Отображены данные по 1-му подключению
+  en: Variables that affect database performance and behavior are displayed.
+    Displayed data for the 1st connection

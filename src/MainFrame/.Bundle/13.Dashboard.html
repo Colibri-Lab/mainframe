@@ -1,4 +1,23 @@
 <div ComponentName="App.Modules.MainFrame.Dashboard">
     <!-- mainframe-dashboard -->
+
+    <Pane shown="true" name="container">
+
+        <Widgets.ServerStatistics shown="true" name="server-statistics" />
+
+        <Widgets.FpmStatistics shown="true" name="fpm-statistics" />
+
+        <Widget shown="true" name="code-statistics" closable="false">
+            <component-header>
+                #{mainframe-php-scripts-statistics-widget-title}
+            </component-header>
+            <component-container>
+    
+            </component-container> 
+        </Widget>
+    
+        <Widgets.DatabaseStatistics shown="true" name="databases-statistics" colspan="3" />
+
+    </Pane>
     
 </div>

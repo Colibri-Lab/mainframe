@@ -12,6 +12,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         super.InitializeModule();
 
         this._mainPage = null;
+        this._store = App.Store.AddChild('app.mainframe');
 
         console.log('Initializing module MainFrame');
 
@@ -38,10 +39,31 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         
             });
 
+            App.Comet && App.Comet.AddHandler('EventReceived', (event, args) => this.__cometEventReceived(event, args));
+
             this.FrameSettings();
+            this.Status();
                 
         });
 
+    }
+
+    __cometEventReceived(event, args) {
+        if(args.event.action == 'status') {
+            
+            if(args.event.message.error) {
+                App.Notices.Add({
+                    severity: Colibri.UI.Notice.Error,
+                    title: args.event.message.error,
+                    timeout: 5000
+                });
+            }
+            
+            const fpmResult = args.event.message;
+            this._store.Set('mainframe.status', fpmResult);
+
+
+        }
     }
 
     __routeHandled(url, options) {
@@ -100,6 +122,18 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
     get MainPage() {
         return this._mainPage;
+    }
+
+    Status() {
+        return new Promise((resolve, reject) => {
+            this.Call('Dashboard', 'Status', {}).then((response) => {
+                this._store.Set('mainframe.status', response.result);
+                resolve();
+            }).catch(error => {
+                App.Notices.Add(new Colibri.UI.Notice(error.result));
+                reject(error);
+            });
+        });
     }
 
 }

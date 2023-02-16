@@ -1,0 +1,11 @@
+mainframe-widgets-fpmstatistics-title:
+  ru: Состояние PHP
+  en: PHP Fpm status
+mainframe-widgets-fpmstatistics-sec:
+  ru: секунд
+  en: seconds
+mainframe-widgets-fpmstatistics-note:
+  ru: "Отображены основные переменные сервера FPM, внимательно следите за
+    состоянием процессов "
+  en: The main variables of the FPM server are displayed, carefully monitor the
+    status of the processes

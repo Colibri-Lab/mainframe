@@ -1,0 +1,35 @@
+<div ComponentName="App.Modules.MainFrame.Widgets.ServerStatistics">
+    <!-- mainframe-widgets-serverstatistics -->
+
+    <Note shown="true" name="fpmstatistics-note" value="#{mainframe-widgets-serverstatistics-note}" className="-warning" />
+
+    <Split shown="true" name="split">
+        <FieldsViewer shown="true" name="mainfields">
+            <fields>
+                {
+                    "connections_active": { 
+                        component: 'Number',
+                        desc: 'Активные',
+                        note: 'Активные подключения'
+                    },
+                    "connections_reading": {
+                        component: 'Number',
+                        desc: 'Чтение',
+                        note: 'Подключения в режиме чтения'
+                    },
+                    "connections_waiting": {
+                        component: 'Number',
+                        desc: 'Ожидание',
+                        note: 'Подключения в режиме ожидания'
+                    },
+                    "connections_writing": {
+                        component: 'Number',
+                        desc: 'Запись',
+                        note: 'Подключения в режиме записи'
+                    }
+                }
+            </fields>
+        </FieldsViewer>        
+        <GoogleChart shown="true" name="processes" type="PieChart" title="Активность" />
+    </Split>
+</div>

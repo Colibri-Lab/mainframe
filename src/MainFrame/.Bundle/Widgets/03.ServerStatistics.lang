@@ -1,0 +1,8 @@
+mainframe-widgets-serverstatistics-title:
+  ru: Состояние веб-сервера
+  en: Web-server status
+mainframe-widgets-serverstatistics-note:
+  ru: Следите за активными процессами, процессы в ожидании должны быть больше чем
+    запись и чтение одновременно
+  en: Keep an eye on active processes, waiting processes should be more than
+    writing and reading at the same time
