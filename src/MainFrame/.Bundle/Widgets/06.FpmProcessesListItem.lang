@@ -1,0 +1,39 @@
+mainframe-widgets-fpmprocesseslistitem-state-desc:
+  ru: Статус
+  en: State
+mainframe-widgets-fpmprocesseslistitem-request—method-desc: {}
+mainframe-widgets-fpmprocesseslistitem-request_method-desc:
+  ru: Тип запроса
+  en: Request method
+mainframe-widgets-fpmprocesseslistitem-request_uri-desc:
+  ru: URI запроса
+  en: Request URI
+mainframe-widgets-fpmprocesseslistitem-script-desc:
+  ru: Точка входа
+  en: Entry point
+mainframe-widgets-fpmprocesseslistitem-requests-desc:
+  ru: Всего запросов
+  en: All requests
+mainframe-widgets-fpmprocesseslistitem-request_duration-desc:
+  ru: Всего потрачено времени
+  en: Time spend on requests
+mainframe-widgets-fpmprocesseslistitem-start_since-desc:
+  ru: Запущено
+  en: Started at
+mainframe-widgets-fpmprocesseslistitem-start_since-unit:
+  ru: секунд назад
+  en: seconds before
+mainframe-widgets-fpmprocesseslistitem-start_time-desc:
+  ru: Дата запуска
+  en: Start date and time
+mainframe-widgets-fpmprocesseslistitem-last-request-cpu-desc: {}
+mainframe-widgets-fpmprocesseslistitem-last_request_cpu-desc:
+  ru: Потрачено процессора
+  en: Processor time used
+mainframe-widgets-fpmprocesseslistitem-last_request_memory-desc:
+  ru: Потрачено памяти
+  en: Memory used
+mainframe-widgets-fpmprocesseslistitem-last_request_memory\-desc: {}
+mainframe-widgets-fpmprocesseslistitem-content_length-desc:
+  ru: Длина запроса
+  en: Content length

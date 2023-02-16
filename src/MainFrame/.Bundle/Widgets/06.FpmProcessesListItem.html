@@ -1,0 +1,100 @@
+<div ComponentName="App.Modules.MainFrame.Widgets.FpmProcessesListItem">
+    <!-- mainframe-widgets-fpmprocesseslistitem -->
+    
+    <FieldsViewer shown="true" name="mainfields">
+        <fields>
+            {
+                'state': {
+                    component: 'Text',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-state-desc}'
+                },
+                'request-method': {
+                    component: 'Text',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-request_method-desc}'
+                },
+                'request-uri': {
+                    component: 'Text',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-request_uri-desc}',
+                    params: {
+                        fieldsviewer: {
+                            hidden: true
+                        }
+                    }
+                },
+                'script': {
+                    component: 'Text',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-script-desc}',
+                    params: {
+                        fieldsviewer: {
+                            hidden: true
+                        }
+                    }
+                },
+                'pid': {
+                    component: 'Number',
+                    desc: 'PID',
+                    params: {
+                        fieldsviewer: {
+                            hidden: true
+                        }
+                    }
+                },
+
+                'start-since': {
+                    component: 'Number',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-start_since-desc}',
+                    params: {
+                        unit: '#{mainframe-widgets-fpmprocesseslistitem-start_since-unit}',
+                        fieldsviewer: {
+                            hidden: true
+                        }
+                    }
+                },
+                'start-time': {
+                    component: 'DateTime',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-start_time-desc}',
+                },
+
+                'requests': {
+                    component: 'Number',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-requests-desc}',
+                    params: {
+                        fieldsviewer: {
+                            hidden: true
+                        }
+                    }
+
+                },
+                'request-duration': {
+                    component: 'Number',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-request_duration-desc}',
+                    params: {
+                        fieldsviewer: {
+                            hidden: true
+                        }
+                    }
+                },
+
+                'content-length': {
+                    component: 'Number',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-content_length-desc}',
+                    params: {
+                        fieldsviewer: {
+                            hidden: true
+                        }
+                    }
+                },
+                'last-request-cpu': {
+                    component: 'Number',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-last_request_cpu-desc}',
+                },
+                'last-request-memory': {
+                    component: 'Number',
+                    desc: '#{mainframe-widgets-fpmprocesseslistitem-last_request_memory-desc}',
+                },
+                
+            }
+        </fields>
+    </FieldsViewer>
+    
+</div>

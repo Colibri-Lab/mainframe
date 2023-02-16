@@ -1,0 +1,8 @@
+mainframe-widgets-fpmprocesses-title:
+  ru: Работающие процессы
+  en: Working processes
+mainframe-widgets-fpmprocesses-notes:
+  ru: Отображен список процессов в сервере FPM․ Необходимо периодически смотреть
+    на время потраченное на процесс
+  en: Displayed a list of processes in the FPM server․ It is necessary to
+    periodically look at the time spent on the process

@@ -1,48 +1,30 @@
-.app-modules-mainframe-widgets-fpmstatistics {
-    
-    .app-component-note {
-        margin-bottom: 20px;
-    }
-
-    [data-object-name="split"] {
-        width: 100%;
-        .app-component-split-left {
-            flex: 0 0 60%;
-        }
-        .app-component-split-right {
-            
-        }
-    }
-
-    [data-object-name="processes"] {
-        width: 200px;
-        height: 150px;
-        overflow: hidden;
-    }
-
+.app-modules-mainframe-widgets-fpmprocesseslistitem {
+    padding: 10px;
     .app-fields-viewer-component {
         > div {
             &.app-component-shown {
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
-                flex-direction: column;
-                gap: 0px;
+                flex-wrap: wrap;
+                gap: 5px 20px;
                 margin: 0px;
-
+    
                 .app-field-pane {
                     &.app-component-shown {
                         display: flex;
                     }
                     gap: 5px;
                     align-items: center;
-
+                    margin: 0px;
+                    padding: 0px;
+    
                     > span {
                         font-size: 14px;
                         margin-bottom: 0px;
                         padding-bottom: 0px;
                     }
-
+    
                     >div {
                         &.app-component-shown {
                             display: flex;
@@ -50,11 +32,11 @@
                         font-size: 12px;
                         font-weight: bold;
                     }
-
+    
                     .app-viewer-component {
                         font-weight: bold;
                     }
-
+    
                     .app-field-datetime {
                         >span {
                             &.app-component-shown {
@@ -66,18 +48,18 @@
                             }
                         }
                     }
-
+    
                 }
             }
         }
         > .app-component-link {
+            margin-top: 5px;
             font-size: 12px;
             svg {
                 display: inline;
-                width: 12px;
                 height: 12px;
+                width: 12px;
             }
         }
     }
-
 }

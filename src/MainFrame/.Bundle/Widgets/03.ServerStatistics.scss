@@ -70,5 +70,13 @@
                 }
             }
         }
+        > .app-component-link {
+            font-size: 12px;
+            svg {
+                display: inline;
+                height: 12px;
+                width: 12px;
+            }
+        }
     }
 }
