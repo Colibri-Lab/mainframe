@@ -3,7 +3,7 @@
     .app-component-note {
         margin-bottom: 20px;
     }
-    
+
     [data-object-name="split"] {
         .app-component-split-left {
             flex: 0 0 60%;
@@ -14,7 +14,7 @@
     }
 
     [data-object-name="processes"] {
-        width: 100%;
+        width: 200px;
         height: 150px;
     }
 
