@@ -30,7 +30,7 @@ App.Modules.MainFrame.Widgets.StatsChart = class extends Colibri.UI.Widget {
             this._processes.value = value;
 
         } else if(path.indexOf('mainframe.status') !== -1) {
-            const graph = MainFrame.Store.Query('mainframe.graph');
+            let graph = MainFrame.Store.Query('mainframe.graph');
             if(!Array.isArray(graph)) {
                 graph = [];
             }
