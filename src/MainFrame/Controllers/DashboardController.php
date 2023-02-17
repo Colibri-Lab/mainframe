@@ -55,24 +55,8 @@ class DashboardController extends WebController
                 throw new InvalidArgumentException('Can not start worker', 500);
             }
 
-            $result = [];
-
-            /** @var StatusWorker */
-            $worker = $process->worker;
-            $fpmStatus = $worker->GetFpmStatus();
-            if($fpmStatus) {
-                $result['fpm'] = $fpmStatus;
-            }
-
-            $serverStatus = $worker->GetServerStatus();
-            if($serverStatus) {
-                $result['server'] = $serverStatus;
-            }
-            
-            $databaseStatus = $worker->GetDatabaseStatus();
-            if($databaseStatus) {
-                $result['databases'] = array_values($databaseStatus);
-            }
+            $result = Module::$instance->RegisterStatusInfo();
+            $result->graph = Module::$instance->GetStatusInfo();
 
 
         } catch (\Throwable $e) {

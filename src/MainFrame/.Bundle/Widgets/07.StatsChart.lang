@@ -1,0 +1,6 @@
+mainframe-widgets-statschart-notes:
+  ru: График работы сервера, показываются последние 50 записей
+  en: Server working stats, shown 50 last items
+mainframe-widgets-statschart-title:
+  ru: График нагрузки
+  en: Load schedule

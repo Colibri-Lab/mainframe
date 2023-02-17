@@ -36,7 +36,6 @@ App.Modules.MainFrame.Widgets.FpmProcesses = class extends Colibri.UI.Widget {
             if(process['request-uri'].indexOf('fpmstatus') !== -1) {
                 continue;
             }
-            console.log(process);
             this._processGroup.AddItem(process);
         }
 

@@ -124,10 +124,15 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         return this._mainPage;
     }
 
+    get Store() {
+        return this._store;
+    }
+
     Status() {
         return new Promise((resolve, reject) => {
             this.Call('Dashboard', 'Status', {}).then((response) => {
-                this._store.Set('mainframe.status', response.result);
+                this._store.Set('mainframe.graph', response.result.graph);
+                this._store.Set('mainframe.status', {fpm: response.result.fpm, server: response.result.server, databases: response.result.databases});
                 resolve();
             }).catch(error => {
                 App.Notices.Add(new Colibri.UI.Notice(error.result));
