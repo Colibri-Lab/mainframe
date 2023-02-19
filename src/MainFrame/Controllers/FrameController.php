@@ -87,7 +87,7 @@ class FrameController extends Controller
             }
         }
 
-        $route = str_replace('/', '.', trim($post->route, '/'));
+        $route = str_replace('/', '.', trim($post->{'route'}, '/'));
 
         if (isset($permissions[$route]) && $userModule->current->IsCommandAllowed($route)) {
             return $this->Finish(200, 'Разрешено', ['execute' => $permissions[$route]]);

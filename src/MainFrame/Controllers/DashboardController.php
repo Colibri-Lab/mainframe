@@ -47,7 +47,7 @@ class DashboardController extends WebController
                 
                 $worker = new StatusWorker();
                 $process = Process::Create($worker);
-                $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->requester]);
+                $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
 
             }
 

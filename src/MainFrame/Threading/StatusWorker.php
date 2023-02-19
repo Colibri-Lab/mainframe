@@ -33,6 +33,6 @@ class StatusWorker extends BaseWorker
             $result = Module::$instance->RegisterStatusInfo();
             $comet->SendToUser($requester, $user, 'status', $result);
         }
-        
+
     }
 }
