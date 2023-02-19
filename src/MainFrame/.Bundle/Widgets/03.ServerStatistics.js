@@ -33,5 +33,12 @@ App.Modules.MainFrame.Widgets.ServerStatistics = class extends Colibri.UI.Widget
         this._processes.value = chartsData;
 
     }
+    
+    static Params() {
+        return {
+            defaultIndex: 0,
+            name: 'server-stats'        
+        }
+    }
 
 }

@@ -31,4 +31,11 @@ App.Modules.MainFrame.Widgets.FpmStatistics = class extends Colibri.UI.Widget {
 
     }
 
+    static Params() {
+        return {
+            defaultIndex: 1,
+            name: 'fpm-stats'
+        }
+    }
+
 }

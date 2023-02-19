@@ -41,5 +41,11 @@ App.Modules.MainFrame.Widgets.FpmProcesses = class extends Colibri.UI.Widget {
 
     }
 
+    static Params() {
+        return {
+            defaultIndex: 2,
+            name: 'fpm-processes'
+        }
+    }
 
 }

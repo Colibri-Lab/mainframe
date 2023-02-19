@@ -7,6 +7,7 @@ App.Modules.MainFrame.Widgets.DatabaseStatistics = class extends Colibri.UI.Widg
 
         this.title = '#{mainframe-widgets-databasesstatistics-title}';
         this.closable = false;
+        this.colspan = 3;
 
         this._mainfields = this.Children('mainfields');
 
@@ -24,4 +25,10 @@ App.Modules.MainFrame.Widgets.DatabaseStatistics = class extends Colibri.UI.Widg
         
     }
 
+    static Params() {
+        return {
+            defaultIndex: 3,
+            name: 'database-stats'
+        }
+    }
 }

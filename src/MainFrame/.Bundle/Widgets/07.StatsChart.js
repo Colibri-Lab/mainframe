@@ -7,6 +7,7 @@ App.Modules.MainFrame.Widgets.StatsChart = class extends Colibri.UI.Widget {
 
         this.title = '#{mainframe-widgets-statschart-title}';
         this.closable = false;
+        this.colspan = 3;
 
         this._processes = this.Children('processes');
 
@@ -40,5 +41,12 @@ App.Modules.MainFrame.Widgets.StatsChart = class extends Colibri.UI.Widget {
         }
 
         
+    }
+    
+    static Params() {
+        return {
+            defaultIndex: 4,
+            name: 'stats-chart'
+        }
     }
 }
