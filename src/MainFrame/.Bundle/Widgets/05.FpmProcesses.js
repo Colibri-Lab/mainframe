@@ -49,3 +49,5 @@ App.Modules.MainFrame.Widgets.FpmProcesses = class extends Colibri.UI.Widget {
     }
 
 }
+
+App.Modules.MainFrame.RegisterWidget('fpm-processes', App.Modules.MainFrame.Widgets.FpmProcesses);

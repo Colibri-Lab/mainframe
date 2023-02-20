@@ -50,3 +50,5 @@ App.Modules.MainFrame.Widgets.StatsChart = class extends Colibri.UI.Widget {
         }
     }
 }
+
+App.Modules.MainFrame.RegisterWidget('stats-chart', App.Modules.MainFrame.Widgets.StatsChart);

@@ -42,3 +42,5 @@ App.Modules.MainFrame.Widgets.ServerStatistics = class extends Colibri.UI.Widget
     }
 
 }
+
+App.Modules.MainFrame.RegisterWidget('server-stats', App.Modules.MainFrame.Widgets.ServerStatistics);

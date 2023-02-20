@@ -141,6 +141,14 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         });
     }
 
+    static Widgets = {};
+    static RegisterWidget(name, component) {
+        App.Modules.MainFrame.Widgets[name] = component;
+    }
+    static UnregisterWidget(name) {
+        delete App.Modules.MainFrame.Widgets[name];
+    }
+
 }
 
 App.Modules.MainFrame.Icons = {};
