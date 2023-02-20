@@ -68,15 +68,14 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
     _loadWidgets() {
 
         let widgets = [];
-        Object.forEach(App.Modules.MainFrame.Widgets, (name, widget) => {
+        Object.forEach(App.Modules.MainFrame.RegisteredWidgets, (name, widget) => {
             try {
+                console.log(name, widget);
                 if(typeof widget.Params == 'function') {
                     widgets.push(widget);
                 }
             }
-            catch(e) {
-
-            }
+            catch(e) { }
         });
 
         const positions = App.Browser.Get('dashboard-widgets').split(',');
