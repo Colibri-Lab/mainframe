@@ -28,6 +28,7 @@ App.Modules.MainFrame.Widgets.StatsChart = class extends Colibri.UI.Widget {
             for(const o of data) {
                 try { value.push([o.time.toDateFromUnixTime(), o.databases[0].open_files, o.fpm['active-processes'], o.server.connections_active]); } catch(e) {}
             }
+            console.log(value);
             this._processes.value = value;
 
         } else if(path.indexOf('mainframe.status') !== -1) {

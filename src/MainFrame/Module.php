@@ -225,7 +225,7 @@ class Module extends BaseModule
                 // if(strstr($key, 'tls') !== false || strstr($key, 'sha2') !== false) {
                 //     continue;
                 // }
-                if(!in_array($key, ['uptime', 'table_locks_immediate', 'select_scan', 'select_full_join', 'slow_queries', 'queries', 'opened_files', 'open_tables', 'max_used_connections', 'aborted_clients'])) {
+                if(!in_array($key, ['uptime', 'table_locks_immediate', 'select_scan', 'select_full_join', 'slow_queries', 'queries', 'open_files', 'open_tables', 'max_used_connections', 'aborted_clients'])) {
                     continue;
                 }
                 $object[$key] = (int)$r->Value;
