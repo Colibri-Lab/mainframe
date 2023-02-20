@@ -77,7 +77,7 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
             catch(e) { }
         });
 
-        const positions = App.Browser.Get('dashboard-widgets').split(',');
+        let positions = App.Browser.Get('dashboard-widgets');
         if(!positions) {
 
             widgets.sort((a, b) => {
@@ -91,7 +91,7 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
             });
 
         } else {
-
+            positions = positions.split(',');
             const w = [];
             for(const name of positions) {
                 for(const widget of widgets) {
