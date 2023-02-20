@@ -68,7 +68,7 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
     _loadWidgets() {
 
         let widgets = [];
-        Object.forEach(App.Modules.MainFrame.RegisteredWidgets, (name, widget) => {
+        Object.forEach(MainFrame.registeredWidgets, (name, widget) => {
             try {
                 console.log(name, widget);
                 if(typeof widget.Params == 'function') {

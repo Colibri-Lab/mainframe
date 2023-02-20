@@ -33,4 +33,4 @@ App.Modules.MainFrame.Widgets.DatabaseStatistics = class extends Colibri.UI.Widg
     }
 }
 
-App.Modules.MainFrame.RegisterWidget('database-stats', App.Modules.MainFrame.Widgets.DatabaseStatistics);
+MainFrame.RegisterWidget('database-stats', App.Modules.MainFrame.Widgets.DatabaseStatistics);

@@ -14,6 +14,8 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         this._mainPage = null;
         this._store = App.Store.AddChild('app.mainframe');
 
+        this._widgets = {};
+
         console.log('Initializing module MainFrame');
 
         this.RegisterEvent('RouteHandled', false, 'Когда произошел переход');
@@ -141,12 +143,15 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         });
     }
 
-    static RegisteredWidgets = {};
-    static RegisterWidget(name, component) {
-        App.Modules.MainFrame.RegisteredWidgets[name] = component;
+    get registeredWidgets() {
+        return this._widgets;
     }
-    static UnregisterWidget(name) {
-        delete App.Modules.MainFrame.RegisteredWidgets[name];
+
+    RegisterWidget(name, component) {
+        this._widgets[name] = component;
+    }
+    UnregisterWidget(name) {
+        delete this._widgets[name];
     }
 
 }
