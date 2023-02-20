@@ -254,6 +254,19 @@ class Module extends BaseModule
 
         $fpmStatus = Module::$instance->GetFpmStatus();
         if($fpmStatus) {
+
+            usort($fpmStatus->processes, function ($a, $b) {
+                if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] > $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
+                    return -1;
+                } else if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] < $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
+                    return 1;
+                } else {
+                    return 0;
+                } 
+            });
+
+            $fpmStatus->processes = array_splice($fpmStatus->processes, 0, 5);
+
             $result['fpm'] = $fpmStatus;
         }
 
