@@ -182,6 +182,19 @@ class Module extends BaseModule
         $result = VariableHelper::Map(json_decode($response->data), function ($key, $value) {
             return [str_replace(' ', '-', $key), $value];
         });
+
+        usort($result['processes'], function ($a, $b) {
+            if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] > $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
+                return -1;
+            } else if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] < $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
+                return 1;
+            } else {
+                return 0;
+            } 
+        });
+
+        $result['processes'] = array_splice($result['processes'], 0, 5);
+
         return (object)$result;
     }
 
@@ -209,7 +222,10 @@ class Module extends BaseModule
             $reader = $point->Query('show status');
             while($r = $reader->Read()) {
                 $key = strtolower($r->Variable_name);
-                if(strstr($key, 'tls') !== false || strstr($key, 'sha2') !== false) {
+                // if(strstr($key, 'tls') !== false || strstr($key, 'sha2') !== false) {
+                //     continue;
+                // }
+                if(!in_array($key, ['uptime', 'table_locks_immediate', 'select_scan', 'select_full_join', 'slow_queries', 'queries', 'opened_files', 'open_tables', 'max_used_connections', 'aborted_clients'])) {
                     continue;
                 }
                 $object[$key] = (int)$r->Value;
@@ -254,19 +270,6 @@ class Module extends BaseModule
 
         $fpmStatus = Module::$instance->GetFpmStatus();
         if($fpmStatus) {
-
-            usort($fpmStatus->processes, function ($a, $b) {
-                if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] > $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
-                    return -1;
-                } else if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] < $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
-                    return 1;
-                } else {
-                    return 0;
-                } 
-            });
-
-            $fpmStatus->processes = array_splice($fpmStatus->processes, 0, 5);
-
             $result['fpm'] = $fpmStatus;
         }
 
