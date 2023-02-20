@@ -6,6 +6,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
     /** @constructor */
     constructor() {
         super('MainFrame');
+        this._widgets = {};
     }
 
     InitializeModule() {
@@ -14,7 +15,6 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         this._mainPage = null;
         this._store = App.Store.AddChild('app.mainframe');
 
-        this._widgets = {};
 
         console.log('Initializing module MainFrame');
 
