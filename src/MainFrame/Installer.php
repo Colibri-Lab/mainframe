@@ -3,6 +3,9 @@
 
 namespace App\Modules\MainFrame;
 
+/**
+ * @suppress PHP0419
+ */
 class Installer
 {
 
