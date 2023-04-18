@@ -36,7 +36,6 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
             const droppedToWidget = widgetElement.tag('component');
             droppedTo.ForEach((name, component) => component.RemoveClass('drag-over'));
             droppedToWidget.AddClass('drag-over');
-            console.log(dragged, droppedTo, droppedToWidget);
         }    
     }
 
