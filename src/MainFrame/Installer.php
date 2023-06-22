@@ -117,9 +117,6 @@ class Installer
         print_r('Встраиваем модуль' . "\n");
         self::_injectIntoModuleConfig($configDir . 'modules.yaml');
 
-        print_r('Установка скриптов' . "\n");
-        self::_copyOrSymlink($mode, $path . '/src/MainFrame/bin/', './bin/', 'mainframe-migrate.sh', 'mainframe-migrate.sh');
-
         print_r('Копирование изображений' . "\n");
         self::_copyOrSymlink($mode, $path . '/src/MainFrame/web/res/img/', './' . $webRoot . '/res/img/', 'mainframe-logo-colibri.svg', 'mainframe-logo-colibri.svg');
         self::_copyOrSymlink($mode, $path . '/src/MainFrame/web/res/img/', './' . $webRoot . '/res/img/', 'loading-icon.svg', 'loading-icon.svg');
