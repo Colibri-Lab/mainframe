@@ -217,21 +217,23 @@ class Module extends BaseModule
         $objects = [];
         $accessPoints = App::$dataAccessPoints->accessPoints;
         foreach($accessPoints->points as $name => $pv) {
-            $point = App::$dataAccessPoints->Get($name);
-            $object = [];
-            $reader = $point->Query('show status');
-            while($r = $reader->Read()) {
-                $key = strtolower($r->Variable_name);
-                // if(strstr($key, 'tls') !== false || strstr($key, 'sha2') !== false) {
-                //     continue;
-                // }
-                if(!in_array($key, ['uptime', 'table_locks_immediate', 'select_scan', 'select_full_join', 'slow_queries', 'queries', 'open_files', 'open_tables', 'max_used_connections', 'aborted_clients'])) {
-                    continue;
+            try {
+                $point = App::$dataAccessPoints->Get($name);
+                $object = [];
+                $reader = $point->Query('show status');
+                while($r = $reader->Read()) {
+                    $key = strtolower($r->Variable_name);
+                    if(!in_array($key, ['uptime', 'table_locks_immediate', 'select_scan', 'select_full_join', 'slow_queries', 'queries', 'open_files', 'open_tables', 'max_used_connections', 'aborted_clients'])) {
+                        continue;
+                    }
+                    $object[$key] = (int)$r->Value;
                 }
-                $object[$key] = (int)$r->Value;
+                
+                $objects[$point->connection->host.':'.$point->connection->port] = $object;    
             }
-            
-            $objects[$point->connection->host.':'.$point->connection->port] = $object;
+            catch(\Throwable $e) {
+
+            }
 
         }
         
