@@ -55,10 +55,10 @@ class Module extends BaseModule
         self::$instance = $this;
 
         $moduleConfig = $this->Config();
-        $this->_fpmRequest = $moduleConfig->Query('config.status.fpm')->GetValue();
-        $this->_serverRequest = $moduleConfig->Query('config.status.server')->GetValue();
-        $this->_timer = $moduleConfig->Query('config.status.timer')->GetValue();
-        $this->_dumpTimer = $moduleConfig->Query('config.status.dump-timer')->GetValue();
+        $this->_fpmRequest = $moduleConfig->Query('config.status.fpm', '')->GetValue();
+        $this->_serverRequest = $moduleConfig->Query('config.status.server', '')->GetValue();
+        $this->_timer = $moduleConfig->Query('config.status.timer', 10)->GetValue();
+        $this->_dumpTimer = $moduleConfig->Query('config.status.dump-timer', 60)->GetValue();
 
     }
 
@@ -172,6 +172,10 @@ class Module extends BaseModule
     
     public function GetFpmStatus(): ?object 
     {
+        if(!$this->_fpmRequest) {
+            return (object)[];
+        }
+
         $request = new Request($this->_fpmRequest, Type::Get);
         $response = $request->Execute();
         if($response->status !== 200) {
@@ -200,6 +204,10 @@ class Module extends BaseModule
 
     public function GetServerStatus(): ?object 
     {
+        if(!$this->_serverRequest) {
+            return (object)[];
+
+        }
         $request = new Request($this->_serverRequest, Type::Get);
         $response = $request->Execute();
         if($response->status !== 200) {
