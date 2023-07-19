@@ -32,8 +32,8 @@ class Module extends BaseModule
 {
 
     
-    private string $_fpmRequest;
-    private string $_serverRequest;
+    private ?string $_fpmRequest;
+    private ?string $_serverRequest;
     private int $_timer;
     private int $_dumpTimer;
 
