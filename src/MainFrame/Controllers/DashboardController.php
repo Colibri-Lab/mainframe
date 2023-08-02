@@ -32,39 +32,31 @@ class DashboardController extends WebController
         $code = 200;
         $result = [];
         $message = 'Result message';
-        try {
 
-            $process = Process::ByWorkerName('StatusWorker');
-            if(App::$isLocal && $process) {
-                $process->Stop();
-                $process = null;
-            }
-
-            if(!$process) {
-        
-                $currentUser = \App\Modules\Security\Module::$instance->current;
-                $userGUID = md5($currentUser->id);
-                
-                $worker = new StatusWorker();
-                $process = Process::Create($worker);
-                $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
-
-            }
-
-            if(!$process->IsRunning()) {
-                throw new InvalidArgumentException('Can not start worker', 500);
-            }
-
-            $result = Module::$instance->RegisterStatusInfo();
-            $result->graph = Module::$instance->GetStatusInfo();
-
-
-        } catch (\Throwable $e) {
-            // если что то не так то выводим ошибку
-            $message = $e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine();
-            $code = $e->getCode();
-            App::$log->debug($message);
+    
+        $process = Process::ByWorkerName('StatusWorker');
+        if(App::$isLocal && $process) {
+            $process->Stop();
+            $process = null;
         }
+
+        if(!$process) {
+    
+            $currentUser = \App\Modules\Security\Module::$instance->current;
+            $userGUID = md5($currentUser->id);
+            
+            $worker = new StatusWorker();
+            $process = Process::Create($worker);
+            $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
+
+        }
+
+        if(!$process->IsRunning()) {
+            throw new InvalidArgumentException('Can not start worker', 500);
+        }
+
+        $result = Module::$instance->RegisterStatusInfo();
+        $result->graph = Module::$instance->GetStatusInfo();
 
         // финишируем контроллер
         return $this->Finish(
