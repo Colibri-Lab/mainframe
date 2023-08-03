@@ -13,7 +13,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         super.InitializeModule();
 
         this._mainPage = null;
-        this._store = App.Store.AddChild('app.mainframe');
+        this._store = App.Store.AddChild('app.mainframe', {}, this);
 
 
         console.log('Initializing module MainFrame');
@@ -48,6 +48,11 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
                 
         });
         
+        this._store.AddHandler('StoreLoaderCrushed', (event, args) => {
+            if(args.status === 403) {
+                location.reload();
+            }
+        });
         this.AddHandler('CallError', (event, args) => {
             if(args.status === 403) {
                 location.reload();
