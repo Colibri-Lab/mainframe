@@ -80,6 +80,9 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
     }
 
     __routeHandled(url, options) {
+        if(!this._mainPage) {
+            return;
+        }
         url = url.trim('/').replaceAll('mainframe/', '');
         const node = this._mainPage.Menu.FindNode('menu_' + url.replaceAll('/', '_'));
         this._mainPage.Menu.Select(node);
