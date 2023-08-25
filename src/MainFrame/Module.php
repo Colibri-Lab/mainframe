@@ -9,6 +9,7 @@
  * @copyright 2019 Colibri
  * @package App\Modules\MainFrame
  */
+
 namespace App\Modules\MainFrame;
 
 use Colibri\App;
@@ -23,15 +24,12 @@ use Colibri\Utils\Config\ConfigException;
 use Colibri\Utils\Logs\Logger;
 use Colibri\Utils\Menu\Item;
 
-
 /**
  * Backend mainframe module
  * @package App\Modules\MainFrame
  */
 class Module extends BaseModule
 {
-
-    
     private ?string $_fpmRequest;
     private ?string $_serverRequest;
     private int $_timer;
@@ -42,7 +40,7 @@ class Module extends BaseModule
      *
      * @var Module
      */
-    public static ? Module $instance = null;
+    public static ?Module $instance = null;
 
     private mixed $_userModule = null;
 
@@ -162,15 +160,15 @@ class Module extends BaseModule
      */
     public function Backup(Logger $logger, string $path)
     {
-        // Do nothing        
+        // Do nothing
     }
 
     public function GetStatusWorkerTimer(): int
     {
         return $this->_timer;
     }
-    
-    public function GetFpmStatus(): ?object 
+
+    public function GetFpmStatus(): ?object
     {
         if(!$this->_fpmRequest) {
             return (object)[];
@@ -190,11 +188,11 @@ class Module extends BaseModule
         usort($result['processes'], function ($a, $b) {
             if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] > $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
                 return -1;
-            } else if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] < $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
+            } elseif($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] < $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
                 return 1;
             } else {
                 return 0;
-            } 
+            }
         });
 
         $result['processes'] = array_splice($result['processes'], 0, 5);
@@ -202,7 +200,7 @@ class Module extends BaseModule
         return (object)$result;
     }
 
-    public function GetServerStatus(): ?object 
+    public function GetServerStatus(): ?object
     {
         if(!$this->_serverRequest) {
             return (object)[];
@@ -236,15 +234,14 @@ class Module extends BaseModule
                     }
                     $object[$key] = (int)$r->Value;
                 }
-                
-                $objects[$point->connection->host.':'.$point->connection->port] = $object;    
-            }
-            catch(\Throwable $e) {
+
+                $objects[$point->connection->host.':'.$point->connection->port] = $object;
+            } catch(\Throwable $e) {
 
             }
 
         }
-        
+
         return $objects;
     }
 
@@ -287,7 +284,7 @@ class Module extends BaseModule
         if($serverStatus) {
             $result['server'] = $serverStatus;
         }
-        
+
         $databaseStatus = Module::$instance->GetDatabaseStatus();
         if($databaseStatus) {
             $result['databases'] = array_values($databaseStatus);
@@ -304,7 +301,7 @@ class Module extends BaseModule
         if(count($results) > 50) {
             array_splice($results, 0, count($results) - 50);
         }
-        
+
         $res = Mem::Write('COLIBRI_STATUS_DATA', gzcompress(json_encode($results)));
         if(time() - $statusLastDumpTime > $this->_dumpTimer || !$res) {
             File::Write($statusDataFile, json_encode($results), true);
