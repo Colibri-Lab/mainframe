@@ -10,7 +10,13 @@ if(App::$domainKey === 'manage') {
             Colibri.IO.Request.RequestEncodeTypeEncrypted, 
             true, 
             true,
-            location.protocol + '//' + location.host
+            location.protocol + '//' + location.host,
+            'ru-RU',
+            'ru-RU',
+            {
+                code: 'RUB',
+                symbol: '₽'
+            }
         );
     </script>
 <?php
