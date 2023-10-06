@@ -219,17 +219,33 @@ class Module extends BaseModule
 
     public function GetDatabaseStatus(): ?array
     {
-
+        
         $objects = [];
         $accessPoints = App::$dataAccessPoints->accessPoints;
         foreach($accessPoints->points as $name => $pv) {
             try {
                 $point = App::$dataAccessPoints->Get($name);
+                $pointData = $point->point;
+                if (strstr($pointData->driver->connection, 'MySql') === false) {
+                    continue;
+                }
+
                 $object = [];
                 $reader = $point->Query('show status');
                 while($r = $reader->Read()) {
                     $key = strtolower($r->Variable_name);
-                    if(!in_array($key, ['uptime', 'table_locks_immediate', 'select_scan', 'select_full_join', 'slow_queries', 'queries', 'open_files', 'open_tables', 'max_used_connections', 'aborted_clients'])) {
+                    if(!in_array($key, [
+                        'uptime',
+                        'table_locks_immediate',
+                        'select_scan',
+                        'select_full_join',
+                        'slow_queries',
+                        'queries',
+                        'open_files',
+                        'open_tables',
+                        'max_used_connections',
+                        'aborted_clients'
+                    ])) {
                         continue;
                     }
                     $object[$key] = (int)$r->Value;
@@ -237,7 +253,7 @@ class Module extends BaseModule
 
                 $objects[$point->connection->host.':'.$point->connection->port] = $object;
             } catch(\Throwable $e) {
-
+                // do nothing
             }
 
         }

@@ -18,7 +18,6 @@ use InvalidArgumentException;
  */
 class DashboardController extends WebController
 {
-
     /**
      * Gets a fpm status
      * @param RequestCollection $get данные GET
@@ -26,14 +25,14 @@ class DashboardController extends WebController
      * @param mixed $payload данные payload обьекта переданного через POST/PUT
      * @return object
      */
-    public function Status(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
+    public function Status(RequestCollection $get, RequestCollection $post, ?PayloadCopy $payload = null): object
     {
 
         $code = 200;
         $result = [];
         $message = 'Result message';
 
-    
+
         $process = Process::ByWorkerName('StatusWorker');
         if(App::$isLocal && $process) {
             $process->Stop();
@@ -41,10 +40,10 @@ class DashboardController extends WebController
         }
 
         if(!$process) {
-    
+
             $currentUser = \App\Modules\Security\Module::$instance->current;
             $userGUID = md5($currentUser->id);
-            
+
             $worker = new StatusWorker();
             $process = Process::Create($worker);
             $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
@@ -69,5 +68,5 @@ class DashboardController extends WebController
     }
 
 
-    
+
 }
