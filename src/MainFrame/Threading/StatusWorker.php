@@ -20,7 +20,7 @@ class StatusWorker extends BaseWorker
      * @suppress PHP0420
      * @return void
      */
-    public function Run(): void
+    public function Run(): never
     {
 
         $user = $this->_params->user;
