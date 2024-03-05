@@ -40,4 +40,4 @@ App.Modules.MainFrame.Widgets.FpmStatistics = class extends Colibri.UI.Widget {
 
 }
 
-MainFrame.RegisterWidget('fpm-stats', App.Modules.MainFrame.Widgets.FpmStatistics);
+MainFrame && MainFrame.RegisterWidget('fpm-stats', App.Modules.MainFrame.Widgets.FpmStatistics);
