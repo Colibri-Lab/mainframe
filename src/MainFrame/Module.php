@@ -186,9 +186,15 @@ class Module extends BaseModule
         });
 
         usort($result['processes'], function ($a, $b) {
-            if($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] > $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
+            if(
+                $a['last-request-cpu'] * 1000000000 +
+                $a['last-request-memory'] > $b['last-request-cpu'] * 1000000000 +
+                $b['last-request-memory']) {
                 return -1;
-            } elseif($a['last-request-cpu'] * 1000000000 + $a['last-request-memory'] < $b['last-request-cpu'] * 1000000000 + $b['last-request-memory']) {
+            } elseif(
+                $a['last-request-cpu'] * 1000000000 +
+                $a['last-request-memory'] < $b['last-request-cpu'] * 1000000000 +
+                $b['last-request-memory']) {
                 return 1;
             } else {
                 return 0;
@@ -219,7 +225,7 @@ class Module extends BaseModule
 
     public function GetDatabaseStatus(): ?array
     {
-        
+
         $objects = [];
         $accessPoints = App::$dataAccessPoints->accessPoints;
         foreach($accessPoints->points as $name => $pv) {
