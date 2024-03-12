@@ -1,1 +1,14 @@
 
+
+user-store: app.security.user
+user-module: security
+
+status: 
+  server: "http://localhost:8090/serverstatus"
+  fpm: "http://localhost:8090/fpmstatus?full&json"
+  timer: 10
+  dump-timer: 60
+
+texts: include(mainframe-langtexts.yaml)
+menu: include(mainframe-menu.yaml)
+  
