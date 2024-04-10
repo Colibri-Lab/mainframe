@@ -16,6 +16,11 @@ App.Modules.MainFrame.Widgets.StatsChart = class extends Colibri.UI.Widget {
 
     }
 
+    /**
+     * @protected
+     * @param {Array<Operation>} data 
+     * @param {String} path 
+     */
     __renderBoundedValues(data, path) {
         if(path.indexOf('mainframe.graph') !== -1) {
             if(!Array.isArray(data) || data.length === 0) {

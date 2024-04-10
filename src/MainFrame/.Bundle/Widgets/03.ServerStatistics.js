@@ -16,6 +16,11 @@ App.Modules.MainFrame.Widgets.ServerStatistics = class extends Colibri.UI.Widget
 
     }
 
+    /**
+     * @protected
+     * @param {Array<Operation>} data 
+     * @param {String} path 
+     */
     __renderBoundedValues(data, path) {
         data = data.server ?? {};
         if(!data || Object.countKeys(data) === 0) {

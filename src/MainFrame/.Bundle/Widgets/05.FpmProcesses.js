@@ -16,6 +16,11 @@ App.Modules.MainFrame.Widgets.FpmProcesses = class extends Colibri.UI.Widget {
     }
  
     
+    /**
+     * @protected
+     * @param {Array<Operation>} data 
+     * @param {String} path 
+     */
     __renderBoundedValues(data, path) {
         data = data?.fpm ?? {};
         if(!data || Object.countKeys(data) === 0 || (data?.processes ?? []).length === 0) {

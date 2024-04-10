@@ -15,6 +15,11 @@ App.Modules.MainFrame.Widgets.DatabaseStatistics = class extends Colibri.UI.Widg
 
     }
 
+    /**
+     * @protected
+     * @param {Array<Operation>} data 
+     * @param {String} path 
+     */
     __renderBoundedValues(data, path) {
         data = data.databases ?? [];
         if(!data || data.length === 0) {
