@@ -61,6 +61,11 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __cometEventReceived(event, args) {
         if(args.event.action == 'status') {
             

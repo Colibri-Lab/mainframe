@@ -15,6 +15,11 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __dragDropLeave(event, args) {
         const dragged = args.dragged;
         const droppedTo = args.droppedTo;
@@ -26,6 +31,11 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         }
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __dragDropOver(event, args) {
         const dragged = args.dragged;
         const droppedTo = args.droppedTo;
@@ -39,6 +49,11 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         }    
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __dragDropComplete(event, args) {
         const dragged = args.dragged;
         const droppedTo = args.droppedTo;

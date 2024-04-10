@@ -20,6 +20,7 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
         this.header.css('width', (super.width - this.links.bounds().outerWidth) + 'px');
     }
 
+    /** @protected */
     _registerEvents() {
         super._registerEvents();
         this.RegisterEvent('SearchButtonClicked', false, 'Когда нажата кнопка поиска');
@@ -154,6 +155,7 @@ App.Modules.MainFrame.MainTabs.Button = class extends Colibri.UI.Button {
 
     }
 
+    /** @protected */
     _registerEvents() {
         super._registerEvents();
         this.RegisterEvent('CloseClicked', false, 'Когда нажали на кнопку закрытия');

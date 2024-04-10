@@ -44,6 +44,11 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __nodeClicked(event, args) {
 
         const node = args.item;

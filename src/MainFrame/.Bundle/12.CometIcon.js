@@ -99,6 +99,11 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
         this._list.styles = {left: point.left + 'px', top: (point.top + point.outerHeight) + 'px'};
     }
     
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __iconClicked(event, args) {
 
         this._list.Show();

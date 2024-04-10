@@ -26,7 +26,6 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         this._menu.AddHandler('NodesLoaded', (event, args) => this.__nodesLoaded(event, args));
         this._tabs.AddHandler('SelectionChanged', (event, args) => this.__tabsClicked(event, args));
 
-        // this._searchButton.AddHandler('Clicked', (event, args) => this.__searchButtonClicked(event, args));
         this._toolbarButtonExpand.AddHandler('Clicked', (event, args) => this.__toolbarExpandButtonClicked(event, args));
         this._toolbarButtonCollapse.AddHandler('Clicked', (event, args) => this.__toolbarCollapseButtonClicked(event, args));
 
@@ -56,10 +55,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         return this._menu;
     }
 
-    // __searchButtonClicked(event, args) {
-
-    // }
-
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __toolbarExpandButtonClicked(event, args) {
         this._toolbarButtonCollapse.shown = true;
         this._toolbarButtonExpand.shown = false;
@@ -71,6 +71,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         window.localStorage.setItem('maintabs', 'tree');
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __toolbarCollapseButtonClicked(event, args) {
         this._toolbarButtonCollapse.shown = false;
         this._toolbarButtonExpand.shown = true;
@@ -82,6 +87,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         window.localStorage.setItem('maintabs', 'toolbar');
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __menuSelectionChanged(event, args) {
         const node = args.node;
         if(!node) {
@@ -93,6 +103,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __toolbarButtonClicked(event, args) {
         const button = args.button;
         if(!button) {
@@ -108,18 +123,38 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         }
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __logoutClicked(event, args) {
         Security.Logout();
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __profileClicked(event, args) {
         Security.ShowProfileWindow();
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __splitResizing(event, args) {
         this._tabs.width = this._split.width - this._split.leftWidth;
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __nodesLoaded(event, args) {
         for(const route of this._tabs.savedTabs) {
             for(const node of this._menu.allNodes) {
@@ -135,6 +170,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         }
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __tabsClicked(event, args) {
         if(!args.tab) {
             App.Router.Navigate('', {});
