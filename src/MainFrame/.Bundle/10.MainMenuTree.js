@@ -29,9 +29,15 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
         });
 
     }
+ 
 
-
-    __renderBoundedValues(data) {
+    /**
+     * Render bounded to component data
+     * @protected
+     * @param {*} data 
+     * @param {String} path 
+     */
+    __renderBoundedValues(data, path) {
 
         if(!Array.isArray(data)) {
             return;

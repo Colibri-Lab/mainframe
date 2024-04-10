@@ -19,9 +19,15 @@ App.Modules.MainFrame.MainMenuToolbar = class extends Colibri.UI.Toolbar {
 
         });
 
-    }
+    } 
 
-    __renderBoundedValues(data) {
+    /**
+     * Render bounded to component data
+     * @protected
+     * @param {*} data 
+     * @param {String} path 
+     */
+    __renderBoundedValues(data, path) {
 
         if(!Array.isArray(data)) {
             return;

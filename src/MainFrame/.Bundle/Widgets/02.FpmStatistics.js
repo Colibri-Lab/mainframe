@@ -16,8 +16,9 @@ App.Modules.MainFrame.Widgets.FpmStatistics = class extends Colibri.UI.Widget {
     }
 
     /**
+     * Render bounded to component data
      * @protected
-     * @param {Array<Operation>} data 
+     * @param {*} data 
      * @param {String} path 
      */
     __renderBoundedValues(data, path) {
