@@ -10,7 +10,6 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
             this.header.scrollLeft += e.deltaY;
             return false;
         });
-
         this.RestoreFromLocalStore();
 
     }
@@ -62,9 +61,7 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
             args.domEvent.preventDefault();
             return false;
         });
-        tabButton.AddHandler('Clicked', (event, args) => {
-            return this.Dispatch('TabClicked', {domEvent: args?.domEvent, tab: event.sender}); 
-        });
+
         this.Dispatch('TabClicked', {tab: tabButton});
         tabButton.Redirect = (route) => {
             this.ReplaceInLocalStore(tabButton.tag.route, route);
@@ -75,7 +72,6 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     }
     
     AddTab(title, route, icon, containerComponent) {
-
         const tabName = route.replaceAll('/', '_');
         let tabButton = this.Children(tabName); 
         if(tabButton) {
