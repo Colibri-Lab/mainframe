@@ -1,81 +1,104 @@
 mainframe-widgets-databasesstatistics-title:
   ru: Статистика используемых баз данных
   en: Used databases statistics
-mainframe-widgets-fpmstatistics-sec: {}
+  hy: Օգտագործված տվյալների բազաների վիճակագրություն
 mainframe-widgets-databasestatistics-uptime-desc:
   ru: Аптайм
   en: Uptime
+  hy: Գործողության ժամանակ
 mainframe-widgets-databasestatistics-uptime-note:
   ru: Количество секунд, в течение которых сервер был включен
   en: The number of seconds the server has been up
+  hy: Սերվերի միացված վայրկյանների քանակը
 mainframe-widgets-databasestatistics-uptime-unit:
   ru: секунд
   en: seconds
-mainframe-widgets-databasestatistics-uptime-unit\: {}
+  hy: վայրկյան
 mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   ru: Запросы на блокировку
   en: Lock requests
+  hy: Կողպելու հարցումներ
 mainframe-widgets-databasestatistics-table_locks_immediate-note:
   ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен
     немедленно
   en: Number of times a table lock request can be granted immediately
+  hy: Սեղանի կողպման հարցումը կարող է անմիջապես տրվել քանի անգամ
 mainframe-widgets-databasestatistics-select_scan-desc:
   ru: Сканирование при выборке
   en: Full scan on joins
+  hy: Սկանավորել նմուշառման ընթացքում
 mainframe-widgets-databasestatistics-select_scan-note:
   ru: Количество объединений, которые выполнили полное сканирование первой таблицы.
   en: The number of joins that performed a full scan on the first table.
+  hy: "Միացումների քանակը, որոնք կատարել են առաջին աղյուսակի ամբողջական
+    սկանավորում:"
 mainframe-widgets-databasestatistics-select_full_join-desc:
   en: Merge scan
   ru: Сканирование при обьеденении
+  hy: Սկանավորում ուտելիս
 mainframe-widgets-databasestatistics-select_full_join-note:
   ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не
     используют индексы
   en: Number of joins performing table scans because they don't use indexes
+  hy: Միացումների քանակը, որոնք սկանավորում են աղյուսակները, քանի որ դրանք չեն
+    օգտագործում ինդեքսներ
 mainframe-widgets-databasestatistics-slow_queries-desc:
   en: Slow Queries
   ru: Медленные запросы
+  hy: Դանդաղ հարցումներ
 mainframe-widgets-databasestatistics-slow_queries-note:
   ru: Количество запросов, которые заняли более long_query_time секунд
   en: Number of queries that took more than long_query_time seconds
+  hy: Հարցումների քանակը, որոնք տևել են log_query_time վայրկյան
 mainframe-widgets-databasestatistics-queries-desc:
   ru: Запросы
   en: Queries
+  hy: Հարցումներ
 mainframe-widgets-databasestatistics-queries-note:
   ru: Количество запросов, выполненных сервером
   en: Number of requests made by the server
+  hy: Սերվերի կողմից կատարված հարցումների քանակը
 mainframe-widgets-databasestatistics-opened_files-desc:
   ru: Открытые файлы
   en: Opened files
-mainframe-widgets-databasestatistics-opened_files-նօտե: {}
-mainframe-widgets-databasestatistics-opened_files-нотno: {}
+  hy: Բացեք ֆայլերը
 mainframe-widgets-databasestatistics-opened_files-note:
   ru: Количество файлов, которые были открыты
   en: Number of files that have been opened
+  hy: Բացված ֆայլերի քանակը
 mainframe-widgets-databasestatistics-open_tables-desc:
   ru: Открытые таблицы
   en: Opened tables
+  hy: Բաց սեղաններ
 mainframe-widgets-databasestatistics-open_tables-note:
   ru: Количество столов, которые открыты
   en: Number of tables that are open
+  hy: Բաց աղյուսակների քանակը
 mainframe-widgets-databasestatistics-max_used_connections-desc:
   ru: Открытые подключения
   en: Open connections
+  hy: Բացեք կապերը
 mainframe-widgets-databasestatistics-max_used_connections-note:
   ru: Максимальное количество подключений, которые использовались одновременно с
     момента запуска сервера
   en: The maximum number of connections that have been in use at the same time
     since the server started
+  hy: Սերվերի գործարկումից ի վեր միաժամանակ օգտագործվող կապերի առավելագույն քանակը
 mainframe-widgets-databasestatistics-aborted_clients-desc:
   ru: Сброшенные подключения
   en: Aborted connections
+  hy: Վերականգնել կապերը
 mainframe-widgets-databasestatistics-aborted_clients-note:
   ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не
     закрыв соединение должным образом
   en: The number of connections that were aborted because the client died without
     properly closing the connection
+  hy: Միացումների թիվը, որոնք դադարեցվել են, քանի որ հաճախորդը մահացել է առանց
+    կապը պատշաճ կերպով փակելու
 mainframe-widgets-databasestatistics-notes:
   ru: Отображены переменные, которые влияют на производительность и поведение базы
     данных. Отображены данные по 1-му подключению
   en: Variables that affect database performance and behavior are displayed.
     Displayed data for the 1st connection
+  hy: "Ցուցադրում է փոփոխականներ, որոնք ազդում են տվյալների բազայի աշխատանքի և
+    վարքագծի վրա: Ցուցադրված տվյալները 1-ին կապի համար"

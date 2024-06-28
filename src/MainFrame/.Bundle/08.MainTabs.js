@@ -154,7 +154,7 @@ App.Modules.MainFrame.MainTabs.Button = class extends Colibri.UI.Button {
     /** @protected */
     _registerEvents() {
         super._registerEvents();
-        this.RegisterEvent('CloseClicked', false, 'Когда нажали на кнопку закрытия');
+        this.RegisterEvent('CloseClicked', false, 'When clicked on close button');
     }
 
     get text() {

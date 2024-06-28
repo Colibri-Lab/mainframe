@@ -138,7 +138,7 @@ class Module extends BaseModule
         $menu = $this->GetTopmostMenu(false);
 
         $permissions = [];
-        $permissions['mainframe'] = '#{mainframe-mainmenu-permissions}';
+        $permissions['mainframe'] = '#{mainframe-mainmenu-permissions}'; 
         foreach ($menu as $item) {
             $permissions['mainframe.' . $item->name] = $item->title;
             foreach ($item->children as $item2) {

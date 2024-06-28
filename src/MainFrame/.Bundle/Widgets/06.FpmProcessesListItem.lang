@@ -1,39 +1,48 @@
 mainframe-widgets-fpmprocesseslistitem-state-desc:
   ru: Статус
   en: State
-mainframe-widgets-fpmprocesseslistitem-request—method-desc: {}
+  hy: Կարգավիճակ
 mainframe-widgets-fpmprocesseslistitem-request_method-desc:
   ru: Тип запроса
   en: Request method
+  hy: Հարցման տեսակը
 mainframe-widgets-fpmprocesseslistitem-request_uri-desc:
   ru: URI запроса
   en: Request URI
+  hy: URI
 mainframe-widgets-fpmprocesseslistitem-script-desc:
   ru: Точка входа
   en: Entry point
+  hy: Մուտքի կետ
 mainframe-widgets-fpmprocesseslistitem-requests-desc:
   ru: Всего запросов
   en: All requests
+  hy: Ընդհանուր հարցումներ
 mainframe-widgets-fpmprocesseslistitem-request_duration-desc:
   ru: Всего потрачено времени
   en: Time spend on requests
+  hy: Ընդհանուր ծախսած ժամանակը
 mainframe-widgets-fpmprocesseslistitem-start_since-desc:
   ru: Запущено
   en: Started at
+  hy: Գործարկվել է
 mainframe-widgets-fpmprocesseslistitem-start_since-unit:
   ru: секунд назад
   en: seconds before
+  hy: վայրկյաններ առաջ
 mainframe-widgets-fpmprocesseslistitem-start_time-desc:
   ru: Дата запуска
   en: Start date and time
-mainframe-widgets-fpmprocesseslistitem-last-request-cpu-desc: {}
+  hy: Գործարկման ամսաթիվը
 mainframe-widgets-fpmprocesseslistitem-last_request_cpu-desc:
   ru: Потрачено процессора
   en: Processor time used
+  hy: CPU ծախսված
 mainframe-widgets-fpmprocesseslistitem-last_request_memory-desc:
   ru: Потрачено памяти
   en: Memory used
-mainframe-widgets-fpmprocesseslistitem-last_request_memory\-desc: {}
+  hy: Հիշողությունը վատնվեց
 mainframe-widgets-fpmprocesseslistitem-content_length-desc:
   ru: Длина запроса
   en: Content length
+  hy: Հարցման երկարությունը

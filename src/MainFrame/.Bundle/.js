@@ -17,7 +17,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
 
         console.log('Initializing module MainFrame');
-
+ 
         this.RegisterEvent('RouteHandled', false, 'Когда произошел переход');
         
         App.Router.AddRoutePattern('/mainframe/', (url, options) => this.__routeHandled(url, options));

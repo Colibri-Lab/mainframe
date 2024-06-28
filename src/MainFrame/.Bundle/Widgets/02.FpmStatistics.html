@@ -9,8 +9,8 @@
                 {
                     "pool": {
                         component: 'Text',
-                        desc: 'Пул',
-                        note: 'Имя пула процессов FPM',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-name}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-name-note}',
                         params: {
                             fieldsviewer: {
                                 hidden: true
@@ -19,8 +19,8 @@
                     },
                     "process-manager": {
                         component: 'Text',
-                        desc: 'Тип пула',
-                        note: 'Тип диспетчера процессов - статический, динамический или ondemand',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-type}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-type-note}',
                         params: {
                             fieldsviewer: {
                                 hidden: true
@@ -29,8 +29,8 @@
                     },
                     "start-time": {
                         component: 'DateTime',
-                        desc: 'Последний запуск',
-                        note: 'Дата и время последнего запуска пула процессов',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-start_time}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-start_time-note}',
                         params: {
                             fieldsviewer: {
                                 hidden: true
@@ -39,8 +39,8 @@
                     },
                     "start-since": {
                         component: 'Number',
-                        desc: 'Длительность',
-                        note: 'Время в секундах с момента последнего запуска пула процессов',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-start_since}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-start_since-note}',
                         params: {
                             format: 'default',
                             decimal: 0,
@@ -52,8 +52,8 @@
                     },
                     "accepted-conn": {
                         component: 'Number',
-                        desc: 'Подключений',
-                        note: 'Общее количество принятых подключений',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-accepted_conn}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-accepted_conn-note}',
                         params: {
                             format: 'default',
                             decimal: 0,
@@ -64,13 +64,13 @@
                     },
                     "listen-queue": {
                         component: 'Number',
-                        desc: 'Ждут обработки',
-                        note: 'Количество запросов (невыполненных работ), ожидающих в настоящее время свободного процесса'
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-listen_queue}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-listen_queue-note}'
                     },
                     "max-listen-queue": {
                         component: 'Number',
-                        desc: 'Максимальное',
-                        note: 'Максимальное количество запросов, отображаемых в очереди прослушивания за один раз',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-max_listen_queue}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-max_listen_queue-note}',
                         params: {
                             fieldsviewer: {
                                 hidden: true
@@ -79,8 +79,8 @@
                     },
                     "listen-queue-len": {
                         component: 'Number',
-                        desc: 'Максимальная очередь',
-                        note: 'Максимально допустимый размер очереди прослушивания',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-listen_queue_length}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-listen_queue_length-note}',
                         params: {
                             fieldsviewer: {
                                 hidden: true
@@ -89,23 +89,23 @@
                     },
                     "idle-processes": {
                         component: 'Number',
-                        desc: 'Ждут работы',
-                        note: 'Количество процессов, которые в данный момент простаивают (ожидают запросов)'
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-idle_processes}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-idle_processes-note}'
                     },
                     "active-processes": {
                         component: 'Number',
-                        desc: 'Работают',
-                        note: 'Количество процессов, обрабатывающих запросы в данный момент'
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-active_processes}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-active_processes-note}'
                     },
                     "total-processes": {
                         component: 'Number',
-                        desc: 'Всего',
-                        note: 'Текущее общее количество процессов'
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-total_processes}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-total_processes-note}'
                     },
                     "max-active-processes": {
                         component: 'Number',
-                        desc: 'Максимальная активность',
-                        note: 'Максимальное количество одновременно активных процессов',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-max_active_processes}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-max_active_processes-note}',
                         params: {
                             fieldsviewer: {
                                 hidden: true
@@ -114,8 +114,8 @@
                     },
                     "max-children-reached": {
                         component: 'Number',
-                        desc: 'Состояние',
-                        note: 'Достигнуто ли когда-либо максимальное количество процессов? Если это так, то отображаемое значение равно 10',
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-max_children_reached}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-max_children_reached-note}',
                         params: {
                             fieldsviewer: {
                                 hidden: true
@@ -124,13 +124,13 @@
                     },
                     "slow-requests": {
                         component: 'Number',
-                        desc: 'Медленные запросы',
-                        note: 'Общее количество запросов, попавших в настроенную платформу'
+                        desc: '#{mainframe-widgets-fpmstatistics-fields-slow_requests}',
+                        note: '#{mainframe-widgets-fpmstatistics-fields-slow_requests-note}'
                     },
                 }
             </fields>
         </FieldsViewer>        
-        <GoogleChart shown="true" name="processes" type="PieChart" title="Активность" />
+        <GoogleChart shown="true" name="processes" type="PieChart" title="#{mainframe-widgets-fpmstatistics-chart}" />
     </Split>
 
 </div>

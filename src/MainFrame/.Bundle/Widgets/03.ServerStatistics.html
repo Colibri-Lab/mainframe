@@ -9,27 +9,27 @@
                 {
                     "connections_active": { 
                         component: 'Number',
-                        desc: 'Активные',
-                        note: 'Активные подключения'
+                        desc: '#{mainframe-widgets-serverstatistics-fields-connections_active}',
+                        note: '#{mainframe-widgets-serverstatistics-fields-connections_active-note}'
                     },
                     "connections_reading": {
                         component: 'Number',
-                        desc: 'Чтение',
-                        note: 'Подключения в режиме чтения'
+                        desc: '#{mainframe-widgets-serverstatistics-fields-connections_reading}',
+                        note: '#{mainframe-widgets-serverstatistics-fields-connections_reading-note}'
                     },
                     "connections_waiting": {
                         component: 'Number',
-                        desc: 'Ожидание',
-                        note: 'Подключения в режиме ожидания'
+                        desc: '#{mainframe-widgets-serverstatistics-fields-connections_wating}',
+                        note: '#{mainframe-widgets-serverstatistics-fields-connections_wating-note}'
                     },
                     "connections_writing": {
                         component: 'Number',
-                        desc: 'Запись',
-                        note: 'Подключения в режиме записи'
+                        desc: '#{mainframe-widgets-serverstatistics-fields-connections_writing}',
+                        note: '#{mainframe-widgets-serverstatistics-fields-connections_writing-note}'
                     }
                 }
             </fields>
         </FieldsViewer>        
-        <GoogleChart shown="true" name="processes" type="PieChart" title="Активность" />
+        <GoogleChart shown="true" name="processes" type="PieChart" title="#{mainframe-widgets-serverstatistics-button}" />
     </Split>
 </div>
