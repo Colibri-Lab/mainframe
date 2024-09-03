@@ -12,6 +12,10 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
         list.forEach((item) => {
             try {
 
+                if(!Security.IsCommandAllowed('app.mainframe.' + (parent.tag && parent.tag?.name ? parent.tag.name + '.' : '') + item.name)) {
+                    return;
+                }
+
                 let newNode = this.FindNode(parent.name + '_' + item.name);
                 if(!newNode) {
                     newNode = parent.nodes.Add(parent.name + '_' + item.name);
