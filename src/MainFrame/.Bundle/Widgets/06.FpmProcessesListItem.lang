@@ -2,47 +2,71 @@ mainframe-widgets-fpmprocesseslistitem-state-desc:
   ru: Статус
   en: State
   hy: Կարգավիճակ
+  it: Stato
+  es: Estado
 mainframe-widgets-fpmprocesseslistitem-request_method-desc:
   ru: Тип запроса
   en: Request method
   hy: Հարցման տեսակը
+  it: Metodo di richiesta
+  es: Método de solicitud
 mainframe-widgets-fpmprocesseslistitem-request_uri-desc:
   ru: URI запроса
   en: Request URI
   hy: URI
+  it: URI di richiesta
+  es: URI de solicitud
 mainframe-widgets-fpmprocesseslistitem-script-desc:
   ru: Точка входа
   en: Entry point
   hy: Մուտքի կետ
+  it: Punto di ingresso
+  es: Punto de entrada
 mainframe-widgets-fpmprocesseslistitem-requests-desc:
   ru: Всего запросов
   en: All requests
   hy: Ընդհանուր հարցումներ
+  it: Tutte le richieste
+  es: Todas las solicitudes
 mainframe-widgets-fpmprocesseslistitem-request_duration-desc:
   ru: Всего потрачено времени
   en: Time spend on requests
   hy: Ընդհանուր ծախսած ժամանակը
+  it: Tempo trascorso sulle richieste
+  es: Tiempo gastado en solicitudes
 mainframe-widgets-fpmprocesseslistitem-start_since-desc:
   ru: Запущено
   en: Started at
   hy: Գործարկվել է
+  it: Iniziato a
+  es: Iniciado en
 mainframe-widgets-fpmprocesseslistitem-start_since-unit:
   ru: секунд назад
   en: seconds before
   hy: վայրկյաններ առաջ
+  it: secondi fa
+  es: segundos antes
 mainframe-widgets-fpmprocesseslistitem-start_time-desc:
   ru: Дата запуска
   en: Start date and time
   hy: Գործարկման ամսաթիվը
+  it: Data e ora di inizio
+  es: Fecha y hora de inicio
 mainframe-widgets-fpmprocesseslistitem-last_request_cpu-desc:
   ru: Потрачено процессора
   en: Processor time used
   hy: CPU ծախսված
+  it: Tempo processore utilizzato
+  es: Tiempo de procesador utilizado
 mainframe-widgets-fpmprocesseslistitem-last_request_memory-desc:
   ru: Потрачено памяти
   en: Memory used
   hy: Հիշողությունը վատնվեց
+  it: Memoria utilizzata
+  es: Memoria utilizada
 mainframe-widgets-fpmprocesseslistitem-content_length-desc:
   ru: Длина запроса
   en: Content length
   hy: Հարցման երկարությունը
+  it: Lunghezza del contenuto
+  es: Longitud del contenido

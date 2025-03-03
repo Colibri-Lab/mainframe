@@ -2,6 +2,8 @@ mainframe-widgets-fpmprocesses-title:
   ru: Работающие процессы
   en: Working processes
   hy: Գործող գործընթացներ
+  it: Processi di lavoro
+  es: Procesos de trabajo
 mainframe-widgets-fpmprocesses-notes:
   ru: Отображен список процессов в сервере FPM. Необходимо периодически смотреть
     на время потраченное на процесс
@@ -9,3 +11,7 @@ mainframe-widgets-fpmprocesses-notes:
     periodically look at the time spent on the process
   hy: "Ցուցադրում է գործընթացների ցանկը FPM սերվերում: Անհրաժեշտ է պարբերաբար
     դիտարկել գործընթացի վրա ծախսված ժամանակը"
+  it: Visualizza un elenco di processi nel server FPM. È necessario guardare
+    periodicamente il tempo trascorso sul processo
+  es: Muestra una lista de procesos en el servidor FPM. Es necesario mirar
+    periódicamente el tiempo dedicado al proceso

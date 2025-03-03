@@ -2,7 +2,11 @@ mainframe-widgets-statschart-notes:
   ru: График работы сервера, показываются последние 50 записей
   en: Server working stats, shown 50 last items
   hy: Սերվերի գործառնական ժամանակացույցը, որը ցույց է տալիս վերջին 50 գրառումները
+  it: Statistiche di lavoro del server, mostrati gli ultimi 50 elementi
+  es: Estadísticas de trabajo del servidor, se muestran los últimos 50 elementos
 mainframe-widgets-statschart-title:
   ru: График нагрузки
   en: Load schedule
   hy: Բեռնման ժամանակացույց
+  it: Programma di carico
+  es: Programa de carga

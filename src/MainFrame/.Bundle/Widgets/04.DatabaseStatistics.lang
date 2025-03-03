@@ -2,103 +2,137 @@ mainframe-widgets-databasesstatistics-title:
   ru: Статистика используемых баз данных
   en: Used databases statistics
   hy: Օգտագործված տվյալների բազաների վիճակագրություն
+  it: Statistiche dei database utilizzati
+  es: Estadísticas de bases de datos utilizadas
 mainframe-widgets-databasestatistics-uptime-desc:
   ru: Аптайм
   en: Uptime
   hy: Գործողության ժամանակ
+  it: Tempo di attività
+  es: Tiempo de actividad
 mainframe-widgets-databasestatistics-uptime-note:
   ru: Количество секунд, в течение которых сервер был включен
   en: The number of seconds the server has been up
   hy: Սերվերի միացված վայրկյանների քանակը
+  it: Il numero di secondi in cui il server è stato attivo
+  es: El número de segundos que el servidor ha estado en funcionamiento
 mainframe-widgets-databasestatistics-uptime-unit:
   ru: секунд
   en: seconds
   hy: վայրկյան
+  it: secondi
+  es: segundos
 mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   ru: Запросы на блокировку
   en: Lock requests
   hy: Կողպելու հարցումներ
+  it: Richieste di blocco
+  es: Solicitudes de bloqueo
 mainframe-widgets-databasestatistics-table_locks_immediate-note:
-  ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен
-    немедленно
+  ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен немедленно
   en: Number of times a table lock request can be granted immediately
   hy: Սեղանի կողպման հարցումը կարող է անմիջապես տրվել քանի անգամ
+  it: Numero di volte in cui una richiesta di blocco della tabella può essere concessa immediatamente
+  es: Número de veces que una solicitud de bloqueo de tabla puede ser concedida inmediatamente
 mainframe-widgets-databasestatistics-select_scan-desc:
   ru: Сканирование при выборке
   en: Full scan on joins
   hy: Սկանավորել նմուշառման ընթացքում
+  it: Scansione completa sui join
+  es: Escaneo completo en uniones
 mainframe-widgets-databasestatistics-select_scan-note:
   ru: Количество объединений, которые выполнили полное сканирование первой таблицы.
   en: The number of joins that performed a full scan on the first table.
-  hy: "Միացումների քանակը, որոնք կատարել են առաջին աղյուսակի ամբողջական
-    սկանավորում:"
+  hy: "Միացումների քանակը, որոնք կատարել են առաջին աղյուսակի ամբողջական սկանավորում:"
+  it: Il numero di join che hanno eseguito una scansione completa sulla prima tabella.
+  es: El número de uniones que realizaron un escaneo completo en la primera tabla.
 mainframe-widgets-databasestatistics-select_full_join-desc:
   en: Merge scan
   ru: Сканирование при обьеденении
   hy: Սկանավորում ուտելիս
+  it: Scansione di unione
+  es: Escaneo de unión
 mainframe-widgets-databasestatistics-select_full_join-note:
-  ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не
-    используют индексы
+  ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не используют индексы
   en: Number of joins performing table scans because they don't use indexes
-  hy: Միացումների քանակը, որոնք սկանավորում են աղյուսակները, քանի որ դրանք չեն
-    օգտագործում ինդեքսներ
+  hy: Միացումների քանակը, որոնք սկանավորում են աղյուսակները, քանի որ դրանք չեն օգտագործում ինդեքսներ
+  it: Numero di join che eseguono scansioni delle tabelle perché non utilizzano indici
+  es: Número de uniones que realizan escaneos de tablas porque no usan índices
 mainframe-widgets-databasestatistics-slow_queries-desc:
   en: Slow Queries
   ru: Медленные запросы
   hy: Դանդաղ հարցումներ
+  it: Query lente
+  es: Consultas lentas
 mainframe-widgets-databasestatistics-slow_queries-note:
   ru: Количество запросов, которые заняли более long_query_time секунд
   en: Number of queries that took more than long_query_time seconds
   hy: Հարցումների քանակը, որոնք տևել են log_query_time վայրկյան
+  it: Numero di query che hanno impiegato più di long_query_time secondi
+  es: Número de consultas que tomaron más de long_query_time segundos
 mainframe-widgets-databasestatistics-queries-desc:
   ru: Запросы
   en: Queries
   hy: Հարցումներ
+  it: Query
+  es: Consultas
 mainframe-widgets-databasestatistics-queries-note:
   ru: Количество запросов, выполненных сервером
   en: Number of requests made by the server
   hy: Սերվերի կողմից կատարված հարցումների քանակը
+  it: Numero di richieste effettuate dal server
+  es: Número de solicitudes realizadas por el servidor
 mainframe-widgets-databasestatistics-opened_files-desc:
   ru: Открытые файлы
   en: Opened files
   hy: Բացեք ֆայլերը
+  it: File aperti
+  es: Archivos abiertos
 mainframe-widgets-databasestatistics-opened_files-note:
   ru: Количество файлов, которые были открыты
   en: Number of files that have been opened
   hy: Բացված ֆայլերի քանակը
+  it: Numero di file che sono stati aperti
+  es: Número de archivos que se han abierto
 mainframe-widgets-databasestatistics-open_tables-desc:
   ru: Открытые таблицы
   en: Opened tables
   hy: Բաց սեղաններ
+  it: Tabelle aperte
+  es: Tablas abiertas
 mainframe-widgets-databasestatistics-open_tables-note:
   ru: Количество столов, которые открыты
   en: Number of tables that are open
   hy: Բաց աղյուսակների քանակը
+  it: Numero di tabelle aperte
+  es: Número de tablas que están abiertas
 mainframe-widgets-databasestatistics-max_used_connections-desc:
   ru: Открытые подключения
   en: Open connections
   hy: Բացեք կապերը
+  it: Connessioni aperte
+  es: Conexiones abiertas
 mainframe-widgets-databasestatistics-max_used_connections-note:
-  ru: Максимальное количество подключений, которые использовались одновременно с
-    момента запуска сервера
-  en: The maximum number of connections that have been in use at the same time
-    since the server started
+  ru: Максимальное количество подключений, которые использовались одновременно с момента запуска сервера
+  en: The maximum number of connections that have been in use at the same time since the server started
   hy: Սերվերի գործարկումից ի վեր միաժամանակ օգտագործվող կապերի առավելագույն քանակը
+  it: Il numero massimo di connessioni che sono state utilizzate contemporaneamente dall'avvio del server
+  es: El número máximo de conexiones que se han utilizado al mismo tiempo desde que se inició el servidor
 mainframe-widgets-databasestatistics-aborted_clients-desc:
   ru: Сброшенные подключения
   en: Aborted connections
   hy: Վերականգնել կապերը
+  it: Connessioni interrotte
+  es: Conexiones abortadas
 mainframe-widgets-databasestatistics-aborted_clients-note:
-  ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не
-    закрыв соединение должным образом
-  en: The number of connections that were aborted because the client died without
-    properly closing the connection
-  hy: Միացումների թիվը, որոնք դադարեցվել են, քանի որ հաճախորդը մահացել է առանց
-    կապը պատշաճ կերպով փակելու
+  ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не закрыв соединение должным образом
+  en: The number of connections that were aborted because the client died without properly closing the connection
+  hy: Միացումների թիվը, որոնք դադարեցվել են, քանի որ հաճախորդը մահացել է առանց կապը պատշաճ կերպով փակելու
+  it: Il numero di connessioni che sono state interrotte perché il client è morto senza chiudere correttamente la connessione
+  es: El número de conexiones que fueron abortadas porque el cliente murió sin cerrar correctamente la conexión
 mainframe-widgets-databasestatistics-notes:
-  ru: Отображены переменные, которые влияют на производительность и поведение базы
-    данных. Отображены данные по 1-му подключению
-  en: Variables that affect database performance and behavior are displayed.
-    Displayed data for the 1st connection
-  hy: "Ցուցադրում է փոփոխականներ, որոնք ազդում են տվյալների բազայի աշխատանքի և
-    վարքագծի վրա: Ցուցադրված տվյալները 1-ին կապի համար"
+  ru: Отображены переменные, которые влияют на производительность и поведение базы данных. Отображены данные по 1-му подключению
+  en: Variables that affect database performance and behavior are displayed. Displayed data for the 1st connection
+  hy: "Ցուցադրում է փոփոխականներ, որոնք ազդում են տվյալների բազայի աշխատանքի և վարքագծի վրա: Ցուցադրված տվյալները 1-ին կապի համար"
+  it: Vengono visualizzate le variabili che influenzano le prestazioni e il comportamento del database. Dati visualizzati per la 1a connessione
+  es: Se muestran las variables que afectan el rendimiento y el comportamiento de la base de datos. Datos mostrados para la 1ª conexión

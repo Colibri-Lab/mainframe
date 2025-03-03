@@ -2,6 +2,8 @@ mainframe-widgets-serverstatistics-title:
   ru: Состояние веб-сервера
   en: Web-server status
   hy: Վեբ սերվերի կարգավիճակը
+  it: Stato del server web
+  es: Estado del servidor web
 mainframe-widgets-serverstatistics-note:
   ru: Следите за активными процессами, процессы в ожидании должны быть больше чем
     запись и чтение одновременно
@@ -9,39 +11,61 @@ mainframe-widgets-serverstatistics-note:
     writing and reading at the same time
   hy: Հետևեք ակտիվ գործընթացներին, սպասման գործընթացները պետք է լինեն ավելին, քան
     միաժամանակ գրելը և կարդալը
+  it: Tieni d'occhio i processi attivi, i processi in attesa dovrebbero essere più di
+    scrivere e leggere contemporaneamente
+  es: Vigila los procesos activos, los procesos en espera deben ser más que
+    escribir y leer al mismo tiempo
 mainframe-widgets-serverstatistics-fields-connections_active:
   ru: Активные
   hy: Ակտիվ
   en: Active
+  it: Attivo
+  es: Activo
 mainframe-widgets-serverstatistics-fields-connections_active-note:
   ru: Активные подключения
   hy: Ակտիվ կապեր
   en: Active connections
+  it: Connessioni attive
+  es: Conexiones activas
 mainframe-widgets-serverstatistics-fields-connections_reading:
   ru: Чтение
   en: Reading
   hy: Ընթերցանություն
+  it: Lettura
+  es: Leyendo
 mainframe-widgets-serverstatistics-fields-connections_reading-note:
   ru: Подключения в режиме чтения
   hy: Կարդալ ռեժիմի միացումներ
   en: Connections in Read Mode
+  it: Connessioni in modalità lettura
+  es: Conexiones en modo de lectura
 mainframe-widgets-serverstatistics-fields-connections_wating:
   ru: Ожидание
   en: Expectation
   hy: Ակնկալիք
+  it: Attesa
+  es: Espera
 mainframe-widgets-serverstatistics-fields-connections_wating-note:
   ru: Подключения в режиме ожидания
   hy: Սպասման միացումներ
   en: Connections in standby mode
+  it: Connessioni in modalità standby
+  es: Conexiones en modo de espera
 mainframe-widgets-serverstatistics-fields-connections_writing:
   ru: Запись
   en: Writing
   hy: Գրառում
+  it: Scrittura
+  es: Escribiendo
 mainframe-widgets-serverstatistics-fields-connections_writing-note:
   ru: Подключения в режиме записи
   hy: Ձայնագրման ռեժիմի միացումներ
   en: Connections in recording mode
+  it: Connessioni in modalità registrazione
+  es: Conexiones en modo de grabación
 mainframe-widgets-serverstatistics-button:
   ru: Активность
   en: Activity
   hy: Գործունեություն
+  it: Attività
+  es: Actividad
