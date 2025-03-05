@@ -4,135 +4,181 @@ mainframe-widgets-databasesstatistics-title:
   hy: Օգտագործված տվյալների բազաների վիճակագրություն
   it: Statistiche dei database utilizzati
   es: Estadísticas de bases de datos utilizadas
+  kk: Пайдаланылған дерекқорлардың статистикасы
+  uz: Foydalanilgan ma'lumotlar bazasi statistikasi
 mainframe-widgets-databasestatistics-uptime-desc:
   ru: Аптайм
   en: Uptime
   hy: Գործողության ժամանակ
   it: Tempo di attività
   es: Tiempo de actividad
+  kk: Жұмыс уақыты
+  uz: Ish vaqti
 mainframe-widgets-databasestatistics-uptime-note:
   ru: Количество секунд, в течение которых сервер был включен
   en: The number of seconds the server has been up
   hy: Սերվերի միացված վայրկյանների քանակը
   it: Il numero di secondi in cui il server è stato attivo
   es: El número de segundos que el servidor ha estado en funcionamiento
+  kk: Сервер қосулы болған секундтар саны
+  uz: Server yoqilgan soniyalar soni
 mainframe-widgets-databasestatistics-uptime-unit:
   ru: секунд
   en: seconds
   hy: վայրկյան
   it: secondi
   es: segundos
+  kk: секунд
+  uz: soniya
 mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   ru: Запросы на блокировку
   en: Lock requests
   hy: Կողպելու հարցումներ
   it: Richieste di blocco
   es: Solicitudes de bloqueo
+  kk: Блоктау сұраулары
+  uz: Bloklash so'rovlari
 mainframe-widgets-databasestatistics-table_locks_immediate-note:
   ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен немедленно
   en: Number of times a table lock request can be granted immediately
   hy: Սեղանի կողպման հարցումը կարող է անմիջապես տրվել քանի անգամ
   it: Numero di volte in cui una richiesta di blocco della tabella può essere concessa immediatamente
   es: Número de veces que una solicitud de bloqueo de tabla puede ser concedida inmediatamente
+  kk: Кестені блоктау сұрауы дереу берілетін рет саны
+  uz: Jadvalni bloklash so'rovi darhol berilishi mumkin bo'lgan soni
 mainframe-widgets-databasestatistics-select_scan-desc:
   ru: Сканирование при выборке
   en: Full scan on joins
   hy: Սկանավորել նմուշառման ընթացքում
   it: Scansione completa sui join
   es: Escaneo completo en uniones
+  kk: Қосылулардағы толық сканерлеу
+  uz: Birikmalarda to'liq skanerlash
 mainframe-widgets-databasestatistics-select_scan-note:
   ru: Количество объединений, которые выполнили полное сканирование первой таблицы.
   en: The number of joins that performed a full scan on the first table.
   hy: "Միացումների քանակը, որոնք կատարել են առաջին աղյուսակի ամբողջական սկանավորում:"
   it: Il numero di join che hanno eseguito una scansione completa sulla prima tabella.
   es: El número de uniones que realizaron un escaneo completo en la primera tabla.
+  kk: Бірінші кестеде толық сканерлеу жүргізген қосылулар саны
+  uz: Birinchi jadvalda to'liq skanerlashni amalga oshirgan birikmalar soni
 mainframe-widgets-databasestatistics-select_full_join-desc:
   en: Merge scan
   ru: Сканирование при обьеденении
   hy: Սկանավորում ուտելիս
   it: Scansione di unione
   es: Escaneo de unión
+  kk: Біріктіру сканерлеуі
+  uz: Birlashtirish skanerlash
 mainframe-widgets-databasestatistics-select_full_join-note:
   ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не используют индексы
   en: Number of joins performing table scans because they don't use indexes
   hy: Միացումների քանակը, որոնք սկանավորում են աղյուսակները, քանի որ դրանք չեն օգտագործում ինդեքսներ
   it: Numero di join che eseguono scansioni delle tabelle perché non utilizzano indici
   es: Número de uniones que realizan escaneos de tablas porque no usan índices
+  kk: Индекстерді пайдаланбайтындықтан кестелерді сканерлейтін қосылулар саны
+  uz: Indekslarni ishlatmaganligi sababli jadval skanerlashni amalga oshirgan birikmalar soni
 mainframe-widgets-databasestatistics-slow_queries-desc:
   en: Slow Queries
   ru: Медленные запросы
   hy: Դանդաղ հարցումներ
   it: Query lente
   es: Consultas lentas
+  kk: Баяу сұраулар
+  uz: Sekin so'rovlar
 mainframe-widgets-databasestatistics-slow_queries-note:
   ru: Количество запросов, которые заняли более long_query_time секунд
   en: Number of queries that took more than long_query_time seconds
   hy: Հարցումների քանակը, որոնք տևել են log_query_time վայրկյան
   it: Numero di query che hanno impiegato più di long_query_time secondi
   es: Número de consultas que tomaron más de long_query_time segundos
+  kk: long_query_time секундтан көп уақыт алған сұраулар саны
+  uz: long_query_time soniyadan ko'proq vaqt olgan so'rovlar soni
 mainframe-widgets-databasestatistics-queries-desc:
   ru: Запросы
   en: Queries
   hy: Հարցումներ
   it: Query
   es: Consultas
+  kk: Сұраулар
+  uz: So'rovlar
 mainframe-widgets-databasestatistics-queries-note:
   ru: Количество запросов, выполненных сервером
   en: Number of requests made by the server
   hy: Սերվերի կողմից կատարված հարցումների քանակը
   it: Numero di richieste effettuate dal server
   es: Número de solicitudes realizadas por el servidor
+  kk: Сервер жасаған сұраулар саны
+  uz: Server tomonidan amalga oshirilgan so'rovlar soni
 mainframe-widgets-databasestatistics-opened_files-desc:
   ru: Открытые файлы
   en: Opened files
   hy: Բացեք ֆայլերը
   it: File aperti
   es: Archivos abiertos
+  kk: Ашылған файлдар
+  uz: Ochiq fayllar
 mainframe-widgets-databasestatistics-opened_files-note:
   ru: Количество файлов, которые были открыты
   en: Number of files that have been opened
   hy: Բացված ֆայլերի քանակը
   it: Numero di file che sono stati aperti
   es: Número de archivos que se han abierto
+  kk: Ашылған файлдар саны
+  uz: Ochiq fayllar soni
 mainframe-widgets-databasestatistics-open_tables-desc:
   ru: Открытые таблицы
   en: Opened tables
   hy: Բաց սեղաններ
   it: Tabelle aperte
   es: Tablas abiertas
+  kk: Ашылған кестелер
+  uz: Ochiq jadvallar
 mainframe-widgets-databasestatistics-open_tables-note:
   ru: Количество столов, которые открыты
   en: Number of tables that are open
   hy: Բաց աղյուսակների քանակը
   it: Numero di tabelle aperte
   es: Número de tablas que están abiertas
+  kk: Ашылған кестелер саны
+  uz: Ochiq jadvallar soni
 mainframe-widgets-databasestatistics-max_used_connections-desc:
   ru: Открытые подключения
   en: Open connections
   hy: Բացեք կապերը
   it: Connessioni aperte
   es: Conexiones abiertas
+  kk: Ашық қосылымдар
+  uz: Ochiq ulanishlar
 mainframe-widgets-databasestatistics-max_used_connections-note:
   ru: Максимальное количество подключений, которые использовались одновременно с момента запуска сервера
   en: The maximum number of connections that have been in use at the same time since the server started
   hy: Սերվերի գործարկումից ի վեր միաժամանակ օգտագործվող կապերի առավելագույն քանակը
   it: Il numero massimo di connessioni che sono state utilizzate contemporaneamente dall'avvio del server
   es: El número máximo de conexiones que se han utilizado al mismo tiempo desde que se inició el servidor
+  kk: Сервер іске қосылғаннан бері бір уақытта пайдаланылған қосылымдардың ең көп саны
+  uz: Server ishga tushirilganidan beri bir vaqtning o'zida ishlatilgan ulanishlarning maksimal soni
 mainframe-widgets-databasestatistics-aborted_clients-desc:
   ru: Сброшенные подключения
   en: Aborted connections
   hy: Վերականգնել կապերը
   it: Connessioni interrotte
   es: Conexiones abortadas
+  kk: Үзілген қосылымдар
+  uz: Bekor qilingan ulanishlar
 mainframe-widgets-databasestatistics-aborted_clients-note:
   ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не закрыв соединение должным образом
   en: The number of connections that were aborted because the client died without properly closing the connection
   hy: Միացումների թիվը, որոնք դադարեցվել են, քանի որ հաճախորդը մահացել է առանց կապը պատշաճ կերպով փակելու
   it: Il numero di connessioni che sono state interrotte perché il client è morto senza chiudere correttamente la connessione
   es: El número de conexiones que fueron abortadas porque el cliente murió sin cerrar correctamente la conexión
+  kk: Клиент қосылымды дұрыс жаппай қайтыс болғандықтан үзілген қосылымдар саны
+  uz: Mijoz ulanishni to'g'ri yopmasdan vafot etgani sababli bekor qilingan ulanishlar soni
 mainframe-widgets-databasestatistics-notes:
   ru: Отображены переменные, которые влияют на производительность и поведение базы данных. Отображены данные по 1-му подключению
   en: Variables that affect database performance and behavior are displayed. Displayed data for the 1st connection
   hy: "Ցուցադրում է փոփոխականներ, որոնք ազդում են տվյալների բազայի աշխատանքի և վարքագծի վրա: Ցուցադրված տվյալները 1-ին կապի համար"
   it: Vengono visualizzate le variabili che influenzano le prestazioni e il comportamento del database. Dati visualizzati per la 1a connessione
   es: Se muestran las variables que afectan el rendimiento y el comportamiento de la base de datos. Datos mostrados para la 1ª conexión
+  kk: Дерекқордың өнімділігі мен мінез-құлқына әсер ететін айнымалылар көрсетіледі. 1-ші қосылым үшін көрсетілген деректер
+  uz: Ma'lumotlar bazasi ishlashiga va xatti-harakatiga ta'sir qiluvchi o'zgaruvchilar ko'rsatiladi. 1-chi ulanish uchun ko'rsatilgan ma'lumotlar

@@ -4,193 +4,259 @@ mainframe-widgets-fpmstatistics-title:
   hy: PHP կարգավիճակ
   it: Stato PHP Fpm
   es: Estado de PHP Fpm
+  kk: PHP күйі
+  uz: PHP holati
 mainframe-widgets-fpmstatistics-sec:
   ru: секунд
   en: seconds
   hy: վայրկյան
   it: secondi
   es: segundos
+  kk: секунд
+  uz: soniya
 mainframe-widgets-fpmstatistics-note:
   ru: "Отображены основные переменные сервера FPM, внимательно следите за состоянием процессов "
   en: The main variables of the FPM server are displayed, carefully monitor the status of the processes
   hy: FPM սերվերի հիմնական փոփոխականները ցուցադրվում են, ուշադիր հետևում են գործընթացների կարգավիճակին
   it: Le principali variabili del server FPM sono visualizzate, monitorare attentamente lo stato dei processi
   es: Se muestran las principales variables del servidor FPM, monitoree cuidadosamente el estado de los procesos
+  kk: FPM серверінің негізгі айнымалылары көрсетілген, процестердің күйін мұқият бақылаңыз
+  uz: FPM serverining asosiy o'zgaruvchilari ko'rsatilgan, jarayonlar holatini diqqat bilan kuzatib boring
 mainframe-widgets-fpmstatistics-fields-name:
   ru: Пул
   hy: Փուլ
   en: Pool
   it: Pool
   es: Grupo
+  kk: Пул
+  uz: Pool
 mainframe-widgets-fpmstatistics-fields-type:
   ru: Тип пула
   en: Pool type
   hy: Փուլի տիպը
   it: Tipo di pool
   es: Tipo de grupo
+  kk: Пул түрі
+  uz: Pool turi
 mainframe-widgets-fpmstatistics-fields-name-note:
   ru: Название пула FPM
   en: FPM pool name
   hy: FPM փուլի անվանումը
   it: Nome del pool FPM
   es: Nombre del grupo FPM
+  kk: FPM пул атауы
+  uz: FPM pool nomi
 mainframe-widgets-fpmstatistics-fields-type-note:
   ru: Тип диспетчера процессов - статический, динамический или ondemand
   en: Process manager type - static, dynamic or ondemand
   hy: Գործընթացների մենեջերի տեսակը՝ static, dynamic կամ ondemand
   it: Tipo di gestore dei processi - statico, dinamico o ondemand
   es: Tipo de gestor de procesos - estático, dinámico o bajo demanda
+  kk: Процесс менеджері түрі - статикалық, динамикалық немесе сұраныс бойынша
+  uz: Jarayon menejeri turi - statik, dinamik yoki talabga binoan
 mainframe-widgets-fpmstatistics-fields-start_time:
   ru: Последний запуск
   hy: Վերջին վազքը
   en: Last launch
   it: Ultimo avvio
   es: Último lanzamiento
+  kk: Соңғы іске қосу
+  uz: Oxirgi ishga tushirish
 mainframe-widgets-fpmstatistics-fields-start_time-note:
   ru: Дата и время последнего запуска пула процессов
   en: Date and time the process pool was last started
   hy: Վերջին անգամ գործընթացի ֆոնդի մեկնարկի ամսաթիվը և ժամը
   it: Data e ora dell'ultimo avvio del pool di processi
   es: Fecha y hora en que se inició por última vez el grupo de procesos
+  kk: Процесс пулын соңғы рет іске қосқан күні мен уақыты
+  uz: Jarayon poolini oxirgi marta ishga tushirilgan sana va vaqt
 mainframe-widgets-fpmstatistics-fields-start_since:
   ru: Длительность
   hy: Տեւողությունը
   en: Duration
   it: Durata
   es: Duración
+  kk: Ұзақтығы
+  uz: Davomiyligi
 mainframe-widgets-fpmstatistics-fields-start_since-note:
   ru: Время в секундах с момента последнего запуска пула процессов
   en: Time in seconds since the process pool was last started
   hy: Ժամանակը վայրկյաններով, քանի որ գործընթացի լողավազանը վերջին անգամ սկսել է
   it: Tempo in secondi dall'ultimo avvio del pool di processi
   es: Tiempo en segundos desde que se inició por última vez el grupo de procesos
+  kk: Процесс пулын соңғы рет іске қосқаннан бері өткен уақыт секундпен
+  uz: Jarayon poolini oxirgi marta ishga tushirilganidan beri o'tgan vaqt soniyada
 mainframe-widgets-fpmstatistics-fields-accepted_conn:
   ru: Подключений
   hy: Միացումներ
   en: Connections
   it: Connessioni
   es: Conexiones
+  kk: Қосылымдар
+  uz: Ulanishlar
 mainframe-widgets-fpmstatistics-fields-accepted_conn-note:
   ru: Общее количество принятых подключений
   en: Total number of accepted connections
   hy: Ընդունված կապերի ընդհանուր թիվը
   it: Numero totale di connessioni accettate
   es: Número total de conexiones aceptadas
+  kk: Қабылданған қосылымдардың жалпы саны
+  uz: Qabul qilingan ulanishlarning umumiy soni
 mainframe-widgets-fpmstatistics-fields-listen_queue:
   ru: Ждут обработки
   hy: Սպասում է մշակմանը
   en: Waiting for processing
   it: In attesa di elaborazione
   es: Esperando procesamiento
+  kk: Өңдеуді күту
+  uz: Qayta ishlashni kutish
 mainframe-widgets-fpmstatistics-fields-listen_queue-note:
   ru: Количество запросов (невыполненных работ), ожидающих в настоящее время свободного процесса
   en: The number of requests (backlogs) currently waiting for an idle process
   hy: Ներկա պահին անգործուն գործընթացի սպասող հարցումների (հետապտույտների) քանակը
   it: Il numero di richieste (arretrati) attualmente in attesa di un processo inattivo
   es: El número de solicitudes (atrasos) que actualmente esperan un proceso inactivo
+  kk: Қазіргі уақытта бос процесті күтіп тұрған сұраулардың (артта қалулардың) саны
+  uz: Hozirda bo'sh jarayonni kutayotgan so'rovlar (orqada qolishlar) soni
 mainframe-widgets-fpmstatistics-fields-max_listen_queue:
   ru: Максимальное
   hy: Առավելագույնը
   en: Maximum
   it: Massimo
   es: Máximo
+  kk: Ең көп
+  uz: Maksimal
 mainframe-widgets-fpmstatistics-fields-max_listen_queue-note:
   ru: Максимальное количество запросов, отображаемых в очереди прослушивания за один раз
   en: The maximum number of requests to display in the listening queue at one time.
   hy: Լսման հերթում միանգամից ցուցադրվող հարցումների առավելագույն քանակը
   it: Il numero massimo di richieste da visualizzare nella coda di ascolto in una sola volta
   es: El número máximo de solicitudes para mostrar en la cola de escucha a la vez
+  kk: Тыңдау кезегінде бір уақытта көрсетілетін сұраулардың ең көп саны
+  uz: Tinglash navbatida bir vaqtning o'zida ko'rsatiladigan so'rovlarning maksimal soni
 mainframe-widgets-fpmstatistics-fields-listen_queue_length:
   ru: Максимальная очередь
   en: Maximum queue
   hy: Առավելագույն հերթ
   it: Coda massima
   es: Cola máxima
+  kk: Ең көп кезек
+  uz: Maksimal navbat
 mainframe-widgets-fpmstatistics-fields-max_listen_q:
   en: Maximum queue
   it: Coda massima
   es: Cola máxima
+  kk: Ең көп кезек
+  uz: Maksimal navbat
 mainframe-widgets-fpmstatistics-fields-listen_queue_length-note:
   ru: Максимально допустимый размер очереди прослушивания
   en: Maximum allowed size of listening queue
   hy: Լսելու հերթի առավելագույն թույլատրելի չափը
   it: Dimensione massima consentita della coda di ascolto
   es: Tamaño máximo permitido de la cola de escucha
+  kk: Тыңдау кезегінің рұқсат етілген ең үлкен өлшемі
+  uz: Tinglash navbatining ruxsat etilgan maksimal hajmi
 mainframe-widgets-fpmstatistics-fields-idle_processes:
   ru: Ждут работы
   hy: Սպասում է աշխատանքի
   en: Waiting for work
   it: In attesa di lavoro
   es: Esperando trabajo
+  kk: Жұмысты күту
+  uz: Ishni kutish
 mainframe-widgets-fpmstatistics-fields-idle_processes-note:
   ru: Количество процессов, которые в данный момент простаивают (ожидают запросов)
   en: The number of processes that are currently idle (waiting for requests)
   hy: Գործընթացների քանակը, որոնք ներկայումս անգործուն են (սպասում են հարցումներին)
   it: Il numero di processi attualmente inattivi (in attesa di richieste)
   es: El número de procesos que están actualmente inactivos (esperando solicitudes)
+  kk: Қазіргі уақытта бос тұрған (сұрауларды күтіп тұрған) процестер саны
+  uz: Hozirda bo'sh turgan (so'rovlarni kutayotgan) jarayonlar soni
 mainframe-widgets-fpmstatistics-fields-active_processes:
   ru: Работают
   en: Working
   hy: Աշխատում են
   it: Lavorando
   es: Trabajando
+  kk: Жұмыс істеу
+  uz: Ishlash
 mainframe-widgets-fpmstatistics-fields-active_processes-note:
   ru: Количество процессов, обрабатывающих запросы в данный момент
   hy: Ներկայիս հարցումները մշակող գործընթացների քանակը
   en: The number of processes currently processing requests
   it: Il numero di processi attualmente in elaborazione delle richieste
   es: El número de procesos que actualmente están procesando solicitudes
+  kk: Қазіргі уақытта сұрауларды өңдеп жатқан процестер саны
+  uz: Hozirda so'rovlarni qayta ishlayotgan jarayonlar soni
 mainframe-widgets-fpmstatistics-fields-total_processes:
   ru: Всего
   en: Total
   hy: Ընդամենը
   it: Totale
   es: Total
+  kk: Барлығы
+  uz: Jami
 mainframe-widgets-fpmstatistics-fields-total_processes-note:
   ru: Текущее общее количество процессов
   hy: Գործընթացների ընթացիկ ընդհանուր թիվը
   en: Current total number of processes
   it: Numero totale attuale di processi
   es: Número total actual de procesos
+  kk: Процестердің ағымдағы жалпы саны
+  uz: Jarayonlarning joriy umumiy soni
 mainframe-widgets-fpmstatistics-fields-max_active_processes:
   ru: Максимальная активность
   en: Maximum activity
   hy: Առավելագույն ակտիվություն
   it: Attività massima
   es: Actividad máxima
+  kk: Ең көп белсенділік
+  uz: Maksimal faoliyat
 mainframe-widgets-fpmstatistics-fields-max_active_processes-note:
   ru: Максимальное количество одновременно активных процессов
   en: Maximum number of simultaneously active processes
   hy: Միաժամանակյա ակտիվ գործընթացների առավելագույն քանակը
   it: Numero massimo di processi attivi simultaneamente
   es: Número máximo de procesos activos simultáneamente
+  kk: Бір уақытта белсенді процестердің ең көп саны
+  uz: Bir vaqtning o'zida faol jarayonlarning maksimal soni
 mainframe-widgets-fpmstatistics-fields-max_children_reached:
   ru: Состояние
   hy: Վիճակ
   en: State
   it: Stato
   es: Estado
+  kk: Күйі
+  uz: Holati
 mainframe-widgets-fpmstatistics-fields-max_children_reached-note:
   ru: Достигнуто ли когда-либо максимальное количество процессов? Если это так, то отображаемое значение равно 10
   hy: "Երբևէ հասել է գործընթացների առավելագույն քանակին: Եթե ​​այո, ապա ցուցադրվող արժեքը 10 է"
   en: Is the maximum number of processes ever reached? If so, the value displayed is 10
   it: È mai stato raggiunto il numero massimo di processi? In tal caso, il valore visualizzato è 10
   es: ¿Se ha alcanzado alguna vez el número máximo de procesos? Si es así, el valor mostrado es 10
+  kk: Процестердің ең көп санына жетті ме? Егер солай болса, көрсетілген мән 10
+  uz: Jarayonlarning maksimal soniga yetildimi? Agar shunday bo'lsa, ko'rsatilgan qiymat 10
 mainframe-widgets-fpmstatistics-fields-slow_requests:
   ru: Медленные запросы
   en: Slow queries
   hy: Դանդաղ հարցումներ
   it: Query lente
   es: Consultas lentas
+  kk: Баяу сұраулар
+  uz: Sekin so'rovlar
 mainframe-widgets-fpmstatistics-fields-slow_requests-note:
   ru: Общее количество запросов, попавших в настроенную платформу
   hy: Հարցումների ընդհանուր թիվը, որոնք հարվածել են կազմաձևված հարթակին
   en: Total number of requests that hit the configured platform
   it: Numero totale di richieste che hanno colpito la piattaforma configurata
   es: Número total de solicitudes que golpearon la plataforma configurada
+  kk: Орнатылған платформаға түскен сұраулардың жалпы саны
+  uz: Sozlangan platformaga tushgan so'rovlarning umumiy soni
 mainframe-widgets-fpmstatistics-chart:
   ru: Активность
   en: Activity
   hy: Գործունեություն
   it: Attività
   es: Actividad
+  kk: Белсенділік
+  uz: Faoliyat

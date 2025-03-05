@@ -4,9 +4,13 @@ mainframe-widgets-statschart-notes:
   hy: Սերվերի գործառնական ժամանակացույցը, որը ցույց է տալիս վերջին 50 գրառումները
   it: Statistiche di lavoro del server, mostrati gli ultimi 50 elementi
   es: Estadísticas de trabajo del servidor, se muestran los últimos 50 elementos
+  kk: Сервер жұмысының статистикасы, соңғы 50 жазба көрсетіледі
+  uz: Server ish statistikasi, oxirgi 50 yozuv ko'rsatiladi
 mainframe-widgets-statschart-title:
   ru: График нагрузки
   en: Load schedule
   hy: Բեռնման ժամանակացույց
   it: Programma di carico
   es: Programa de carga
+  kk: Жүктеме кестесі
+  uz: Yuklama jadvali

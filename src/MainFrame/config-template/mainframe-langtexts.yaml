@@ -4,25 +4,33 @@ mainframe-menu-struct:
   hy: Կառուցվածքը
   it: Struttura
   es: Estructura
+  kk: Құрылым
+  uz: Tuzilma
 mainframe-menu-dev:
   ru: Разработка
   en: Development
   hy: Մշակում
   it: Sviluppo
   es: Desarrollo
+  kk: Даму
+  uz: Rivojlanish
 mainframe-menu-more:
   ru: Инструменты
   en: Tools
   hy: Գործիքներ
   it: Strumenti
   es: Herramientas
+  kk: Құралдар
+  uz: Asboblar
 mainframe-menu-more-menu:
   ru: Редактор древовидного меню панели администратора. Можно поменять местами,
     скрыть или отобразить некоторые пункты
   en: Menu Editor
   hy: Մենյու խմբագիր
-  it: Editor del
-  es: Editor del
+  it: Editor del menu
+  es: Editor del menú
+  kk: Мәзір редакторы
+  uz: Menyu muharriri
 mainframe-menu-more-menu-desc:
   en: Editor of the tree menu of the admin panel. You can swap, hide or display
     some items
@@ -34,9 +42,13 @@ mainframe-menu-more-menu-desc:
     nascondere o visualizzare alcuni elementi"
   es: "Editor del menú de árbol del panel de administración. Puede intercambiar, ocultar
     o mostrar algunos elementos"
+  kk: "Әкімші панелінің ағаш мәзірінің редакторы. Кейбір элементтерді ауыстыруға, жасыруға немесе көрсетуге болады"
+  uz: "Administrator panelining daraxt menyusi muharriri. Ba'zi elementlarni almashtirish, yashirish yoki ko'rsatish mumkin"
 mainframe-mainmenu-permissions:
   ru: Основное меню
   en: Main menu
   hy: Հիմնական մենյու
   it: Menu principale
   es: Menú principal
+  kk: Негізгі мәзір
+  uz: Asosiy menyu
