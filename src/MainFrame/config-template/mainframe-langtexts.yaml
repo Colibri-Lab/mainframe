@@ -38,12 +38,14 @@ mainframe-menu-more-menu-desc:
     скрыть или отобразить некоторые пункты
   hy: "Կառավարիչի վահանակի ծառի մենյուի խմբագիր: Դուք կարող եք փոխել տեղերը,
     թաքցնել կամ ցուցադրել որոշ կետեր"
-  it: "Editor del menu ad albero del pannello di amministrazione. È possibile scambiare,
-    nascondere o visualizzare alcuni elementi"
-  es: "Editor del menú de árbol del panel de administración. Puede intercambiar, ocultar
-    o mostrar algunos elementos"
-  kk: "Әкімші панелінің ағаш мәзірінің редакторы. Кейбір элементтерді ауыстыруға, жасыруға немесе көрсетуге болады"
-  uz: "Administrator panelining daraxt menyusi muharriri. Ba'zi elementlarni almashtirish, yashirish yoki ko'rsatish mumkin"
+  it: Editor del menu ad albero del pannello di amministrazione. È possibile
+    scambiare, nascondere o visualizzare alcuni elementi
+  es: Editor del menú de árbol del panel de administración. Puede intercambiar,
+    ocultar o mostrar algunos elementos
+  kk: Әкімші панелінің ағаш мәзірінің редакторы. Кейбір элементтерді ауыстыруға,
+    жасыруға немесе көрсетуге болады
+  uz: Administrator panelining daraxt menyusi muharriri. Ba'zi elementlarni
+    almashtirish, yashirish yoki ko'rsatish mumkin
 mainframe-mainmenu-permissions:
   ru: Основное меню
   en: Main menu

@@ -32,7 +32,7 @@ class StatusWorker extends BaseWorker
         while(true) {
             sleep(Module::$instance->GetStatusWorkerTimer());
             $result = Module::$instance->RegisterStatusInfo();
-            $comet->SendToUser($requester, $user, 'status', $result);
+            $comet->SendToUser($requester, $user, 'status', $result, false);
         }
 
     }
