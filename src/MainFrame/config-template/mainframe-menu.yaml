@@ -1,0 +1,218 @@
+---
+name: mainframe
+title: Приложение
+description: Функции приложения
+execute: ""
+icon: ""
+index: /mainframe/
+enabled: true
+children:
+- name: struct
+  title: '#{mainframe-menu-struct}'
+  description: ""
+  execute: ""
+  icon: App.Modules.MainFrame.Icons.StructureIcon
+  index: /mainframe/struct/
+  enabled: true
+  children:
+  - name: structure
+    title: '#{sites-menu-struct}'
+    description: '#{sites-menu-struct-desc}'
+    execute: App.Modules.Sites.StructurePage
+    icon: App.Modules.Sites.Icons.FoldersIcon
+    index: /mainframe/struct/structure/
+    enabled: true
+    children: []
+  - name: data
+    title: '#{sites-menu-storagesdata}'
+    description: '#{sites-menu-storagesdata-desc}'
+    execute: App.Modules.Sites.DataPage
+    icon: App.Modules.Sites.Icons.StoragesIcon
+    index: /mainframe/struct/data/
+    enabled: true
+    children: []
+  - name: settings
+    title: '#{tools-menu-settings-data}'
+    description: '#{tools-menu-settings-data-desc}'
+    execute: App.Modules.Tools.SettingsDataPage
+    icon: App.Modules.Tools.Icons.SettingsIcon
+    index: /mainframe/struct/settings/
+    enabled: true
+    children: []
+  - name: disk
+    title: '#{tools-menu-filesondisk}'
+    description: '#{tools-menu-filesondisk-desc}'
+    execute: App.Modules.Tools.FilesPage
+    icon: App.Modules.Tools.Icons.FilesIcon
+    index: /mainframe/struct/disk/
+    enabled: true
+    children: []
+  - name: remote
+    title: '#{tools-menu-filesremote}'
+    description: '#{tools-menu-filesremote-desc}'
+    execute: App.Modules.Tools.RemoteFilesSettingsPage
+    icon: App.Modules.Tools.Icons.RemoteFilesIcon
+    index: /mainframe/struct/remote/
+    enabled: true
+    children: []
+- name: dev
+  title: '#{mainframe-menu-dev}'
+  description: ""
+  execute: ""
+  icon: App.Modules.MainFrame.Icons.DevIcon
+  index: /mainframe/dev/
+  enabled: true
+  children:
+  - name: storages
+    title: '#{sites-menu-storages}'
+    description: '#{sites-menu-storages-desc}'
+    execute: App.Modules.Sites.StoragesPage
+    icon: App.Modules.Sites.Icons.StoragesManageIcon
+    index: /mainframe/dev/storages/
+    enabled: true
+    children: []
+  - name: manager
+    title: '#{tools-menu-settings}'
+    description: '#{tools-menu-settings-desc}'
+    execute: App.Modules.Tools.SettingsManagerPage
+    icon: App.Modules.Tools.Icons.SettingsIcon
+    index: /mainframe/dev/manager/
+    enabled: true
+    children: []
+  - name: notices
+    title: '#{tools-menu-notices}'
+    description: '#{tools-menu-notices-desc}'
+    execute: App.Modules.Tools.NoticesPage
+    icon: App.Modules.Tools.Icons.NoticesIcon
+    index: /mainframe/dev/notices/
+    enabled: true
+    children: []
+- name: more
+  title: '#{mainframe-menu-more}'
+  description: ""
+  execute: ""
+  icon: App.Modules.MainFrame.Icons.MoreIcon
+  index: /mainframe/more/
+  enabled: true
+  children:
+  - name: lang
+    title: '#{lang-menu-settings}'
+    description: '#{lang-menu-settings-desc}'
+    execute: App.Modules.Lang.SettingsPage
+    icon: App.Modules.Lang.Icons.LangSettingsIcon
+    index: /mainframe/more/lang/
+    enabled: true
+    children: []
+  - name: users
+    title: '#{security-menu-usersandroles}'
+    description: '#{security-menu-usersandroles-desc}'
+    execute: App.Modules.Security.AdministratePage
+    icon: App.Modules.Security.Icons.UserAndRolesIcon
+    index: /mainframe/more/users/
+    enabled: true
+    children: []
+  - name: backup
+    title: '#{tools-menu-backups}'
+    description: '#{tools-menu-backups-desc}'
+    execute: App.Modules.Tools.BackupPage
+    icon: App.Modules.Tools.Icons.BackupIcon
+    index: /mainframe/more/backup/
+    enabled: true
+    children: []
+  - name: execute
+    title: '#{tools-menu-execute}'
+    description: '#{tools-menu-execute-desc}'
+    execute: App.Modules.Tools.ExecutePHPPage
+    icon: App.Modules.Tools.Icons.ExecuteIcon
+    index: /mainframe/more/execute/
+    enabled: true
+    children: []
+  - name: themes
+    title: '#{tools-menu-themes}'
+    description: '#{tools-menu-themes-desc}'
+    execute: App.Modules.Tools.ThemesPage
+    icon: App.Modules.Tools.Icons.ThemesIcon
+    index: /mainframe/more/themes/
+    enabled: true
+    children: []
+  - name: jobs
+    title: '#{tools-menu-jobs}'
+    description: '#{tools-menu-jobs-desc}'
+    execute: App.Modules.Tools.JobsPage
+    icon: App.Modules.Tools.Icons.JobsIcon
+    index: /mainframe/more/jobs/
+    enabled: true
+    children: []
+- name: audit
+  title: '#{glavbukhaudit-menu-audit}'
+  description: ""
+  execute: ""
+  icon: App.Modules.GlavbukhAudit.Icons.BackendLogo
+  index: /mainframe/audit/
+  enabled: true
+  children:
+  - name: test
+    title: '#{glavbukhaudit-menu-test}'
+    description: '#{glavbukhaudit-menu-test-desc}'
+    execute: App.Modules.GlavbukhAudit.Backend.TestRequirements
+    icon: App.Modules.GlavbukhAudit.Icons.Test
+    index: /mainframe/audit/test/
+    enabled: true
+    children: []
+  - name: advices
+    title: '#{glavbukhaudit-menu-advices}'
+    description: '#{glavbukhaudit-menu-advices-desc}'
+    execute: App.Modules.GlavbukhAudit.Backend.Advices
+    icon: App.Modules.GlavbukhAudit.Icons.Advices
+    index: /mainframe/audit/advices/
+    enabled: true
+    children: []
+  - name: reports
+    title: '#{glavbukhaudit-menu-reports}'
+    description: '#{glavbukhaudit-menu-reports-desc}'
+    execute: App.Modules.GlavbukhAudit.Backend.Reports
+    icon: App.Modules.GlavbukhAudit.Icons.Reports
+    index: /mainframe/audit/reports/
+    enabled: true
+    children: []
+  - name: uploads
+    title: '#{glavbukhaudit-menu-uploads}'
+    description: '#{glavbukhaudit-menu-uploads-desc}'
+    execute: App.Modules.GlavbukhAudit.Backend.Uploads
+    icon: App.Modules.GlavbukhAudit.Icons.Uploads
+    index: /mainframe/audit/uploads/
+    enabled: true
+    children: []
+- name: sur
+  title: '#{sur-menu-audit}'
+  description: ""
+  execute: ""
+  icon: App.Modules.Sur.Icons.BackendLogo
+  index: /mainframe/sur/
+  enabled: true
+  children:
+  - name: norms
+    title: '#{sur-menu-norms}'
+    description: '#{sur-menu-norms-desc}'
+    execute: App.Modules.Sur.Backend.Norms
+    icon: App.Modules.Sur.Icons.Backend.Norms
+    index: /mainframe/sur/norms/
+    enabled: true
+    children: []
+  - name: clients
+    title: '#{sur-menu-clienst}'
+    description: '#{sur-menu-clienst-desc}'
+    execute: App.Modules.Sur.Backend.Clients
+    icon: App.Modules.Sur.Icons.Backend.Clients
+    index: /mainframe/sur/clients/
+    enabled: true
+    children: []
+  - name: uploads
+    title: '#{sur-menu-uploads}'
+    description: '#{sur-menu-uploads-desc}'
+    execute: App.Modules.Sur.Backend.Uploads
+    icon: App.Modules.Sur.Icons.Uploads
+    index: /mainframe/sur/uploads/
+    enabled: true
+    children: []
+...
