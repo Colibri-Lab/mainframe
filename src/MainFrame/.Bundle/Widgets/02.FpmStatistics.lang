@@ -148,6 +148,8 @@ mainframe-widgets-fpmstatistics-fields-max_listen_q:
   es: Cola máxima
   kk: Ең көп кезек
   uz: Maksimal navbat
+  hy: Առավելագույն հերթ
+  ru: Максимальная очередь
 mainframe-widgets-fpmstatistics-fields-listen_queue_length-note:
   ru: Максимально допустимый размер очереди прослушивания
   en: Maximum allowed size of listening queue
