@@ -35,12 +35,6 @@ class Module extends BaseModule
     private int $_timer;
     private int $_dumpTimer;
 
-    /**
-     * Синглтон
-     *
-     * @var Module
-     */
-    public static ?Module $instance = null;
 
     private mixed $_userModule = null;
 
@@ -50,7 +44,6 @@ class Module extends BaseModule
      */
     public function InitializeModule(): void
     {
-        self::$instance = $this;
 
         $moduleConfig = $this->Config();
         $this->_fpmRequest = $moduleConfig->Query('config.status.fpm', '')->GetValue();
@@ -86,7 +79,7 @@ class Module extends BaseModule
     {
 
         try {
-            $menu = Module::$instance->Config()->Query('config.menu')->AsArray();
+            $menu = Module::Instance()->Config()->Query('config.menu')->AsArray();
         } catch (ConfigException $e) {
             $menu = null;
         }
@@ -297,17 +290,17 @@ class Module extends BaseModule
 
         $result = ['time' => time()];
 
-        $fpmStatus = Module::$instance->GetFpmStatus();
+        $fpmStatus = Module::Instance()->GetFpmStatus();
         if($fpmStatus) {
             $result['fpm'] = $fpmStatus;
         }
 
-        $serverStatus = Module::$instance->GetServerStatus();
+        $serverStatus = Module::Instance()->GetServerStatus();
         if($serverStatus) {
             $result['server'] = $serverStatus;
         }
 
-        $databaseStatus = Module::$instance->GetDatabaseStatus();
+        $databaseStatus = Module::Instance()->GetDatabaseStatus();
         if($databaseStatus) {
             $result['databases'] = array_values($databaseStatus);
         }

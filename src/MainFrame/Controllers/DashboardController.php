@@ -41,7 +41,7 @@ class DashboardController extends WebController
 
         if(!$process) {
 
-            $currentUser = \App\Modules\Security\Module::$instance->current;
+            $currentUser = \App\Modules\Security\Module::Instance()->current;
             $userGUID = md5($currentUser->id);
 
             $worker = new StatusWorker();
@@ -54,8 +54,8 @@ class DashboardController extends WebController
             throw new InvalidArgumentException('Can not start worker', 500);
         }
 
-        $result = Module::$instance->RegisterStatusInfo();
-        $result->graph = Module::$instance->GetStatusInfo();
+        $result = Module::Instance()->RegisterStatusInfo();
+        $result->graph = Module::Instance()->GetStatusInfo();
 
         // финишируем контроллер
         return $this->Finish(

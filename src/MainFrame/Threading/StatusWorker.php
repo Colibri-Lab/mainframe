@@ -30,8 +30,8 @@ class StatusWorker extends BaseWorker
         $comet = new Client($cometConfig->host, $cometConfig->port);
 
         while(true) {
-            sleep(Module::$instance->GetStatusWorkerTimer());
-            $result = Module::$instance->RegisterStatusInfo();
+            sleep(Module::Instance()->GetStatusWorkerTimer());
+            $result = Module::Instance()->RegisterStatusInfo();
             $comet->SendToUser($requester, $user, 'status', $result, false);
         }
 

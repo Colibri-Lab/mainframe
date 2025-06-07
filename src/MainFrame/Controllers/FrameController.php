@@ -22,9 +22,9 @@ class FrameController extends Controller
     public function Settings(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {
 
-        $mainframeConfig = Module::$instance->Config();
+        $mainframeConfig = Module::Instance()->Config();
 
-        $menu = Module::$instance->GetTopmostMenu(true);
+        $menu = Module::Instance()->GetTopmostMenu(true);
 
         $config = $mainframeConfig->Query('config')->AsArray();
         unset($config['texts']);
@@ -69,12 +69,12 @@ class FrameController extends Controller
     public function Execute(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {
 
-        $userModule = Module::$instance->UserModule();
+        $userModule = Module::Instance()->UserModule();
         if (!$userModule->current) {
             return $this->Finish(403, 'Пользователь не авторизован');
         }
 
-        $menu = Module::$instance->GetTopmostMenu(false);
+        $menu = Module::Instance()->GetTopmostMenu(false);
 
         $permissions = [];
         foreach ($menu as $item) {
