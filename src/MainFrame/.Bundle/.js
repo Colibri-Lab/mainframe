@@ -41,7 +41,11 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         
             });
 
-            App.Comet && App.Comet.AddHandler('EventReceived', (event, args) => this.__cometEventReceived(event, args));
+            if(App.Comet) {
+                this.__eventReceived = (event, args) => this.__cometEventReceived(event, args);
+                App.Comet.RemoveHandler('EventReceived', this.__eventReceived);
+                App.Comet.AddHandler('EventReceived', this.__eventReceived);
+            } 
 
             this.FrameSettings();
             this.Status();
