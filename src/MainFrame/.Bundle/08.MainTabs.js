@@ -6,12 +6,19 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
 
         this._localStore = [];
 
-        this.header.addEventListener('mousewheel', (e) => {
+        this.__handleMouseWheel = (e) => {
             this.header.scrollLeft += e.deltaY;
             return false;
-        });
+        };
+
+        this.header.addEventListener('mousewheel', this.__handleMouseWheel);
         this.RestoreFromLocalStore();
 
+    }
+
+    Dispose() {
+        this.header.removeEventListener('mousewheel', this.__handleMouseWheel);
+        super.Dispose();
     }
 
     set width(value) {
