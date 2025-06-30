@@ -4,7 +4,7 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
         this.AddClass('app-comet-button-component');
 
         this._iconContextMenu = [];
-        this.AddHandler('Clicked', (event, args) => this.__iconClicked(event, args));
+        this.AddHandler('Clicked', this.__iconClicked);
 
         this._list = new Colibri.UI.List(this.name + '_list', document.body);
         this._list.AddClass('app-commet-message-list-component');
@@ -57,7 +57,7 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
             }
         };
 
-        this._list.AddHandler('ShadowClicked', (event, args) => this._listShadowClicked(event, args));
+        this._list.AddHandler('ShadowClicked', this._listShadowClicked, false, this);
 
         if(!!App.Comet) {
             this.shown = true;

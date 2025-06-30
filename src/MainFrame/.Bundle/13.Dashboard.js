@@ -9,9 +9,9 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         const draggable = this._loadWidgets();
 
         this._dragManager = new Colibri.UI.DragManager(draggable, [this._container]);
-        this._dragManager.AddHandler('DragDropComplete', (event, args) => this.__dragDropComplete(event, args));
-        this._dragManager.AddHandler('DragDropOver', (event, args) => this.__dragDropOver(event, args));
-        this._dragManager.AddHandler('DragDropLeave', (event, args) => this.__dragDropLeave(event, args));
+        this._dragManager.AddHandler('DragDropComplete', this.__dragDropComplete, false, this);
+        this._dragManager.AddHandler('DragDropOver', this.__dragDropOver, false, this);
+        this._dragManager.AddHandler('DragDropLeave', this.__dragDropLeave, false, this);
 
     }
 
@@ -26,7 +26,8 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         const droppedToElement = args.droppedToElement;
         const widgetElement = droppedToElement.closest('.app-component-widget');
         if(widgetElement) {
-            const droppedToWidget = widgetElement.tag('component');
+            // const droppedToWidget = widgetElement.getUIComponent();
+            const droppedToWidget = widgetElement.getUIComponent();
             droppedToWidget.RemoveClass('drag-over')
         }
     }
@@ -43,7 +44,8 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         
         const widgetElement = droppedToElement.closest('.app-component-widget');
         if(widgetElement) {
-            const droppedToWidget = widgetElement.tag('component');
+            // const droppedToWidget = widgetElement.getUIComponent();
+            const droppedToWidget = widgetElement.getUIComponent();
             droppedTo.ForEach((name, component) => component.RemoveClass('drag-over'));
             droppedToWidget.AddClass('drag-over');
         }    
@@ -62,7 +64,8 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         const widgetElement = droppedToElement.closest('.app-component-widget');
         if(widgetElement) {
 
-            const droppedToWidget = widgetElement.tag('component');
+            // const droppedToWidget = widgetElement.getUIComponent();
+            const droppedToWidget = widgetElement.getUIComponent();
             droppedToWidget.RemoveClass('drag-over');
             droppedTo.Children(dragged.name, dragged, droppedToWidget.index, droppedTo.container, dragged.mainElement);
 

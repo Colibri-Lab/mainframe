@@ -18,16 +18,16 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
         this._toolbarButtonExpand = this._tabs.Children('toolbar-button-expand');
         this._toolbarButtonCollapse = this._tabs.Children('toolbar-button-collapse');
 
-        this._menu.AddHandler('SelectionChanged', (event, args) => this.__menuSelectionChanged(event, args));
-        this._toolbar.AddHandler('ToolbarButtonClicked', (event, args) => this.__toolbarButtonClicked(event, args));
-        this._user.AddHandler('LogoutClicked', (event, args) => this.__logoutClicked(event, args));
-        this._user.AddHandler('ProfileClicked', (event, args) => this.__profileClicked(event, args));
-        this._split.AddHandler(['SplitResizing', 'Resize'], (event, args) => this.__splitResizing(event, args));
-        this._menu.AddHandler('NodesLoaded', (event, args) => this.__nodesLoaded(event, args));
-        this._tabs.AddHandler('SelectionChanged', (event, args) => this.__tabsClicked(event, args));
+        this._menu.AddHandler('SelectionChanged', this.__menuSelectionChanged, false, this);
+        this._toolbar.AddHandler('ToolbarButtonClicked', this.__toolbarButtonClicked, false, this);
+        this._user.AddHandler('LogoutClicked', this.__logoutClicked, false, this);
+        this._user.AddHandler('ProfileClicked', this.__profileClicked, false, this);
+        this._split.AddHandler(['SplitResizing', 'Resize'], this.__splitResizing, false, this);
+        this._menu.AddHandler('NodesLoaded', this.__nodesLoaded, false, this);
+        this._tabs.AddHandler('SelectionChanged', this.__tabsClicked, false, this);
 
-        this._toolbarButtonExpand.AddHandler('Clicked', (event, args) => this.__toolbarExpandButtonClicked(event, args));
-        this._toolbarButtonCollapse.AddHandler('Clicked', (event, args) => this.__toolbarCollapseButtonClicked(event, args));
+        this._toolbarButtonExpand.AddHandler('Clicked', this.__toolbarExpandButtonClicked, false, this);
+        this._toolbarButtonCollapse.AddHandler('Clicked', this.__toolbarCollapseButtonClicked, false, this);
 
         Colibri.Common.Delay(100).then(() => {
             this._tabs.width = this._split.width - this._split.leftWidth;
