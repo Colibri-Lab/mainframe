@@ -9,7 +9,7 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
         this._list = new Colibri.UI.List(this.name + '_list', document.body);
         this._list.AddClass('app-commet-message-list-component');
         this._group = this._list.AddGroup('group', '');
-        this._group.noItemsText = '#{mainframe-comet-messages-empty}';
+        this._group.emptyMessage = '#{mainframe-comet-messages-empty}';
         this._list.__renderItemContent = (data, item) => {
             const messageContainer = new Colibri.UI.FlexBox('s', item);
             const messageIcon = new Colibri.UI.Icon('i', messageContainer);
@@ -17,10 +17,10 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
             const messageTextContainer = new Colibri.UI.Pane('tc', messageContainer);
             const messageText = new Colibri.UI.TextSpan('s', messageTextContainer);
             const messageDateContainer = new Colibri.UI.FlexBox('dc', messageTextContainer);
-            if(data.message.from) {
+            if (data.message.from) {
                 const messageFrom = new Colibri.UI.TextSpan('f', messageDateContainer);
                 messageFrom.shown = true;
-                messageFrom.value = data.message.from; 
+                messageFrom.value = data.message.from;
             }
 
             const messageDate = new Colibri.UI.TextSpan('d', messageDateContainer);
@@ -31,41 +31,46 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
             messageRemove.iconSVG = 'Colibri.UI.RemoveIcon';
             messageText.value = data.message.text;
             messageDate.value = data.date.toDate().Age();
-            messageRemove.AddHandler('Clicked', (event, args) => {
-                App.Comet && App.Comet.RemoveMessage(data);
-                args.domEvent.stopPropagation();
-                args.domEvent.preventDefault();
-                return false;
-            });
-            if(data.message.exec) {
-                messageContainer.AddHandler('Clicked', (event, args) => {
-                    let exec = data.message.exec;
-                    try {
-                        exec = eval(exec);
-                    }
-                    catch(e) {}
-
-                    this._listShadowClicked(event, args);
-
-                    exec && exec(data);
-
-                    args.domEvent.stopPropagation();
-                    args.domEvent.preventDefault();
-                    return false;
-    
-                });
+            messageRemove.AddHandler('Clicked', this.__messageRemoveClicked, false, this);
+            if (data.message.exec) {
+                messageContainer.tag = data;
+                messageContainer.AddHandler('Clicked', this.__messageContainerClicked, false, this);
             }
         };
 
         this._list.AddHandler('ShadowClicked', this._listShadowClicked, false, this);
 
-        if(!!App.Comet) {
+        if (!!App.Comet) {
             this.shown = true;
         }
 
     }
 
-    
+    __messageContainerClicked(event, args) {
+        let exec = event.sender.data.message.exec;
+        try {
+            exec = eval(exec);
+        }
+        catch (e) { }
+
+        this._listShadowClicked(event, args);
+
+        exec && exec(event.sender.data);
+
+        args.domEvent.stopPropagation();
+        args.domEvent.preventDefault();
+        return false;
+
+    }
+
+    __messageRemoveClicked(event, args) {
+        App.Comet && App.Comet.RemoveMessage(data);
+        args.domEvent.stopPropagation();
+        args.domEvent.preventDefault();
+        return false;
+    }
+
+
 
     /**
      * Render bounded to component data
@@ -74,43 +79,43 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
      * @param {String} path 
      */
     __renderBoundedValues(data, path) {
-        if(!data || !Object.isObject(data) || !Object.countKeys(data)) {
+        if (!data || !Object.isObject(data) || !Object.countKeys(data)) {
             return;
         }
 
         this._unreadCount = data.unread;
         this._messages = data.messages;
         this._renderList();
-        
-        if(this._unreadCount > 0) {
-            if(!this._unreadCounter) {
+
+        if (this._unreadCount > 0) {
+            if (!this._unreadCounter) {
                 this._unreadCounter = new Colibri.UI.Counter(this.name + '_counter', this);
             }
             this._unreadCounter.value = this._unreadCount;
             this._unreadCounter.shown = true;
         }
-        else if(this._unreadCounter) {
+        else if (this._unreadCounter) {
             this._unreadCounter.shown = false;
         }
 
     }
-    
+
     _listShadowClicked(event, args) {
         this._list.hasShadow = false;
         this._list.Hide();
     }
 
-    
+
     _setListPosition() {
         const point = this.container.bounds();
-        this._list.styles = {left: point.left + 'px', top: (point.top + point.outerHeight) + 'px'};
+        this._list.styles = { left: point.left + 'px', top: (point.top + point.outerHeight) + 'px' };
     }
-    
+
     /**
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __iconClicked(event, args) {
 
         this._list.Show();
@@ -123,10 +128,10 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
 
     _renderList() {
         this._group.Clear();
-        for(const message of this._messages) {
+        for (const message of this._messages) {
             this._group.AddItem(message);
         }
-        if(this._list.shown) {
+        if (this._list.shown) {
             this._list.BringToFront();
             this._list.hasShadow = true;
         }

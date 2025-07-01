@@ -30,7 +30,37 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     _registerEvents() {
         super._registerEvents();
         this.RegisterEvent('SearchButtonClicked', false, 'Когда нажата кнопка поиска');
-        
+
+    }
+
+    __tabButtonMouseUp(event, args) {
+        if (args.domEvent.button === 1 && tabButton.closable) {
+            return tabButton.Dispatch('CloseClicked', args);
+        }
+    }
+
+    __tabButtonCloseClicked(event, args) {
+
+        this.RemoveFromLocalStore(route);
+
+        const currentIndex = tabButton.container.index();
+
+        tabButton.Dispose();
+        containerComponent.Dispose();
+
+        if (currentIndex == 0 && this.tabsCount > 0) {
+            this.selectedIndex = 0;
+        }
+        else if (currentIndex > 0) {
+            this.selectedIndex = currentIndex - 1;
+        }
+        else {
+            this.Dispatch('SelectionChanged', { domEvent: args.domEvent, name: null });
+        }
+
+        args.domEvent.stopPropagation();
+        args.domEvent.preventDefault();
+        return false;
     }
 
     _createTabButton(title, route, icon, containerComponent) {
@@ -39,49 +69,23 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
         tabButton.closable = true;
         tabButton.parent = this;
         tabButton.icon = icon;
-        tabButton.tag = {title: title, route: route, icon: icon, container: containerComponent};
-        tabButton.AddHandler('MouseUp', (event, args) => {
-            if(args.domEvent.button === 1 && tabButton.closable) {
-                tabButton.Dispatch('CloseClicked', args);
-            }
-        });
-        tabButton.AddHandler('CloseClicked', (event, args) => {
+        tabButton.tag = { title: title, route: route, icon: icon, container: containerComponent };
+        tabButton.AddHandler('MouseUp', this.__tabButtonMouseUp, false, this);
+        tabButton.AddHandler('CloseClicked', this.__tabButtonCloseClicked, false, this);
 
-            this.RemoveFromLocalStore(route);
-
-            const currentIndex = tabButton.container.index();
-
-            tabButton.Dispose();
-            containerComponent.Dispose();
-
-            if(currentIndex == 0 && this.tabsCount > 0) {
-                this.selectedIndex = 0;
-            }
-            else if(currentIndex > 0) {
-                this.selectedIndex = currentIndex - 1;
-            }
-            else {
-                this.Dispatch('SelectionChanged', {domEvent: args.domEvent, name: null}); 
-            }
-
-            args.domEvent.stopPropagation();
-            args.domEvent.preventDefault();
-            return false;
-        });
-
-        this.Dispatch('TabClicked', {tab: tabButton});
+        this.Dispatch('TabClicked', { tab: tabButton });
         tabButton.Redirect = (route) => {
             this.ReplaceInLocalStore(tabButton.tag.route, route);
             tabButton.tag.route = route;
-            this.Dispatch('SelectionChanged', {tab: tabButton}); 
+            this.Dispatch('SelectionChanged', { tab: tabButton });
         };
         return tabButton;
     }
-    
+
     AddTab(title, route, icon, containerComponent) {
         const tabName = route.replaceAll('/', '_');
-        let tabButton = this.Children(tabName); 
-        if(tabButton) {
+        let tabButton = this.Children(tabName);
+        if (tabButton) {
             this.selectedTab = tabName;
         }
         else {
@@ -108,27 +112,27 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     ReplaceInLocalStore(route1, route2) {
 
         const index = this._localStore.indexOf(route1);
-        if(index === -1) {
+        if (index === -1) {
             return;
         }
-    
+
         this._localStore.splice(index, 1, route2);
         window.localStorage.setItem('open-tabs', JSON.stringify(this._localStore));
     }
 
     SaveToLocalStore(route) {
         const index = this._localStore.indexOf(route);
-        if(index !== -1) {
+        if (index !== -1) {
             return;
         }
-    
+
         this._localStore.push(route);
         window.localStorage.setItem('open-tabs', JSON.stringify(this._localStore));
     }
 
     RestoreFromLocalStore() {
         this._localStore = JSON.parse(window.localStorage.getItem('open-tabs'));
-        if(!Array.isArray(this._localStore)) {
+        if (!Array.isArray(this._localStore)) {
             this._localStore = [];
         }
     }
@@ -154,7 +158,7 @@ App.Modules.MainFrame.MainTabs.Button = class extends Colibri.UI.Button {
 
         this._color = null;
 
-        this._closeObject.AddHandler('Clicked', (event, args) => this.Dispatch('CloseClicked', {domEvent: args.domEvent}));
+        this._closeObject.AddHandler('Clicked', (event, args) => this.Dispatch('CloseClicked', { domEvent: args.domEvent }));
 
     }
 
