@@ -41,7 +41,7 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
 
     __tabButtonCloseClicked(event, args) {
 
-        this.RemoveFromLocalStore(route);
+        this.RemoveFromLocalStore(event.sender.tag.route);
 
         const currentIndex = tabButton.container.index();
 
