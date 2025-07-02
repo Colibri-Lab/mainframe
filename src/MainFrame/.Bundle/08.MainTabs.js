@@ -34,8 +34,8 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     }
 
     __tabButtonMouseUp(event, args) {
-        if (args.domEvent.button === 1 && tabButton.closable) {
-            return tabButton.Dispatch('CloseClicked', args);
+        if (args.domEvent.button === 1 && event.sender.closable) {
+            return event.sender.Dispatch('CloseClicked', args);
         }
     }
 
