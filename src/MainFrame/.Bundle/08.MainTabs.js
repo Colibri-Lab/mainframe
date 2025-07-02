@@ -43,10 +43,10 @@ App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
 
         this.RemoveFromLocalStore(event.sender.tag.route);
 
-        const currentIndex = tabButton.container.index();
+        const currentIndex = event.sender.container.index();
 
-        tabButton.Dispose();
-        containerComponent.Dispose();
+        event.sender.Dispose();
+        event.sender.tag.container.Dispose();
 
         if (currentIndex == 0 && this.tabsCount > 0) {
             this.selectedIndex = 0;
