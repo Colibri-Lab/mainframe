@@ -6,6 +6,7 @@ mainframe-widgets-fpmprocesseslistitem-state-desc:
   es: Estado
   kk: Күйі
   uz: Holati
+  cz: Stav
 mainframe-widgets-fpmprocesseslistitem-request_method-desc:
   ru: Тип запроса
   en: Request method
@@ -14,6 +15,7 @@ mainframe-widgets-fpmprocesseslistitem-request_method-desc:
   es: Método de solicitud
   kk: Сұрау әдісі
   uz: So'rov usuli
+  cz: Metoda požadavku
 mainframe-widgets-fpmprocesseslistitem-request_uri-desc:
   ru: URI запроса
   en: Request URI
@@ -22,6 +24,7 @@ mainframe-widgets-fpmprocesseslistitem-request_uri-desc:
   es: URI de solicitud
   kk: Сұрау URI
   uz: So'rov URI
+  cz: URI požadavku
 mainframe-widgets-fpmprocesseslistitem-script-desc:
   ru: Точка входа
   en: Entry point
@@ -30,6 +33,7 @@ mainframe-widgets-fpmprocesseslistitem-script-desc:
   es: Punto de entrada
   kk: Кіру нүктесі
   uz: Kirish nuqtasi
+  cz: Vstupní bod
 mainframe-widgets-fpmprocesseslistitem-requests-desc:
   ru: Всего запросов
   en: All requests
@@ -38,6 +42,7 @@ mainframe-widgets-fpmprocesseslistitem-requests-desc:
   es: Todas las solicitudes
   kk: Барлық сұраулар
   uz: Barcha so'rovlar
+  cz: Všechny požadavky
 mainframe-widgets-fpmprocesseslistitem-request_duration-desc:
   ru: Всего потрачено времени
   en: Time spend on requests
@@ -46,6 +51,7 @@ mainframe-widgets-fpmprocesseslistitem-request_duration-desc:
   es: Tiempo gastado en solicitudes
   kk: Сұрауларға жұмсалған уақыт
   uz: So'rovlarga sarflangan vaqt
+  cz: Čas strávený na požadavcích
 mainframe-widgets-fpmprocesseslistitem-start_since-desc:
   ru: Запущено
   en: Started at
@@ -54,6 +60,7 @@ mainframe-widgets-fpmprocesseslistitem-start_since-desc:
   es: Iniciado en
   kk: Іске қосылды
   uz: Ishga tushirilgan
+  cz: Spuštěno
 mainframe-widgets-fpmprocesseslistitem-start_since-unit:
   ru: секунд назад
   en: seconds before
@@ -62,6 +69,7 @@ mainframe-widgets-fpmprocesseslistitem-start_since-unit:
   es: segundos antes
   kk: секунд бұрын
   uz: soniya oldin
+  cz: sekund zpět
 mainframe-widgets-fpmprocesseslistitem-start_time-desc:
   ru: Дата запуска
   en: Start date and time
@@ -70,6 +78,7 @@ mainframe-widgets-fpmprocesseslistitem-start_time-desc:
   es: Fecha y hora de inicio
   kk: Іске қосу күні мен уақыты
   uz: Ishga tushirish sanasi va vaqti
+  cz: Datum a čas spuštění
 mainframe-widgets-fpmprocesseslistitem-last_request_cpu-desc:
   ru: Потрачено процессора
   en: Processor time used
@@ -78,6 +87,7 @@ mainframe-widgets-fpmprocesseslistitem-last_request_cpu-desc:
   es: Tiempo de procesador utilizado
   kk: Процессор уақыты пайдаланылды
   uz: Protsessor vaqti ishlatilgan
+  cz: Využitý čas procesoru
 mainframe-widgets-fpmprocesseslistitem-last_request_memory-desc:
   ru: Потрачено памяти
   en: Memory used
@@ -86,6 +96,7 @@ mainframe-widgets-fpmprocesseslistitem-last_request_memory-desc:
   es: Memoria utilizada
   kk: Жад пайдаланылды
   uz: Xotira ishlatilgan
+  cz: Použitá paměť
 mainframe-widgets-fpmprocesseslistitem-content_length-desc:
   ru: Длина запроса
   en: Content length
@@ -94,3 +105,4 @@ mainframe-widgets-fpmprocesseslistitem-content_length-desc:
   es: Longitud del contenido
   kk: Мазмұн ұзындығы
   uz: Kontent uzunligi
+  cz: Délka obsahu

@@ -6,6 +6,7 @@ mainframe-widgets-databasesstatistics-title:
   es: Estadísticas de bases de datos utilizadas
   kk: Пайдаланылған дерекқорлардың статистикасы
   uz: Foydalanilgan ma'lumotlar bazasi statistikasi
+  cz: Statistiky používaných databází
 mainframe-widgets-databasestatistics-uptime-desc:
   ru: Аптайм
   en: Uptime
@@ -14,6 +15,7 @@ mainframe-widgets-databasestatistics-uptime-desc:
   es: Tiempo de actividad
   kk: Жұмыс уақыты
   uz: Ish vaqti
+  cz: Doba provozu
 mainframe-widgets-databasestatistics-uptime-note:
   ru: Количество секунд, в течение которых сервер был включен
   en: The number of seconds the server has been up
@@ -22,6 +24,7 @@ mainframe-widgets-databasestatistics-uptime-note:
   es: El número de segundos que el servidor ha estado en funcionamiento
   kk: Сервер қосулы болған секундтар саны
   uz: Server yoqilgan soniyalar soni
+  cz: Počet sekund, po které byl server spuštěn
 mainframe-widgets-databasestatistics-uptime-unit:
   ru: секунд
   en: seconds
@@ -30,6 +33,7 @@ mainframe-widgets-databasestatistics-uptime-unit:
   es: segundos
   kk: секунд
   uz: soniya
+  cz: sekund
 mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   ru: Запросы на блокировку
   en: Lock requests
@@ -38,6 +42,7 @@ mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   es: Solicitudes de bloqueo
   kk: Блоктау сұраулары
   uz: Bloklash so'rovlari
+  cz: Požadavky na zámek
 mainframe-widgets-databasestatistics-table_locks_immediate-note:
   ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен немедленно
   en: Number of times a table lock request can be granted immediately
@@ -46,6 +51,7 @@ mainframe-widgets-databasestatistics-table_locks_immediate-note:
   es: Número de veces que una solicitud de bloqueo de tabla puede ser concedida inmediatamente
   kk: Кестені блоктау сұрауы дереу берілетін рет саны
   uz: Jadvalni bloklash so'rovi darhol berilishi mumkin bo'lgan soni
+  cz: Počet případů, kdy může být požadavek na zámek tabulky okamžitě splněn
 mainframe-widgets-databasestatistics-select_scan-desc:
   ru: Сканирование при выборке
   en: Full scan on joins
@@ -54,6 +60,7 @@ mainframe-widgets-databasestatistics-select_scan-desc:
   es: Escaneo completo en uniones
   kk: Қосылулардағы толық сканерлеу
   uz: Birikmalarda to'liq skanerlash
+  cz: Úplné skenování při spojování
 mainframe-widgets-databasestatistics-select_scan-note:
   ru: Количество объединений, которые выполнили полное сканирование первой таблицы.
   en: The number of joins that performed a full scan on the first table.
@@ -62,6 +69,7 @@ mainframe-widgets-databasestatistics-select_scan-note:
   es: El número de uniones que realizaron un escaneo completo en la primera tabla.
   kk: Бірінші кестеде толық сканерлеу жүргізген қосылулар саны
   uz: Birinchi jadvalda to'liq skanerlashni amalga oshirgan birikmalar soni
+  cz: Počet spojení, která provedla úplné skenování první tabulky
 mainframe-widgets-databasestatistics-select_full_join-desc:
   en: Merge scan
   ru: Сканирование при обьеденении
@@ -70,6 +78,7 @@ mainframe-widgets-databasestatistics-select_full_join-desc:
   es: Escaneo de unión
   kk: Біріктіру сканерлеуі
   uz: Birlashtirish skanerlash
+  cz: Skenování při spojení
 mainframe-widgets-databasestatistics-select_full_join-note:
   ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не используют индексы
   en: Number of joins performing table scans because they don't use indexes
@@ -78,6 +87,7 @@ mainframe-widgets-databasestatistics-select_full_join-note:
   es: Número de uniones que realizan escaneos de tablas porque no usan índices
   kk: Индекстерді пайдаланбайтындықтан кестелерді сканерлейтін қосылулар саны
   uz: Indekslarni ishlatmaganligi sababli jadval skanerlashni amalga oshirgan birikmalar soni
+  cz: Počet spojení, která skenují tabulky, protože nepoužívají indexy
 mainframe-widgets-databasestatistics-slow_queries-desc:
   en: Slow Queries
   ru: Медленные запросы
@@ -86,6 +96,7 @@ mainframe-widgets-databasestatistics-slow_queries-desc:
   es: Consultas lentas
   kk: Баяу сұраулар
   uz: Sekin so'rovlar
+  cz: Pomalé dotazy
 mainframe-widgets-databasestatistics-slow_queries-note:
   ru: Количество запросов, которые заняли более long_query_time секунд
   en: Number of queries that took more than long_query_time seconds
@@ -94,6 +105,7 @@ mainframe-widgets-databasestatistics-slow_queries-note:
   es: Número de consultas que tomaron más de long_query_time segundos
   kk: long_query_time секундтан көп уақыт алған сұраулар саны
   uz: long_query_time soniyadan ko'proq vaqt olgan so'rovlar soni
+  cz: Počet dotazů, které trvaly déle než long_query_time sekund
 mainframe-widgets-databasestatistics-queries-desc:
   ru: Запросы
   en: Queries
@@ -102,6 +114,7 @@ mainframe-widgets-databasestatistics-queries-desc:
   es: Consultas
   kk: Сұраулар
   uz: So'rovlar
+  cz: Dotazy
 mainframe-widgets-databasestatistics-queries-note:
   ru: Количество запросов, выполненных сервером
   en: Number of requests made by the server
@@ -110,6 +123,7 @@ mainframe-widgets-databasestatistics-queries-note:
   es: Número de solicitudes realizadas por el servidor
   kk: Сервер жасаған сұраулар саны
   uz: Server tomonidan amalga oshirilgan so'rovlar soni
+  cz: Počet požadavků provedených serverem
 mainframe-widgets-databasestatistics-opened_files-desc:
   ru: Открытые файлы
   en: Opened files
@@ -118,6 +132,7 @@ mainframe-widgets-databasestatistics-opened_files-desc:
   es: Archivos abiertos
   kk: Ашылған файлдар
   uz: Ochiq fayllar
+  cz: Otevřené soubory
 mainframe-widgets-databasestatistics-opened_files-note:
   ru: Количество файлов, которые были открыты
   en: Number of files that have been opened
@@ -126,6 +141,7 @@ mainframe-widgets-databasestatistics-opened_files-note:
   es: Número de archivos que se han abierto
   kk: Ашылған файлдар саны
   uz: Ochiq fayllar soni
+  cz: Počet souborů, které byly otevřeny
 mainframe-widgets-databasestatistics-open_tables-desc:
   ru: Открытые таблицы
   en: Opened tables
@@ -134,6 +150,7 @@ mainframe-widgets-databasestatistics-open_tables-desc:
   es: Tablas abiertas
   kk: Ашылған кестелер
   uz: Ochiq jadvallar
+  cz: Otevřené tabulky
 mainframe-widgets-databasestatistics-open_tables-note:
   ru: Количество столов, которые открыты
   en: Number of tables that are open
@@ -142,6 +159,7 @@ mainframe-widgets-databasestatistics-open_tables-note:
   es: Número de tablas que están abiertas
   kk: Ашылған кестелер саны
   uz: Ochiq jadvallar soni
+  cz: Počet otevřených tabulek
 mainframe-widgets-databasestatistics-max_used_connections-desc:
   ru: Открытые подключения
   en: Open connections
@@ -150,6 +168,7 @@ mainframe-widgets-databasestatistics-max_used_connections-desc:
   es: Conexiones abiertas
   kk: Ашық қосылымдар
   uz: Ochiq ulanishlar
+  cz: Otevřená připojení
 mainframe-widgets-databasestatistics-max_used_connections-note:
   ru: Максимальное количество подключений, которые использовались одновременно с момента запуска сервера
   en: The maximum number of connections that have been in use at the same time since the server started
@@ -158,6 +177,7 @@ mainframe-widgets-databasestatistics-max_used_connections-note:
   es: El número máximo de conexiones que se han utilizado al mismo tiempo desde que se inició el servidor
   kk: Сервер іске қосылғаннан бері бір уақытта пайдаланылған қосылымдардың ең көп саны
   uz: Server ishga tushirilganidan beri bir vaqtning o'zida ishlatilgan ulanishlarning maksimal soni
+  cz: Maximální počet připojení, která byla současně používána od spuštění serveru
 mainframe-widgets-databasestatistics-aborted_clients-desc:
   ru: Сброшенные подключения
   en: Aborted connections
@@ -166,6 +186,7 @@ mainframe-widgets-databasestatistics-aborted_clients-desc:
   es: Conexiones abortadas
   kk: Үзілген қосылымдар
   uz: Bekor qilingan ulanishlar
+  cz: Přerušená připojení
 mainframe-widgets-databasestatistics-aborted_clients-note:
   ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не закрыв соединение должным образом
   en: The number of connections that were aborted because the client died without properly closing the connection
@@ -174,6 +195,7 @@ mainframe-widgets-databasestatistics-aborted_clients-note:
   es: El número de conexiones que fueron abortadas porque el cliente murió sin cerrar correctamente la conexión
   kk: Клиент қосылымды дұрыс жаппай қайтыс болғандықтан үзілген қосылымдар саны
   uz: Mijoz ulanishni to'g'ri yopmasdan vafot etgani sababli bekor qilingan ulanishlar soni
+  cz: Počet připojení, která byla přerušena, protože klient ukončil spojení nesprávně
 mainframe-widgets-databasestatistics-notes:
   ru: Отображены переменные, которые влияют на производительность и поведение базы данных. Отображены данные по 1-му подключению
   en: Variables that affect database performance and behavior are displayed. Displayed data for the 1st connection
@@ -182,3 +204,4 @@ mainframe-widgets-databasestatistics-notes:
   es: Se muestran las variables que afectan el rendimiento y el comportamiento de la base de datos. Datos mostrados para la 1ª conexión
   kk: Дерекқордың өнімділігі мен мінез-құлқына әсер ететін айнымалылар көрсетіледі. 1-ші қосылым үшін көрсетілген деректер
   uz: Ma'lumotlar bazasi ishlashiga va xatti-harakatiga ta'sir qiluvchi o'zgaruvchilar ko'rsatiladi. 1-chi ulanish uchun ko'rsatilgan ma'lumotlar
+  cz: Zobrazují se proměnné, které ovlivňují výkon a chování databáze. Zobrazená data pro 1. připojení

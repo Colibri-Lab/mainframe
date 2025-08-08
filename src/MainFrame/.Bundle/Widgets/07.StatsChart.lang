@@ -6,6 +6,7 @@ mainframe-widgets-statschart-notes:
   es: Estadísticas de trabajo del servidor, se muestran los últimos 50 elementos
   kk: Сервер жұмысының статистикасы, соңғы 50 жазба көрсетіледі
   uz: Server ish statistikasi, oxirgi 50 yozuv ko'rsatiladi
+  cz: Statistiky provozu serveru, zobrazeno posledních 50 záznamů
 mainframe-widgets-statschart-title:
   ru: График нагрузки
   en: Load schedule
@@ -14,3 +15,4 @@ mainframe-widgets-statschart-title:
   es: Programa de carga
   kk: Жүктеме кестесі
   uz: Yuklama jadvali
+  cz: Plán zatížení

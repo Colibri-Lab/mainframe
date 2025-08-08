@@ -6,6 +6,7 @@ mainframe-widgets-serverstatistics-title:
   es: Estado del servidor web
   kk: Веб-сервердің күйі
   uz: Veb-server holati
+  cz: Stav webového serveru
 mainframe-widgets-serverstatistics-note:
   ru: Следите за активными процессами, процессы в ожидании должны быть больше чем запись и чтение одновременно
   en: Keep an eye on active processes, waiting processes should be more than writing and reading at the same time
@@ -14,6 +15,7 @@ mainframe-widgets-serverstatistics-note:
   es: Vigila los procesos activos, los procesos en espera deben ser más que escribir y leer al mismo tiempo
   kk: Белсенді процестерді қадағалаңыз, күту процестері бір уақытта жазу және оқу процесінен көп болуы керек
   uz: Faol jarayonlarni kuzatib boring, kutish jarayonlari bir vaqtning o'zida yozish va o'qishdan ko'proq bo'lishi kerak
+  cz: Sledujte aktivní procesy, čekající procesy by měly být více než zápis a čtení současně
 mainframe-widgets-serverstatistics-fields-connections_active:
   ru: Активные
   hy: Ակտիվ
@@ -22,6 +24,7 @@ mainframe-widgets-serverstatistics-fields-connections_active:
   es: Activo
   kk: Белсенді
   uz: Faol
+  cz: Aktivní
 mainframe-widgets-serverstatistics-fields-connections_active-note:
   ru: Активные подключения
   hy: Ակտիվ կապեր
@@ -30,6 +33,7 @@ mainframe-widgets-serverstatistics-fields-connections_active-note:
   es: Conexiones activas
   kk: Белсенді қосылымдар
   uz: Faol ulanishlar
+  cz: Aktivní připojení
 mainframe-widgets-serverstatistics-fields-connections_reading:
   ru: Чтение
   en: Reading
@@ -38,6 +42,7 @@ mainframe-widgets-serverstatistics-fields-connections_reading:
   es: Leyendo
   kk: Оқу
   uz: O'qish
+  cz: Čtení
 mainframe-widgets-serverstatistics-fields-connections_reading-note:
   ru: Подключения в режиме чтения
   hy: Կարդալ ռեժիմի միացումներ
@@ -46,6 +51,7 @@ mainframe-widgets-serverstatistics-fields-connections_reading-note:
   es: Conexiones en modo de lectura
   kk: Оқу режиміндегі қосылымдар
   uz: O'qish rejimidagi ulanishlar
+  cz: Připojení v režimu čtení
 mainframe-widgets-serverstatistics-fields-connections_wating:
   ru: Ожидание
   en: Expectation
@@ -54,6 +60,7 @@ mainframe-widgets-serverstatistics-fields-connections_wating:
   es: Espera
   kk: Күту
   uz: Kutish
+  cz: Čekání
 mainframe-widgets-serverstatistics-fields-connections_wating-note:
   ru: Подключения в режиме ожидания
   hy: Սպասման միացումներ
@@ -62,6 +69,7 @@ mainframe-widgets-serverstatistics-fields-connections_wating-note:
   es: Conexiones en modo de espera
   kk: Күту режиміндегі қосылымдар
   uz: Kutish rejimidagi ulanishlar
+  cz: Připojení v pohotovostním režimu
 mainframe-widgets-serverstatistics-fields-connections_writing:
   ru: Запись
   en: Writing
@@ -70,6 +78,7 @@ mainframe-widgets-serverstatistics-fields-connections_writing:
   es: Escribiendo
   kk: Жазу
   uz: Yozish
+  cz: Zápis
 mainframe-widgets-serverstatistics-fields-connections_writing-note:
   ru: Подключения в режиме записи
   hy: Ձայնագրման ռեժիմի միացումներ
@@ -78,6 +87,7 @@ mainframe-widgets-serverstatistics-fields-connections_writing-note:
   es: Conexiones en modo de grabación
   kk: Жазу режиміндегі қосылымдар
   uz: Yozish rejimidagi ulanishlar
+  cz: Připojení v režimu zápisu
 mainframe-widgets-serverstatistics-button:
   ru: Активность
   en: Activity
@@ -86,3 +96,4 @@ mainframe-widgets-serverstatistics-button:
   es: Actividad
   kk: Белсенділік
   uz: Faollik
+  cz: Aktivita
