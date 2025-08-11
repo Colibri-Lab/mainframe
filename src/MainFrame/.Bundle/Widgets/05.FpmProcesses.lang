@@ -7,12 +7,22 @@ mainframe-widgets-fpmprocesses-title:
   kk: Жұмыс процестері
   uz: Ishlayotgan jarayonlar
   cz: Pracující procesy
+  de: null
 mainframe-widgets-fpmprocesses-notes:
-  ru: Отображен список процессов в сервере FPM. Необходимо периодически смотреть на время потраченное на процесс
-  en: Displayed a list of processes in the FPM server. It is necessary to periodically look at the time spent on the process
-  hy: "Ցուցադրում է գործընթացների ցանկը FPM սերվերում: Անհրաժեշտ է պարբերաբար դիտարկել գործընթացի վրա ծախսված ժամանակը"
-  it: Visualizza un elenco di processi nel server FPM. È necessario guardare periodicamente il tempo trascorso sul processo
-  es: Muestra una lista de procesos en el servidor FPM. Es necesario mirar periódicamente el tiempo dedicado al proceso
-  kk: FPM серверіндегі процестер тізімі көрсетілген. Процеске жұмсалған уақытты мезгіл-мезгіл қарап отыру қажет
-  uz: FPM serveridagi jarayonlar ro'yxati ko'rsatilgan. Jarayonga sarflangan vaqtni vaqti-vaqti bilan ko'rib chiqish kerak
-  cz: Zobrazen seznam procesů na serveru FPM. Je nutné pravidelně sledovat čas strávený na procesu
+  ru: Отображен список процессов в сервере FPM. Необходимо периодически смотреть
+    на время потраченное на процесс
+  en: Displayed a list of processes in the FPM server. It is necessary to
+    periodically look at the time spent on the process
+  hy: "Ցուցադրում է գործընթացների ցանկը FPM սերվերում: Անհրաժեշտ է պարբերաբար
+    դիտարկել գործընթացի վրա ծախսված ժամանակը"
+  it: Visualizza un elenco di processi nel server FPM. È necessario guardare
+    periodicamente il tempo trascorso sul processo
+  es: Muestra una lista de procesos en el servidor FPM. Es necesario mirar
+    periódicamente el tiempo dedicado al proceso
+  kk: FPM серверіндегі процестер тізімі көрсетілген. Процеске жұмсалған уақытты
+    мезгіл-мезгіл қарап отыру қажет
+  uz: FPM serveridagi jarayonlar ro'yxati ko'rsatilgan. Jarayonga sarflangan
+    vaqtni vaqti-vaqti bilan ko'rib chiqish kerak
+  cz: Zobrazen seznam procesů na serveru FPM. Je nutné pravidelně sledovat čas
+    strávený na procesu
+  de: null
