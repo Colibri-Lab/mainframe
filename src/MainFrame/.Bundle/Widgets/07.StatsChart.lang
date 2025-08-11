@@ -8,6 +8,7 @@ mainframe-widgets-statschart-notes:
   uz: Server ish statistikasi, oxirgi 50 yozuv ko'rsatiladi
   cz: Statistiky provozu serveru, zobrazeno posledních 50 záznamů
   de: null
+  tr: Sunucu çalışma istatistikleri, son 50 öğe gösterilir
 mainframe-widgets-statschart-title:
   ru: График нагрузки
   en: Load schedule
@@ -18,3 +19,4 @@ mainframe-widgets-statschart-title:
   uz: Yuklama jadvali
   cz: Plán zatížení
   de: null
+  tr: Yük çizelgesi

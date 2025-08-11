@@ -8,6 +8,7 @@ mainframe-widgets-fpmprocesses-title:
   uz: Ishlayotgan jarayonlar
   cz: Pracující procesy
   de: null
+  tr: Çalışan işlemler
 mainframe-widgets-fpmprocesses-notes:
   ru: Отображен список процессов в сервере FPM. Необходимо периодически смотреть
     на время потраченное на процесс
@@ -26,3 +27,5 @@ mainframe-widgets-fpmprocesses-notes:
   cz: Zobrazen seznam procesů na serveru FPM. Je nutné pravidelně sledovat čas
     strávený na procesu
   de: null
+  tr: FPM sunucusundaki işlemlerin listesi görüntülenir. İşlemde harcanan süreye
+    periyodik olarak bakmak gerekir

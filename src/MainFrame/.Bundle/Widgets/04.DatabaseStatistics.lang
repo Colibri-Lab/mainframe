@@ -8,6 +8,7 @@ mainframe-widgets-databasesstatistics-title:
   uz: Foydalanilgan ma'lumotlar bazasi statistikasi
   cz: Statistiky používaných databází
   de: null
+  tr: Kullanılan veritabanı istatistikleri
 mainframe-widgets-databasestatistics-uptime-desc:
   ru: Аптайм
   en: Uptime
@@ -18,6 +19,7 @@ mainframe-widgets-databasestatistics-uptime-desc:
   uz: Ish vaqti
   cz: Doba provozu
   de: null
+  tr: Çalışma süresi
 mainframe-widgets-databasestatistics-uptime-note:
   ru: Количество секунд, в течение которых сервер был включен
   en: The number of seconds the server has been up
@@ -28,6 +30,7 @@ mainframe-widgets-databasestatistics-uptime-note:
   uz: Server yoqilgan soniyalar soni
   cz: Počet sekund, po které byl server spuštěn
   de: null
+  tr: Sunucunun açık olduğu saniye sayısı
 mainframe-widgets-databasestatistics-uptime-unit:
   ru: секунд
   en: seconds
@@ -38,6 +41,7 @@ mainframe-widgets-databasestatistics-uptime-unit:
   uz: soniya
   cz: sekund
   de: null
+  tr: saniye
 mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   ru: Запросы на блокировку
   en: Lock requests
@@ -48,6 +52,7 @@ mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   uz: Bloklash so'rovlari
   cz: Požadavky na zámek
   de: null
+  tr: Kilit istekleri
 mainframe-widgets-databasestatistics-table_locks_immediate-note:
   ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен
     немедленно
@@ -61,6 +66,7 @@ mainframe-widgets-databasestatistics-table_locks_immediate-note:
   uz: Jadvalni bloklash so'rovi darhol berilishi mumkin bo'lgan soni
   cz: Počet případů, kdy může být požadavek na zámek tabulky okamžitě splněn
   de: null
+  tr: Tablo kilit isteğinin hemen karşılanabildiği sayı
 mainframe-widgets-databasestatistics-select_scan-desc:
   ru: Сканирование при выборке
   en: Full scan on joins
@@ -71,6 +77,7 @@ mainframe-widgets-databasestatistics-select_scan-desc:
   uz: Birikmalarda to'liq skanerlash
   cz: Úplné skenování při spojování
   de: null
+  tr: Birleşimlerde tam tarama
 mainframe-widgets-databasestatistics-select_scan-note:
   ru: Количество объединений, которые выполнили полное сканирование первой таблицы.
   en: The number of joins that performed a full scan on the first table.
@@ -83,6 +90,7 @@ mainframe-widgets-databasestatistics-select_scan-note:
   uz: Birinchi jadvalda to'liq skanerlashni amalga oshirgan birikmalar soni
   cz: Počet spojení, která provedla úplné skenování první tabulky
   de: null
+  tr: İlk tabloda tam tarama yapan birleşimlerin sayısı
 mainframe-widgets-databasestatistics-select_full_join-desc:
   en: Merge scan
   ru: Сканирование при обьеденении
@@ -93,6 +101,7 @@ mainframe-widgets-databasestatistics-select_full_join-desc:
   uz: Birlashtirish skanerlash
   cz: Skenování při spojení
   de: null
+  tr: Birleştirme taraması
 mainframe-widgets-databasestatistics-select_full_join-note:
   ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не
     используют индексы
@@ -107,6 +116,7 @@ mainframe-widgets-databasestatistics-select_full_join-note:
     birikmalar soni
   cz: Počet spojení, která skenují tabulky, protože nepoužívají indexy
   de: null
+  tr: İndeks kullanılmadığı için tablo taraması yapan birleşimlerin sayısı
 mainframe-widgets-databasestatistics-slow_queries-desc:
   en: Slow Queries
   ru: Медленные запросы
@@ -117,6 +127,7 @@ mainframe-widgets-databasestatistics-slow_queries-desc:
   uz: Sekin so'rovlar
   cz: Pomalé dotazy
   de: null
+  tr: Yavaş sorgular
 mainframe-widgets-databasestatistics-slow_queries-note:
   ru: Количество запросов, которые заняли более long_query_time секунд
   en: Number of queries that took more than long_query_time seconds
@@ -127,6 +138,7 @@ mainframe-widgets-databasestatistics-slow_queries-note:
   uz: long_query_time soniyadan ko'proq vaqt olgan so'rovlar soni
   cz: Počet dotazů, které trvaly déle než long_query_time sekund
   de: null
+  tr: long_query_time süresinden uzun süren sorguların sayısı
 mainframe-widgets-databasestatistics-queries-desc:
   ru: Запросы
   en: Queries
@@ -137,6 +149,7 @@ mainframe-widgets-databasestatistics-queries-desc:
   uz: So'rovlar
   cz: Dotazy
   de: null
+  tr: Sorgular
 mainframe-widgets-databasestatistics-queries-note:
   ru: Количество запросов, выполненных сервером
   en: Number of requests made by the server
@@ -147,6 +160,7 @@ mainframe-widgets-databasestatistics-queries-note:
   uz: Server tomonidan amalga oshirilgan so'rovlar soni
   cz: Počet požadavků provedených serverem
   de: null
+  tr: Sunucu tarafından yapılan istek sayısı
 mainframe-widgets-databasestatistics-opened_files-desc:
   ru: Открытые файлы
   en: Opened files
@@ -157,6 +171,7 @@ mainframe-widgets-databasestatistics-opened_files-desc:
   uz: Ochiq fayllar
   cz: Otevřené soubory
   de: null
+  tr: Açık dosyalar
 mainframe-widgets-databasestatistics-opened_files-note:
   ru: Количество файлов, которые были открыты
   en: Number of files that have been opened
@@ -167,6 +182,7 @@ mainframe-widgets-databasestatistics-opened_files-note:
   uz: Ochiq fayllar soni
   cz: Počet souborů, které byly otevřeny
   de: null
+  tr: Açılan dosya sayısı
 mainframe-widgets-databasestatistics-open_tables-desc:
   ru: Открытые таблицы
   en: Opened tables
@@ -177,6 +193,7 @@ mainframe-widgets-databasestatistics-open_tables-desc:
   uz: Ochiq jadvallar
   cz: Otevřené tabulky
   de: null
+  tr: Açık tablolar
 mainframe-widgets-databasestatistics-open_tables-note:
   ru: Количество столов, которые открыты
   en: Number of tables that are open
@@ -187,6 +204,7 @@ mainframe-widgets-databasestatistics-open_tables-note:
   uz: Ochiq jadvallar soni
   cz: Počet otevřených tabulek
   de: null
+  tr: Açık olan tablo sayısı
 mainframe-widgets-databasestatistics-max_used_connections-desc:
   ru: Открытые подключения
   en: Open connections
@@ -197,6 +215,7 @@ mainframe-widgets-databasestatistics-max_used_connections-desc:
   uz: Ochiq ulanishlar
   cz: Otevřená připojení
   de: null
+  tr: Açık bağlantılar
 mainframe-widgets-databasestatistics-max_used_connections-note:
   ru: Максимальное количество подключений, которые использовались одновременно с
     момента запуска сервера
@@ -213,6 +232,7 @@ mainframe-widgets-databasestatistics-max_used_connections-note:
     ulanishlarning maksimal soni
   cz: Maximální počet připojení, která byla současně používána od spuštění serveru
   de: null
+  tr: Sunucu başladığından beri aynı anda kullanılan maksimum bağlantı sayısı
 mainframe-widgets-databasestatistics-aborted_clients-desc:
   ru: Сброшенные подключения
   en: Aborted connections
@@ -223,6 +243,7 @@ mainframe-widgets-databasestatistics-aborted_clients-desc:
   uz: Bekor qilingan ulanishlar
   cz: Přerušená připojení
   de: null
+  tr: Sonlandırılan bağlantılar
 mainframe-widgets-databasestatistics-aborted_clients-note:
   ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не
     закрыв соединение должным образом
@@ -240,6 +261,8 @@ mainframe-widgets-databasestatistics-aborted_clients-note:
   cz: Počet připojení, která byla přerušena, protože klient ukončil spojení
     nesprávně
   de: null
+  tr: Bağlantı düzgün kapatılmadan istemci öldüğü için sonlandırılan bağlantı
+    sayısı
 mainframe-widgets-databasestatistics-notes:
   ru: Отображены переменные, которые влияют на производительность и поведение базы
     данных. Отображены данные по 1-му подключению
@@ -258,3 +281,5 @@ mainframe-widgets-databasestatistics-notes:
   cz: Zobrazují se proměnné, které ovlivňují výkon a chování databáze. Zobrazená
     data pro 1. připojení
   de: null
+  tr: Veritabanı performansını ve davranışını etkileyen değişkenler görüntülenir.
+    1. bağlantı için veriler gösterilir

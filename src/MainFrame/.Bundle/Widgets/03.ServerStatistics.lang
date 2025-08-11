@@ -8,6 +8,7 @@ mainframe-widgets-serverstatistics-title:
   uz: Veb-server holati
   cz: Stav webového serveru
   de: null
+  tr: Web sunucu durumu
 mainframe-widgets-serverstatistics-note:
   ru: Следите за активными процессами, процессы в ожидании должны быть больше чем
     запись и чтение одновременно
@@ -26,6 +27,8 @@ mainframe-widgets-serverstatistics-note:
   cz: Sledujte aktivní procesy, čekající procesy by měly být více než zápis a
     čtení současně
   de: null
+  tr: Aktif işlemleri izleyin, bekleyen işlemler aynı anda yazma ve okuma
+    işlemlerinden fazla olmalıdır
 mainframe-widgets-serverstatistics-fields-connections_active:
   ru: Активные
   hy: Ակտիվ
@@ -36,6 +39,7 @@ mainframe-widgets-serverstatistics-fields-connections_active:
   uz: Faol
   cz: Aktivní
   de: null
+  tr: Aktif
 mainframe-widgets-serverstatistics-fields-connections_active-note:
   ru: Активные подключения
   hy: Ակտիվ կապեր
@@ -46,6 +50,7 @@ mainframe-widgets-serverstatistics-fields-connections_active-note:
   uz: Faol ulanishlar
   cz: Aktivní připojení
   de: null
+  tr: Aktif bağlantılar
 mainframe-widgets-serverstatistics-fields-connections_reading:
   ru: Чтение
   en: Reading
@@ -56,6 +61,7 @@ mainframe-widgets-serverstatistics-fields-connections_reading:
   uz: O'qish
   cz: Čtení
   de: null
+  tr: Okuma
 mainframe-widgets-serverstatistics-fields-connections_reading-note:
   ru: Подключения в режиме чтения
   hy: Կարդալ ռեժիմի միացումներ
@@ -66,6 +72,7 @@ mainframe-widgets-serverstatistics-fields-connections_reading-note:
   uz: O'qish rejimidagi ulanishlar
   cz: Připojení v režimu čtení
   de: null
+  tr: Okuma modunda bağlantılar
 mainframe-widgets-serverstatistics-fields-connections_wating:
   ru: Ожидание
   en: Expectation
@@ -76,6 +83,7 @@ mainframe-widgets-serverstatistics-fields-connections_wating:
   uz: Kutish
   cz: Čekání
   de: null
+  tr: Bekleme
 mainframe-widgets-serverstatistics-fields-connections_wating-note:
   ru: Подключения в режиме ожидания
   hy: Սպասման միացումներ
@@ -86,6 +94,7 @@ mainframe-widgets-serverstatistics-fields-connections_wating-note:
   uz: Kutish rejimidagi ulanishlar
   cz: Připojení v pohotovostním režimu
   de: null
+  tr: Bekleme modunda bağlantılar
 mainframe-widgets-serverstatistics-fields-connections_writing:
   ru: Запись
   en: Writing
@@ -96,6 +105,7 @@ mainframe-widgets-serverstatistics-fields-connections_writing:
   uz: Yozish
   cz: Zápis
   de: null
+  tr: Yazma
 mainframe-widgets-serverstatistics-fields-connections_writing-note:
   ru: Подключения в режиме записи
   hy: Ձայնագրման ռեժիմի միացումներ
@@ -106,6 +116,7 @@ mainframe-widgets-serverstatistics-fields-connections_writing-note:
   uz: Yozish rejimidagi ulanishlar
   cz: Připojení v režimu zápisu
   de: null
+  tr: Yazma modunda bağlantılar
 mainframe-widgets-serverstatistics-button:
   ru: Активность
   en: Activity
@@ -116,3 +127,4 @@ mainframe-widgets-serverstatistics-button:
   uz: Faollik
   cz: Aktivita
   de: null
+  tr: Aktivite
