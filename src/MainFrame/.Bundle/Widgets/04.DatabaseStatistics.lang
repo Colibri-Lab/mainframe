@@ -7,9 +7,10 @@ mainframe-widgets-databasesstatistics-title:
   kk: Пайдаланылған дерекқорлардың статистикасы
   uz: Foydalanilgan ma'lumotlar bazasi statistikasi
   cz: Statistiky používaných databází
-  de: null
   tr: Kullanılan veritabanı istatistikleri
   zh: 已用数据库统计
+  de: Verwendete Datenbankstatistiken
+  fa: آمار پایگاه‌های داده استفاده شده
 mainframe-widgets-databasestatistics-uptime-desc:
   ru: Аптайм
   en: Uptime
@@ -19,9 +20,10 @@ mainframe-widgets-databasestatistics-uptime-desc:
   kk: Жұмыс уақыты
   uz: Ish vaqti
   cz: Doba provozu
-  de: null
   tr: Çalışma süresi
   zh: 运行时间
+  de: Betriebszeit
+  fa: مدت زمان فعالیت
 mainframe-widgets-databasestatistics-uptime-note:
   ru: Количество секунд, в течение которых сервер был включен
   en: The number of seconds the server has been up
@@ -31,9 +33,10 @@ mainframe-widgets-databasestatistics-uptime-note:
   kk: Сервер қосулы болған секундтар саны
   uz: Server yoqilgan soniyalar soni
   cz: Počet sekund, po které byl server spuštěn
-  de: null
   tr: Sunucunun açık olduğu saniye sayısı
   zh: 服务器已运行的秒数
+  de: Die Anzahl der Sekunden, die der Server in Betrieb war
+  fa: تعداد ثانیه‌هایی که سرور فعال بوده است
 mainframe-widgets-databasestatistics-uptime-unit:
   ru: секунд
   en: seconds
@@ -43,9 +46,10 @@ mainframe-widgets-databasestatistics-uptime-unit:
   kk: секунд
   uz: soniya
   cz: sekund
-  de: null
   tr: saniye
   zh: 秒
+  de: sekunden
+  fa: ثانیه
 mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   ru: Запросы на блокировку
   en: Lock requests
@@ -55,9 +59,10 @@ mainframe-widgets-databasestatistics-table_locks_immediate-desc:
   kk: Блоктау сұраулары
   uz: Bloklash so'rovlari
   cz: Požadavky na zámek
-  de: null
   tr: Kilit istekleri
   zh: 锁请求
+  de: Sperranfragen
+  fa: درخواست‌های قفل
 mainframe-widgets-databasestatistics-table_locks_immediate-note:
   ru: Количество раз, когда запрос на блокировку таблицы может быть предоставлен
     немедленно
@@ -70,9 +75,10 @@ mainframe-widgets-databasestatistics-table_locks_immediate-note:
   kk: Кестені блоктау сұрауы дереу берілетін рет саны
   uz: Jadvalni bloklash so'rovi darhol berilishi mumkin bo'lgan soni
   cz: Počet případů, kdy může být požadavek na zámek tabulky okamžitě splněn
-  de: null
   tr: Tablo kilit isteğinin hemen karşılanabildiği sayı
   zh: 表锁请求可立即授予的次数
+  de: Anzahl der Sperranfragen, die sofort gewährt werden können
+  fa: تعداد دفعاتی که درخواست قفل جدول بلافاصله پذیرفته شده است
 mainframe-widgets-databasestatistics-select_scan-desc:
   ru: Сканирование при выборке
   en: Full scan on joins
@@ -82,9 +88,10 @@ mainframe-widgets-databasestatistics-select_scan-desc:
   kk: Қосылулардағы толық сканерлеу
   uz: Birikmalarda to'liq skanerlash
   cz: Úplné skenování při spojování
-  de: null
   tr: Birleşimlerde tam tarama
   zh: 连接时全表扫描
+  de: Vollständiger Scan bei Joins
+  fa: اسکن کامل در اتصال‌ها
 mainframe-widgets-databasestatistics-select_scan-note:
   ru: Количество объединений, которые выполнили полное сканирование первой таблицы.
   en: The number of joins that performed a full scan on the first table.
@@ -96,9 +103,10 @@ mainframe-widgets-databasestatistics-select_scan-note:
   kk: Бірінші кестеде толық сканерлеу жүргізген қосылулар саны
   uz: Birinchi jadvalda to'liq skanerlashni amalga oshirgan birikmalar soni
   cz: Počet spojení, která provedla úplné skenování první tabulky
-  de: null
   tr: İlk tabloda tam tarama yapan birleşimlerin sayısı
   zh: 在第一个表上执行全表扫描的连接次数
+  de: Die Anzahl der Joins, die einen vollständigen Scan auf der ersten Tabelle durchgeführt haben
+  fa: تعداد اتصال‌هایی که اسکن کامل روی جدول اول انجام داده‌اند
 mainframe-widgets-databasestatistics-select_full_join-desc:
   en: Merge scan
   ru: Сканирование при обьеденении
@@ -108,9 +116,10 @@ mainframe-widgets-databasestatistics-select_full_join-desc:
   kk: Біріктіру сканерлеуі
   uz: Birlashtirish skanerlash
   cz: Skenování při spojení
-  de: null
   tr: Birleştirme taraması
   zh: 合并扫描
+  de: Zusammenführungsscan
+  fa: اسکن ادغام
 mainframe-widgets-databasestatistics-select_full_join-note:
   ru: Количество объединений, выполняющих сканирование таблиц, поскольку они не
     используют индексы
@@ -124,9 +133,10 @@ mainframe-widgets-databasestatistics-select_full_join-note:
   uz: Indekslarni ishlatmaganligi sababli jadval skanerlashni amalga oshirgan
     birikmalar soni
   cz: Počet spojení, která skenují tabulky, protože nepoužívají indexy
-  de: null
   tr: İndeks kullanılmadığı için tablo taraması yapan birleşimlerin sayısı
   zh: 因未使用索引而执行表扫描的连接次数
+  de: Anzahl der Joins, die Tabellen-Scans durchführen, weil sie keine Indizes verwenden
+  fa: تعداد اتصال‌هایی که به دلیل عدم استفاده از ایندکس‌ها اسکن جدول انجام داده‌اند
 mainframe-widgets-databasestatistics-slow_queries-desc:
   en: Slow Queries
   ru: Медленные запросы
@@ -136,9 +146,10 @@ mainframe-widgets-databasestatistics-slow_queries-desc:
   kk: Баяу сұраулар
   uz: Sekin so'rovlar
   cz: Pomalé dotazy
-  de: null
   tr: Yavaş sorgular
   zh: 慢查询
+  de: Langsame Abfragen
+  fa: پرس‌وجوهای کند
 mainframe-widgets-databasestatistics-slow_queries-note:
   ru: Количество запросов, которые заняли более long_query_time секунд
   en: Number of queries that took more than long_query_time seconds
@@ -148,9 +159,10 @@ mainframe-widgets-databasestatistics-slow_queries-note:
   kk: long_query_time секундтан көп уақыт алған сұраулар саны
   uz: long_query_time soniyadan ko'proq vaqt olgan so'rovlar soni
   cz: Počet dotazů, které trvaly déle než long_query_time sekund
-  de: null
   tr: long_query_time süresinden uzun süren sorguların sayısı
   zh: 超过 long_query_time 秒的查询次数
+  de: Anzahl der Abfragen, die länger als long_query_time Sekunden gedauert haben
+  fa: تعداد پرس‌وجوهایی که بیش از long_query_time ثانیه طول کشیده‌اند
 mainframe-widgets-databasestatistics-queries-desc:
   ru: Запросы
   en: Queries
@@ -160,9 +172,10 @@ mainframe-widgets-databasestatistics-queries-desc:
   kk: Сұраулар
   uz: So'rovlar
   cz: Dotazy
-  de: null
   tr: Sorgular
   zh: 查询数
+  de: Abfragen
+  fa: پرس‌وجوها
 mainframe-widgets-databasestatistics-queries-note:
   ru: Количество запросов, выполненных сервером
   en: Number of requests made by the server
@@ -172,9 +185,10 @@ mainframe-widgets-databasestatistics-queries-note:
   kk: Сервер жасаған сұраулар саны
   uz: Server tomonidan amalga oshirilgan so'rovlar soni
   cz: Počet požadavků provedených serverem
-  de: null
   tr: Sunucu tarafından yapılan istek sayısı
   zh: 服务器发出的请求数
+  de: Anzahl der vom Server gestellten Anfragen
+  fa: تعداد درخواست‌های انجام شده توسط سرور
 mainframe-widgets-databasestatistics-opened_files-desc:
   ru: Открытые файлы
   en: Opened files
@@ -184,9 +198,10 @@ mainframe-widgets-databasestatistics-opened_files-desc:
   kk: Ашылған файлдар
   uz: Ochiq fayllar
   cz: Otevřené soubory
-  de: null
   tr: Açık dosyalar
   zh: 已打开文件
+  de: Geöffnete Dateien
+  fa: فایل‌های باز شده
 mainframe-widgets-databasestatistics-opened_files-note:
   ru: Количество файлов, которые были открыты
   en: Number of files that have been opened
@@ -196,9 +211,10 @@ mainframe-widgets-databasestatistics-opened_files-note:
   kk: Ашылған файлдар саны
   uz: Ochiq fayllar soni
   cz: Počet souborů, které byly otevřeny
-  de: null
   tr: Açılan dosya sayısı
   zh: 已打开的文件数
+  de: Anzahl der geöffneten Dateien
+  fa: تعداد فایل‌هایی که باز شده‌اند
 mainframe-widgets-databasestatistics-open_tables-desc:
   ru: Открытые таблицы
   en: Opened tables
@@ -208,9 +224,10 @@ mainframe-widgets-databasestatistics-open_tables-desc:
   kk: Ашылған кестелер
   uz: Ochiq jadvallar
   cz: Otevřené tabulky
-  de: null
   tr: Açık tablolar
   zh: 已打开表
+  de: Geöffnete Tabellen
+  fa: جداول باز شده
 mainframe-widgets-databasestatistics-open_tables-note:
   ru: Количество столов, которые открыты
   en: Number of tables that are open
@@ -220,9 +237,10 @@ mainframe-widgets-databasestatistics-open_tables-note:
   kk: Ашылған кестелер саны
   uz: Ochiq jadvallar soni
   cz: Počet otevřených tabulek
-  de: null
   tr: Açık olan tablo sayısı
   zh: 已打开的表数
+  de: Anzahl der geöffneten Tabellen
+  fa: تعداد جداولی که باز هستند
 mainframe-widgets-databasestatistics-max_used_connections-desc:
   ru: Открытые подключения
   en: Open connections
@@ -232,9 +250,10 @@ mainframe-widgets-databasestatistics-max_used_connections-desc:
   kk: Ашық қосылымдар
   uz: Ochiq ulanishlar
   cz: Otevřená připojení
-  de: null
   tr: Açık bağlantılar
   zh: 打开连接数
+  de: Offene Verbindungen
+  fa: اتصالات باز
 mainframe-widgets-databasestatistics-max_used_connections-note:
   ru: Максимальное количество подключений, которые использовались одновременно с
     момента запуска сервера
@@ -250,9 +269,11 @@ mainframe-widgets-databasestatistics-max_used_connections-note:
   uz: Server ishga tushirilganidan beri bir vaqtning o'zida ishlatilgan
     ulanishlarning maksimal soni
   cz: Maximální počet připojení, která byla současně používána od spuštění serveru
-  de: null
   tr: Sunucu başladığından beri aynı anda kullanılan maksimum bağlantı sayısı
   zh: 服务器启动以来同时使用的最大连接数
+  de: Die maximale Anzahl der Verbindungen, die seit dem Start des Servers
+    gleichzeitig verwendet wurden
+  fa: بیشترین تعداد اتصالاتی که از زمان شروع سرور همزمان استفاده شده‌اند
 mainframe-widgets-databasestatistics-aborted_clients-desc:
   ru: Сброшенные подключения
   en: Aborted connections
@@ -262,9 +283,10 @@ mainframe-widgets-databasestatistics-aborted_clients-desc:
   kk: Үзілген қосылымдар
   uz: Bekor qilingan ulanishlar
   cz: Přerušená připojení
-  de: null
   tr: Sonlandırılan bağlantılar
   zh: 中断连接
+  de: Abgebrochene Verbindungen
+  fa: اتصالات قطع شده
 mainframe-widgets-databasestatistics-aborted_clients-note:
   ru: Количество соединений, которые были прерваны из-за того, что клиент умер, не
     закрыв соединение должным образом
@@ -281,10 +303,11 @@ mainframe-widgets-databasestatistics-aborted_clients-note:
     ulanishlar soni
   cz: Počet připojení, která byla přerušena, protože klient ukončil spojení
     nesprávně
-  de: null
   tr: Bağlantı düzgün kapatılmadan istemci öldüğü için sonlandırılan bağlantı
     sayısı
   zh: 因客户端未正常关闭连接而中断的连接数
+  de: Abgebrochene Verbindungen
+  fa: تعداد اتصالاتی که به دلیل بسته نشدن صحیح توسط کلاینت قطع شده‌اند
 mainframe-widgets-databasestatistics-notes:
   ru: Отображены переменные, которые влияют на производительность и поведение базы
     данных. Отображены данные по 1-му подключению
@@ -302,7 +325,9 @@ mainframe-widgets-databasestatistics-notes:
     o'zgaruvchilar ko'rsatiladi. 1-chi ulanish uchun ko'rsatilgan ma'lumotlar
   cz: Zobrazují se proměnné, které ovlivňují výkon a chování databáze. Zobrazená
     data pro 1. připojení
-  de: null
   tr: Veritabanı performansını ve davranışını etkileyen değişkenler görüntülenir.
     1. bağlantı için veriler gösterilir
   zh: 显示影响数据库性能和行为的变量。显示第一个连接的数据
+  de: Variablen, die die Datenbankleistung und das Verhalten beeinflussen, werden
+    angezeigt. Angezeigte Daten für die 1. Verbindung
+  fa: متغیرهایی که بر عملکرد و رفتار پایگاه داده تأثیر می‌گذارند نمایش داده شده‌اند. داده‌های نمایش داده شده برای اولین اتصال

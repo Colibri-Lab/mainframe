@@ -7,9 +7,10 @@ mainframe-widgets-fpmstatistics-title:
   kk: PHP күйі
   uz: PHP holati
   cz: Stav PHP Fpm
-  de: null
   tr: PHP Fpm durumu
   zh: PHP Fpm 状态
+  de: PHP Fpm Status
+  fa: وضعیت PHP Fpm
 mainframe-widgets-fpmstatistics-sec:
   ru: секунд
   en: seconds
@@ -19,9 +20,10 @@ mainframe-widgets-fpmstatistics-sec:
   kk: секунд
   uz: soniya
   cz: sekundy
-  de: null
   tr: saniye
   zh: 秒
+  de: Sekunden
+  fa: ثانیه
 mainframe-widgets-fpmstatistics-note:
   ru: "Отображены основные переменные сервера FPM, внимательно следите за
     состоянием процессов "
@@ -38,10 +40,11 @@ mainframe-widgets-fpmstatistics-note:
   uz: FPM serverining asosiy o'zgaruvchilari ko'rsatilgan, jarayonlar holatini
     diqqat bilan kuzatib boring
   cz: Zobrazují se hlavní proměnné serveru FPM, pečlivě sledujte stav procesů
-  de: null
   tr: FPM sunucusunun ana değişkenleri görüntülenir, süreçlerin durumunu
     dikkatlice izleyin
   zh: 显示 FPM 服务器的主要变量，请仔细监控进程状态
+  de: Die Hauptvariablen des FPM-Servers werden angezeigt, überwachen Sie sorgfältig den Status der Prozesse
+  fa: متغیرهای اصلی سرور FPM نمایش داده می‌شوند، وضعیت فرآیندها را با دقت زیر نظر بگیرید
 mainframe-widgets-fpmstatistics-fields-name:
   ru: Пул
   hy: Փուլ
@@ -51,9 +54,10 @@ mainframe-widgets-fpmstatistics-fields-name:
   kk: Пул
   uz: Pool
   cz: Pool
-  de: null
   tr: Havuz
   zh: 池
+  de: Pool
+  fa: استخر
 mainframe-widgets-fpmstatistics-fields-type:
   ru: Тип пула
   en: Pool type
@@ -63,9 +67,10 @@ mainframe-widgets-fpmstatistics-fields-type:
   kk: Пул түрі
   uz: Pool turi
   cz: Typ poolu
-  de: null
   tr: Havuz türü
   zh: 池类型
+  de: Pooltyp
+  fa: نوع استخر
 mainframe-widgets-fpmstatistics-fields-name-note:
   ru: Название пула FPM
   en: FPM pool name
@@ -75,9 +80,10 @@ mainframe-widgets-fpmstatistics-fields-name-note:
   kk: FPM пул атауы
   uz: FPM pool nomi
   cz: Název FPM poolu
-  de: null
   tr: FPM havuz adı
   zh: FPM 池名称
+  de: Name des FPM-Pools
+  fa: نام استخر FPM
 mainframe-widgets-fpmstatistics-fields-type-note:
   ru: Тип диспетчера процессов - статический, динамический или ondemand
   en: Process manager type - static, dynamic or ondemand
@@ -87,9 +93,10 @@ mainframe-widgets-fpmstatistics-fields-type-note:
   kk: Процесс менеджері түрі - статикалық, динамикалық немесе сұраныс бойынша
   uz: Jarayon menejeri turi - statik, dinamik yoki talabga binoan
   cz: Typ správce procesů - statický, dynamický nebo na požádání
-  de: null
   tr: İşlem yöneticisi türü - statik, dinamik veya isteğe bağlı
   zh: 进程管理器类型 - 静态、动态或按需
+  de: Prozessmanager-Typ – statisch, dynamisch oder bei Bedarf
+  fa: نوع مدیر فرآیند - ایستا، پویا یا بر اساس درخواست
 mainframe-widgets-fpmstatistics-fields-start_time:
   ru: Последний запуск
   hy: Վերջին վազքը
@@ -99,9 +106,10 @@ mainframe-widgets-fpmstatistics-fields-start_time:
   kk: Соңғы іске қосу
   uz: Oxirgi ishga tushirish
   cz: Poslední spuštění
-  de: null
   tr: Son başlatma
   zh: 上次启动
+  de: Letzter Start
+  fa: آخرین راه‌اندازی
 mainframe-widgets-fpmstatistics-fields-start_time-note:
   ru: Дата и время последнего запуска пула процессов
   en: Date and time the process pool was last started
@@ -111,9 +119,10 @@ mainframe-widgets-fpmstatistics-fields-start_time-note:
   kk: Процесс пулын соңғы рет іске қосқан күні мен уақыты
   uz: Jarayon poolini oxirgi marta ishga tushirilgan sana va vaqt
   cz: Datum a čas posledního spuštění poolu procesů
-  de: null
   tr: İşlem havuzunun en son başlatıldığı tarih ve saat
   zh: 进程池上次启动的日期和时间
+  de: Datum und Uhrzeit des letzten Starts des Prozesspools
+  fa: تاریخ و زمان آخرین راه‌اندازی استخر فرآیند
 mainframe-widgets-fpmstatistics-fields-start_since:
   ru: Длительность
   hy: Տեւողությունը
@@ -123,9 +132,10 @@ mainframe-widgets-fpmstatistics-fields-start_since:
   kk: Ұзақтығы
   uz: Davomiyligi
   cz: Doba trvání
-  de: null
   tr: Süre
   zh: 持续时间
+  de: Dauer
+  fa: مدت زمان
 mainframe-widgets-fpmstatistics-fields-start_since-note:
   ru: Время в секундах с момента последнего запуска пула процессов
   en: Time in seconds since the process pool was last started
@@ -135,9 +145,10 @@ mainframe-widgets-fpmstatistics-fields-start_since-note:
   kk: Процесс пулын соңғы рет іске қосқаннан бері өткен уақыт секундпен
   uz: Jarayon poolini oxirgi marta ishga tushirilganidan beri o'tgan vaqt soniyada
   cz: Čas v sekundách od posledního spuštění poolu procesů
-  de: null
   tr: İşlem havuzunun en son başlatılmasından bu yana geçen süre (saniye)
   zh: 距离进程池上次启动的秒数
+  de: Zeit in Sekunden seit dem letzten Start des Prozesspools
+  fa: زمان به ثانیه از آخرین راه‌اندازی استخر فرآیند
 mainframe-widgets-fpmstatistics-fields-accepted_conn:
   ru: Подключений
   hy: Միացումներ
@@ -147,9 +158,10 @@ mainframe-widgets-fpmstatistics-fields-accepted_conn:
   kk: Қосылымдар
   uz: Ulanishlar
   cz: Připojení
-  de: null
   tr: Bağlantılar
   zh: 连接数
+  de: Verbindungen
+  fa: اتصالات
 mainframe-widgets-fpmstatistics-fields-accepted_conn-note:
   ru: Общее количество принятых подключений
   en: Total number of accepted connections
@@ -159,9 +171,10 @@ mainframe-widgets-fpmstatistics-fields-accepted_conn-note:
   kk: Қабылданған қосылымдардың жалпы саны
   uz: Qabul qilingan ulanishlarning umumiy soni
   cz: Celkový počet přijatých připojení
-  de: null
   tr: Kabul edilen toplam bağlantı sayısı
   zh: 已接受连接总数
+  de: Gesamtzahl der akzeptierten Verbindungen
+  fa: تعداد کل اتصالات پذیرفته شده
 mainframe-widgets-fpmstatistics-fields-listen_queue:
   ru: Ждут обработки
   hy: Սպասում է մշակմանը
@@ -171,9 +184,10 @@ mainframe-widgets-fpmstatistics-fields-listen_queue:
   kk: Өңдеуді күту
   uz: Qayta ishlashni kutish
   cz: Čeká na zpracování
-  de: null
   tr: İşlem için bekliyor
   zh: 等待处理
+  de: Wartet auf Verarbeitung
+  fa: در انتظار پردازش
 mainframe-widgets-fpmstatistics-fields-listen_queue-note:
   ru: Количество запросов (невыполненных работ), ожидающих в настоящее время
     свободного процесса
@@ -186,9 +200,10 @@ mainframe-widgets-fpmstatistics-fields-listen_queue-note:
   kk: Қазіргі уақытта бос процесті күтіп тұрған сұраулардың (артта қалулардың) саны
   uz: Hozirda bo'sh jarayonni kutayotgan so'rovlar (orqada qolishlar) soni
   cz: Počet požadavků (čekajících), které čekají na volný proces
-  de: null
   tr: Şu anda boşta bir işlem bekleyen isteklerin (kuyruk) sayısı
   zh: 当前等待空闲进程的请求（积压）数量
+  de: Anzahl der Anfragen (Rückstände), die derzeit auf einen freien Prozess warten
+  fa: تعداد درخواست‌هایی (در صف انتظار) که در حال حاضر منتظر یک فرآیند بیکار هستند
 mainframe-widgets-fpmstatistics-fields-max_listen_queue:
   ru: Максимальное
   hy: Առավելագույնը
@@ -198,9 +213,10 @@ mainframe-widgets-fpmstatistics-fields-max_listen_queue:
   kk: Ең көп
   uz: Maksimal
   cz: Maximum
-  de: null
   tr: Maksimum
   zh: 最大值
+  de: Maximum
+  fa: حداکثر
 mainframe-widgets-fpmstatistics-fields-max_listen_queue-note:
   ru: Максимальное количество запросов, отображаемых в очереди прослушивания за
     один раз
@@ -213,9 +229,10 @@ mainframe-widgets-fpmstatistics-fields-max_listen_queue-note:
   uz: Tinglash navbatida bir vaqtning o'zida ko'rsatiladigan so'rovlarning
     maksimal soni
   cz: Maximální počet požadavků zobrazených ve frontě najednou
-  de: null
   tr: Dinleme kuyruğunda bir seferde görüntülenecek maksimum istek sayısı
   zh: 监听队列中一次可显示的最大请求数
+  de: Maximale Anzahl von Anfragen, die gleichzeitig in der Warteschlange angezeigt werden
+  fa: حداکثر تعداد درخواست‌هایی که همزمان در صف گوش دادن نمایش داده می‌شوند
 mainframe-widgets-fpmstatistics-fields-listen_queue_length:
   ru: Максимальная очередь
   en: Maximum queue
@@ -225,9 +242,10 @@ mainframe-widgets-fpmstatistics-fields-listen_queue_length:
   kk: Ең көп кезек
   uz: Maksimal navbat
   cz: Maximální fronta
-  de: null
   tr: Maksimum kuyruk
   zh: 最大队列
+  de: Maximale Warteschlange
+  fa: صف حداکثر
 mainframe-widgets-fpmstatistics-fields-max_listen_q:
   en: Maximum queue
   it: Coda massima
@@ -237,9 +255,10 @@ mainframe-widgets-fpmstatistics-fields-max_listen_q:
   hy: Առավելագույն հերթ
   ru: Максимальная очередь
   cz: Maximální fronta
-  de: null
   tr: Maksimum kuyruk
   zh: 最大队列
+  de: Maximale Warteschlange
+  fa: صف حداکثر
 mainframe-widgets-fpmstatistics-fields-listen_queue_length-note:
   ru: Максимально допустимый размер очереди прослушивания
   en: Maximum allowed size of listening queue
@@ -249,9 +268,10 @@ mainframe-widgets-fpmstatistics-fields-listen_queue_length-note:
   kk: Тыңдау кезегінің рұқсат етілген ең үлкен өлшемі
   uz: Tinglash navbatining ruxsat etilgan maksimal hajmi
   cz: Maximální povolená velikost fronty naslouchání
-  de: null
   tr: Dinleme kuyruğunun izin verilen maksimum boyutu
   zh: 监听队列允许的最大大小
+  de: Maximale erlaubte Größe der Warteschlange
+  fa: حداکثر اندازه مجاز صف گوش دادن
 mainframe-widgets-fpmstatistics-fields-idle_processes:
   ru: Ждут работы
   hy: Սպասում է աշխատանքի
@@ -261,9 +281,10 @@ mainframe-widgets-fpmstatistics-fields-idle_processes:
   kk: Жұмысты күту
   uz: Ishni kutish
   cz: Čeká na práci
-  de: null
   tr: İş için bekliyor
   zh: 等待任务
+  de: Wartet auf Arbeit
+  fa: در انتظار کار
 mainframe-widgets-fpmstatistics-fields-idle_processes-note:
   ru: Количество процессов, которые в данный момент простаивают (ожидают запросов)
   en: The number of processes that are currently idle (waiting for requests)
@@ -273,9 +294,10 @@ mainframe-widgets-fpmstatistics-fields-idle_processes-note:
   kk: Қазіргі уақытта бос тұрған (сұрауларды күтіп тұрған) процестер саны
   uz: Hozirda bo'sh turgan (so'rovlarni kutayotgan) jarayonlar soni
   cz: Počet procesů, které jsou aktuálně nečinné (čekají na požadavky)
-  de: null
   tr: Şu anda boşta olan (istek bekleyen) işlem sayısı
   zh: 当前空闲（等待请求）的进程数
+  de: Anzahl der Prozesse, die derzeit untätig sind (warten auf Anfragen)
+  fa: تعداد فرآیندهایی که در حال حاضر بیکار هستند (در انتظار درخواست‌ها)
 mainframe-widgets-fpmstatistics-fields-active_processes:
   ru: Работают
   en: Working
@@ -285,9 +307,10 @@ mainframe-widgets-fpmstatistics-fields-active_processes:
   kk: Жұмыс істеу
   uz: Ishlash
   cz: Pracuje
-  de: null
   tr: Çalışıyor
   zh: 工作中
+  de: Arbeiten
+  fa: در حال کار
 mainframe-widgets-fpmstatistics-fields-active_processes-note:
   ru: Количество процессов, обрабатывающих запросы в данный момент
   hy: Ներկայիս հարցումները մշակող գործընթացների քանակը
@@ -297,9 +320,10 @@ mainframe-widgets-fpmstatistics-fields-active_processes-note:
   kk: Қазіргі уақытта сұрауларды өңдеп жатқан процестер саны
   uz: Hozirda so'rovlarni qayta ishlayotgan jarayonlar soni
   cz: Počet procesů, které aktuálně zpracovávají požadavky
-  de: null
   tr: Şu anda istekleri işleyen işlem sayısı
   zh: 当前正在处理请求的进程数
+  de: Anzahl der Prozesse, die derzeit Anfragen bearbeiten
+  fa: تعداد فرآیندهایی که در حال حاضر درخواست‌ها را پردازش می‌کنند
 mainframe-widgets-fpmstatistics-fields-total_processes:
   ru: Всего
   en: Total
@@ -309,9 +333,10 @@ mainframe-widgets-fpmstatistics-fields-total_processes:
   kk: Барлығы
   uz: Jami
   cz: Celkem
-  de: null
   tr: Toplam
   zh: 总数
+  de: Gesamt
+  fa: مجموع
 mainframe-widgets-fpmstatistics-fields-total_processes-note:
   ru: Текущее общее количество процессов
   hy: Գործընթացների ընթացիկ ընդհանուր թիվը
@@ -321,9 +346,10 @@ mainframe-widgets-fpmstatistics-fields-total_processes-note:
   kk: Процестердің ағымдағы жалпы саны
   uz: Jarayonlarning joriy umumiy soni
   cz: Aktuální celkový počet procesů
-  de: null
   tr: Mevcut toplam işlem sayısı
   zh: 当前进程总数
+  de: Aktuelle Gesamtanzahl der Prozesse
+  fa: تعداد کل فعلی فرآیندها
 mainframe-widgets-fpmstatistics-fields-max_active_processes:
   ru: Максимальная активность
   en: Maximum activity
@@ -333,9 +359,10 @@ mainframe-widgets-fpmstatistics-fields-max_active_processes:
   kk: Ең көп белсенділік
   uz: Maksimal faoliyat
   cz: Maximální aktivita
-  de: null
   tr: Maksimum etkinlik
   zh: 最大活动数
+  de: Maximale Aktivität
+  fa: حداکثر فعالیت
 mainframe-widgets-fpmstatistics-fields-max_active_processes-note:
   ru: Максимальное количество одновременно активных процессов
   en: Maximum number of simultaneously active processes
@@ -345,9 +372,10 @@ mainframe-widgets-fpmstatistics-fields-max_active_processes-note:
   kk: Бір уақытта белсенді процестердің ең көп саны
   uz: Bir vaqtning o'zida faol jarayonlarning maksimal soni
   cz: Maximální počet současně aktivních procesů
-  de: null
   tr: Aynı anda etkin olan maksimum işlem sayısı
   zh: 同时活动进程的最大数量
+  de: Maximale Anzahl gleichzeitig aktiver Prozesse
+  fa: حداکثر تعداد فرآیندهای فعال به طور همزمان
 mainframe-widgets-fpmstatistics-fields-max_children_reached:
   ru: Состояние
   hy: Վիճակ
@@ -357,9 +385,10 @@ mainframe-widgets-fpmstatistics-fields-max_children_reached:
   kk: Күйі
   uz: Holati
   cz: Stav
-  de: null
   tr: Durum
   zh: 状态
+  de: Status
+  fa: وضعیت
 mainframe-widgets-fpmstatistics-fields-max_children_reached-note:
   ru: Достигнуто ли когда-либо максимальное количество процессов? Если это так, то
     отображаемое значение равно 10
@@ -376,10 +405,11 @@ mainframe-widgets-fpmstatistics-fields-max_children_reached-note:
     qiymat 10
   cz: Bylo někdy dosaženo maximálního počtu procesů? Pokud ano, zobrazená hodnota
     je 10
-  de: null
   tr: Maksimum işlem sayısına ulaşıldı mı? Eğer ulaşıldıysa, görüntülenen değer
     10'dur
   zh: 是否达到进程最大数？如果是，显示的值为10
+  de: Wurde die maximale Anzahl von Prozessen jemals erreicht? Falls ja, wird der Wert 10 angezeigt
+  fa: آیا تعداد حداکثر فرآیندها تا به حال رسیده است؟ اگر بله، مقدار نمایش داده شده ۱۰ است
 mainframe-widgets-fpmstatistics-fields-slow_requests:
   ru: Медленные запросы
   en: Slow queries
@@ -389,9 +419,10 @@ mainframe-widgets-fpmstatistics-fields-slow_requests:
   kk: Баяу сұраулар
   uz: Sekin so'rovlar
   cz: Pomalé dotazy
-  de: null
   tr: Yavaş sorgular
   zh: 慢查询
+  de: Langsame Anfragen
+  fa: درخواست‌های کند
 mainframe-widgets-fpmstatistics-fields-slow_requests-note:
   ru: Общее количество запросов, попавших в настроенную платформу
   hy: Հարցումների ընդհանուր թիվը, որոնք հարվածել են կազմաձևված հարթակին
@@ -401,9 +432,10 @@ mainframe-widgets-fpmstatistics-fields-slow_requests-note:
   kk: Орнатылған платформаға түскен сұраулардың жалпы саны
   uz: Sozlangan platformaga tushgan so'rovlarning umumiy soni
   cz: Celkový počet požadavků, které zasáhly nakonfigurovanou platformu
-  de: null
   tr: Yapılandırılmış platforma ulaşan toplam istek sayısı
   zh: 命中配置平台的请求总数
+  de: Gesamtzahl der Anfragen, die die konfigurierte Plattform erreicht haben
+  fa: تعداد کل درخواست‌هایی که به پلتفرم پیکربندی شده رسیده‌اند
 mainframe-widgets-fpmstatistics-chart:
   ru: Активность
   en: Activity
@@ -413,6 +445,7 @@ mainframe-widgets-fpmstatistics-chart:
   kk: Белсенділік
   uz: Faoliyat
   cz: Aktivita
-  de: null
   tr: Aktivite
   zh: 活动
+  de: Aktivität
+  fa: فعالیت

@@ -7,30 +7,23 @@ mainframe-widgets-serverstatistics-title:
   kk: Веб-сервердің күйі
   uz: Veb-server holati
   cz: Stav webového serveru
-  de: null
   tr: Web sunucu durumu
   zh: Web服务器状态
+  de: Status des Webservers
+  fa: وضعیت وب سرور
 mainframe-widgets-serverstatistics-note:
-  ru: Следите за активными процессами, процессы в ожидании должны быть больше чем
-    запись и чтение одновременно
-  en: Keep an eye on active processes, waiting processes should be more than
-    writing and reading at the same time
-  hy: Հետևեք ակտիվ գործընթացներին, սպասման գործընթացները պետք է լինեն ավելին, քան
-    միաժամանակ գրելը և կարդալը
-  it: Tieni d'occhio i processi attivi, i processi in attesa dovrebbero essere più
-    di scrivere e leggere contemporaneamente
-  es: Vigila los procesos activos, los procesos en espera deben ser más que
-    escribir y leer al mismo tiempo
-  kk: Белсенді процестерді қадағалаңыз, күту процестері бір уақытта жазу және оқу
-    процесінен көп болуы керек
-  uz: Faol jarayonlarni kuzatib boring, kutish jarayonlari bir vaqtning o'zida
-    yozish va o'qishdan ko'proq bo'lishi kerak
-  cz: Sledujte aktivní procesy, čekající procesy by měly být více než zápis a
-    čtení současně
-  de: null
-  tr: Aktif işlemleri izleyin, bekleyen işlemler aynı anda yazma ve okuma
-    işlemlerinden fazla olmalıdır
+  ru: Следите за активными процессами, процессы в ожидании должны быть больше чем запись и чтение одновременно
+  en: Keep an eye on active processes, waiting processes should be more than writing and reading at the same time
+  hy: Հետևեք ակտիվ գործընթացներին, սպասման գործընթացները պետք է լինեն ավելին, քան միաժամանակ գրելը և կարդալը
+  it: Tieni d'occhio i processi attivi, i processi in attesa dovrebbero essere più di scrivere e leggere contemporaneamente
+  es: Vigila los procesos activos, los procesos en espera deben ser más que escribir y leer al mismo tiempo
+  kk: Белсенді процестерді қадағалаңыз, күту процестері бір уақытта жазу және оқу процесінен көп болуы керек
+  uz: Faol jarayonlarni kuzatib boring, kutish jarayonlari bir vaqtning o'zida yozish va o'qishdan ko'proq bo'lishi kerak
+  cz: Sledujte aktivní procesy, čekající procesy by měly být více než zápis a čtení současně
+  tr: Aktif işlemleri izleyin, bekleyen işlemler aynı anda yazma ve okuma işlemlerinden fazla olmalıdır
   zh: 注意活动进程，等待进程应多于同时写入和读取的进程
+  de: Beobachten Sie die aktiven Prozesse, wartende Prozesse sollten mehr als gleichzeitiges Schreiben und Lesen sein
+  fa: مراقب فرآیندهای فعال باشید، فرآیندهای منتظر باید بیشتر از نوشتن و خواندن همزمان باشند
 mainframe-widgets-serverstatistics-fields-connections_active:
   ru: Активные
   hy: Ակտիվ
@@ -40,9 +33,10 @@ mainframe-widgets-serverstatistics-fields-connections_active:
   kk: Белсенді
   uz: Faol
   cz: Aktivní
-  de: null
   tr: Aktif
   zh: 活跃
+  de: Aktiv
+  fa: فعال
 mainframe-widgets-serverstatistics-fields-connections_active-note:
   ru: Активные подключения
   hy: Ակտիվ կապեր
@@ -52,9 +46,10 @@ mainframe-widgets-serverstatistics-fields-connections_active-note:
   kk: Белсенді қосылымдар
   uz: Faol ulanishlar
   cz: Aktivní připojení
-  de: null
   tr: Aktif bağlantılar
   zh: 活跃连接
+  de: Aktive Verbindungen
+  fa: اتصالات فعال
 mainframe-widgets-serverstatistics-fields-connections_reading:
   ru: Чтение
   en: Reading
@@ -64,9 +59,10 @@ mainframe-widgets-serverstatistics-fields-connections_reading:
   kk: Оқу
   uz: O'qish
   cz: Čtení
-  de: null
   tr: Okuma
   zh: 读取中
+  de: Lesen
+  fa: خواندن
 mainframe-widgets-serverstatistics-fields-connections_reading-note:
   ru: Подключения в режиме чтения
   hy: Կարդալ ռեժիմի միացումներ
@@ -76,9 +72,10 @@ mainframe-widgets-serverstatistics-fields-connections_reading-note:
   kk: Оқу режиміндегі қосылымдар
   uz: O'qish rejimidagi ulanishlar
   cz: Připojení v režimu čtení
-  de: null
   tr: Okuma modunda bağlantılar
   zh: 读取模式下的连接
+  de: Verbindungen im Lesemodus
+  fa: اتصالات در حالت خواندن
 mainframe-widgets-serverstatistics-fields-connections_wating:
   ru: Ожидание
   en: Expectation
@@ -88,9 +85,10 @@ mainframe-widgets-serverstatistics-fields-connections_wating:
   kk: Күту
   uz: Kutish
   cz: Čekání
-  de: null
   tr: Bekleme
   zh: 等待中
+  de: Warten
+  fa: انتظار
 mainframe-widgets-serverstatistics-fields-connections_wating-note:
   ru: Подключения в режиме ожидания
   hy: Սպասման միացումներ
@@ -100,9 +98,10 @@ mainframe-widgets-serverstatistics-fields-connections_wating-note:
   kk: Күту режиміндегі қосылымдар
   uz: Kutish rejimidagi ulanishlar
   cz: Připojení v pohotovostním režimu
-  de: null
   tr: Bekleme modunda bağlantılar
   zh: 待机模式下的连接
+  de: Verbindungen im Standby-Modus
+  fa: اتصالات در حالت انتظار
 mainframe-widgets-serverstatistics-fields-connections_writing:
   ru: Запись
   en: Writing
@@ -112,9 +111,10 @@ mainframe-widgets-serverstatistics-fields-connections_writing:
   kk: Жазу
   uz: Yozish
   cz: Zápis
-  de: null
   tr: Yazma
   zh: 写入中
+  de: Schreiben
+  fa: نوشتن
 mainframe-widgets-serverstatistics-fields-connections_writing-note:
   ru: Подключения в режиме записи
   hy: Ձայնագրման ռեժիմի միացումներ
@@ -124,9 +124,10 @@ mainframe-widgets-serverstatistics-fields-connections_writing-note:
   kk: Жазу режиміндегі қосылымдар
   uz: Yozish rejimidagi ulanishlar
   cz: Připojení v režimu zápisu
-  de: null
   tr: Yazma modunda bağlantılar
   zh: 写入模式下的连接
+  de: Verbindungen im Schreibmodus
+  fa: اتصالات در حالت نوشتن
 mainframe-widgets-serverstatistics-button:
   ru: Активность
   en: Activity
@@ -136,6 +137,7 @@ mainframe-widgets-serverstatistics-button:
   kk: Белсенділік
   uz: Faollik
   cz: Aktivita
-  de: null
   tr: Aktivite
   zh: 活动
+  de: Aktivität
+  fa: فعالیت
