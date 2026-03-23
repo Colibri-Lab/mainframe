@@ -96,6 +96,7 @@ class Installer
         $path = $vendorDir . $targetDir;
         $configPath = $path . '/src/MainFrame/config-template/';
         $configDir = './config/';
+        $runtimeDir = './runtime/';
 
         if (!file_exists($configDir . 'app.yaml')) {
             print_r('Не найден файл конфигурации app.yaml' . "\n");
@@ -112,7 +113,7 @@ class Installer
         // копируем конфиг
         print_r('Копируем файлы конфигурации' . "\n");
         self::_copyOrSymlink($mode, $configPath, $configDir, 'module-' . $mode . '.yaml', 'mainframe.yaml');
-        self::_copyOrSymlink($mode, $configPath, $configDir, 'mainframe-menu.yaml', 'mainframe-menu.yaml', true);
+        self::_copyOrSymlink($mode, $configPath, $runtimeDir, 'mainframe-menu.yaml', 'mainframe-menu.yaml', true);
         self::_copyOrSymlink($mode, $configPath, $configDir, 'mainframe-langtexts.yaml', 'mainframe-langtexts.yaml', true);
 
         print_r('Встраиваем модуль' . "\n");

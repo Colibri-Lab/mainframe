@@ -9,5 +9,5 @@ status:
   dump-timer: 60
 
 texts: include(mainframe-langtexts.yaml)
-menu: include(mainframe-menu.yaml)
+menu: include(../runtime/mainframe-menu.yaml)
   

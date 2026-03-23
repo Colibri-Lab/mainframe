@@ -78,8 +78,11 @@ class Module extends BaseModule
     public function GetTopmostMenu(bool $hideExecuteCommand = true): Item|array
     {
 
+        $runtime = App::$config->Query('runtime')->GetValue();
+
         try {
-            $menu = Module::Instance()->Config()->Query('config.menu')->AsArray();
+            $menu = (new Config($runtime . 'mainframe-menu.yaml', true))->ToArray();
+            // $menu = Module::Instance()->Config()->Query('config.menu')->AsArray();
         } catch (ConfigException $e) {
             $menu = null;
         }
@@ -117,7 +120,7 @@ class Module extends BaseModule
 
         // сохраняем меню в настроечный файл
         $config = new Config($menuArray);
-        $config->Save('mainframe-menu.yaml');
+        $config->Save($runtime . 'mainframe-menu.yaml');
 
         return $menu->children;
     }
