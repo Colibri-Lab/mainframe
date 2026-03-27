@@ -1,6 +1,7 @@
 App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
     constructor(name, container) {
         super(name, container);
+        this.AddClass('app-mainframe-menu-tree');
 
         this.RegisterEvent('NodesLoaded', false, 'When nodes are loaded');
         this.AddHandler('NodeClicked', this.__nodeClicked);

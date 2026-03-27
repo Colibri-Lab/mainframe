@@ -33,6 +33,8 @@
                 font-weight: normal;
                 [data-object-name$="-icon"] {
                     svg {
+                        width: 20px;
+                        height: 20px;
                         path, circle {
                             fill: #ffffff;
                         }
