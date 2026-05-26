@@ -42,17 +42,19 @@ class DashboardController extends WebController
         if(!$process) {
 
             $currentUser = \App\Modules\Security\Module::Instance()->current;
-            $userGUID = md5($currentUser->id);
+            $userGUID = $currentUser ? md5($currentUser->id) : null;
+            if($userGUID) {
+                $worker = new StatusWorker();
+                $process = Process::Create($worker);
+                $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
+            }
 
-            $worker = new StatusWorker();
-            $process = Process::Create($worker);
-            $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
-
+            if(!$process->IsRunning()) {
+                throw new InvalidArgumentException('Can not start worker', 500);
+            }
+            
         }
 
-        if(!$process->IsRunning()) {
-            throw new InvalidArgumentException('Can not start worker', 500);
-        }
 
         $result = Module::Instance()->RegisterStatusInfo();
         $result->graph = Module::Instance()->GetStatusInfo();
