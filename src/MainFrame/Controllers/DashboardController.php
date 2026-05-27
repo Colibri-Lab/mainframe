@@ -49,7 +49,7 @@ class DashboardController extends WebController
                 $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
             }
 
-            if(!$process->IsRunning()) {
+            if(!($process?->IsRunning() ?? null)) {
                 throw new InvalidArgumentException('Can not start worker', 500);
             }
             
