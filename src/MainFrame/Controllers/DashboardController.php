@@ -47,12 +47,11 @@ class DashboardController extends WebController
                 $worker = new StatusWorker();
                 $process = Process::Create($worker);
                 $process->Run((object)['user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
+                if(!($process?->IsRunning() ?? null)) {
+                    throw new InvalidArgumentException('Can not start worker', 500);
+                }
             }
 
-            if(!($process?->IsRunning() ?? null)) {
-                throw new InvalidArgumentException('Can not start worker', 500);
-            }
-            
         }
 
 
