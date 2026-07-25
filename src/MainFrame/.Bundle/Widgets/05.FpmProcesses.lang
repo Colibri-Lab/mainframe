@@ -29,10 +29,9 @@ mainframe-widgets-fpmprocesses-notes:
   cz: Zobrazen seznam procesů na serveru FPM. Je nutné pravidelně sledovat čas
     strávený na procesu
   de: Es wird eine Liste der Prozesse auf dem FPM-Server angezeigt. Es ist
-    erforderlich, regelmäßig die für den Prozess aufgewendete Zeit zu
-    überprüfen
+    erforderlich, regelmäßig die für den Prozess aufgewendete Zeit zu überprüfen
   tr: FPM sunucusundaki işlemlerin listesi görüntülenir. İşlemde harcanan süreye
     periyodik olarak bakmak gerekir
   zh: 显示 FPM 服务器中的进程列表。需要定期查看进程耗时
-  fa: فهرستی از فرآیندها در سرور FPM نمایش داده شد. لازم است که به طور دوره‌ای
-    به زمان صرف شده برای فرآیند نگاه کنید
+  fa: فهرستی از فرآیندها در سرور FPM نمایش داده شد. لازم است که به طور دوره‌ای به
+    زمان صرف شده برای فرآیند نگاه کنید

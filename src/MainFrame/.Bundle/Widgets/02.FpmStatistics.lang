@@ -43,8 +43,10 @@ mainframe-widgets-fpmstatistics-note:
   tr: FPM sunucusunun ana değişkenleri görüntülenir, süreçlerin durumunu
     dikkatlice izleyin
   zh: 显示 FPM 服务器的主要变量，请仔细监控进程状态
-  de: Die Hauptvariablen des FPM-Servers werden angezeigt, überwachen Sie sorgfältig den Status der Prozesse
-  fa: متغیرهای اصلی سرور FPM نمایش داده می‌شوند، وضعیت فرآیندها را با دقت زیر نظر بگیرید
+  de: Die Hauptvariablen des FPM-Servers werden angezeigt, überwachen Sie
+    sorgfältig den Status der Prozesse
+  fa: متغیرهای اصلی سرور FPM نمایش داده می‌شوند، وضعیت فرآیندها را با دقت زیر نظر
+    بگیرید
 mainframe-widgets-fpmstatistics-fields-name:
   ru: Пул
   hy: Փուլ
@@ -231,7 +233,8 @@ mainframe-widgets-fpmstatistics-fields-max_listen_queue-note:
   cz: Maximální počet požadavků zobrazených ve frontě najednou
   tr: Dinleme kuyruğunda bir seferde görüntülenecek maksimum istek sayısı
   zh: 监听队列中一次可显示的最大请求数
-  de: Maximale Anzahl von Anfragen, die gleichzeitig in der Warteschlange angezeigt werden
+  de: Maximale Anzahl von Anfragen, die gleichzeitig in der Warteschlange
+    angezeigt werden
   fa: حداکثر تعداد درخواست‌هایی که همزمان در صف گوش دادن نمایش داده می‌شوند
 mainframe-widgets-fpmstatistics-fields-listen_queue_length:
   ru: Максимальная очередь
@@ -408,8 +411,10 @@ mainframe-widgets-fpmstatistics-fields-max_children_reached-note:
   tr: Maksimum işlem sayısına ulaşıldı mı? Eğer ulaşıldıysa, görüntülenen değer
     10'dur
   zh: 是否达到进程最大数？如果是，显示的值为10
-  de: Wurde die maximale Anzahl von Prozessen jemals erreicht? Falls ja, wird der Wert 10 angezeigt
-  fa: آیا تعداد حداکثر فرآیندها تا به حال رسیده است؟ اگر بله، مقدار نمایش داده شده ۱۰ است
+  de: Wurde die maximale Anzahl von Prozessen jemals erreicht? Falls ja, wird der
+    Wert 10 angezeigt
+  fa: آیا تعداد حداکثر فرآیندها تا به حال رسیده است؟ اگر بله، مقدار نمایش داده شده
+    ۱۰ است
 mainframe-widgets-fpmstatistics-fields-slow_requests:
   ru: Медленные запросы
   en: Slow queries

@@ -12,18 +12,29 @@ mainframe-widgets-serverstatistics-title:
   de: Status des Webservers
   fa: وضعیت وب سرور
 mainframe-widgets-serverstatistics-note:
-  ru: Следите за активными процессами, процессы в ожидании должны быть больше чем запись и чтение одновременно
-  en: Keep an eye on active processes, waiting processes should be more than writing and reading at the same time
-  hy: Հետևեք ակտիվ գործընթացներին, սպասման գործընթացները պետք է լինեն ավելին, քան միաժամանակ գրելը և կարդալը
-  it: Tieni d'occhio i processi attivi, i processi in attesa dovrebbero essere più di scrivere e leggere contemporaneamente
-  es: Vigila los procesos activos, los procesos en espera deben ser más que escribir y leer al mismo tiempo
-  kk: Белсенді процестерді қадағалаңыз, күту процестері бір уақытта жазу және оқу процесінен көп болуы керек
-  uz: Faol jarayonlarni kuzatib boring, kutish jarayonlari bir vaqtning o'zida yozish va o'qishdan ko'proq bo'lishi kerak
-  cz: Sledujte aktivní procesy, čekající procesy by měly být více než zápis a čtení současně
-  tr: Aktif işlemleri izleyin, bekleyen işlemler aynı anda yazma ve okuma işlemlerinden fazla olmalıdır
+  ru: Следите за активными процессами, процессы в ожидании должны быть больше чем
+    запись и чтение одновременно
+  en: Keep an eye on active processes, waiting processes should be more than
+    writing and reading at the same time
+  hy: Հետևեք ակտիվ գործընթացներին, սպասման գործընթացները պետք է լինեն ավելին, քան
+    միաժամանակ գրելը և կարդալը
+  it: Tieni d'occhio i processi attivi, i processi in attesa dovrebbero essere più
+    di scrivere e leggere contemporaneamente
+  es: Vigila los procesos activos, los procesos en espera deben ser más que
+    escribir y leer al mismo tiempo
+  kk: Белсенді процестерді қадағалаңыз, күту процестері бір уақытта жазу және оқу
+    процесінен көп болуы керек
+  uz: Faol jarayonlarni kuzatib boring, kutish jarayonlari bir vaqtning o'zida
+    yozish va o'qishdan ko'proq bo'lishi kerak
+  cz: Sledujte aktivní procesy, čekající procesy by měly být více než zápis a
+    čtení současně
+  tr: Aktif işlemleri izleyin, bekleyen işlemler aynı anda yazma ve okuma
+    işlemlerinden fazla olmalıdır
   zh: 注意活动进程，等待进程应多于同时写入和读取的进程
-  de: Beobachten Sie die aktiven Prozesse, wartende Prozesse sollten mehr als gleichzeitiges Schreiben und Lesen sein
-  fa: مراقب فرآیندهای فعال باشید، فرآیندهای منتظر باید بیشتر از نوشتن و خواندن همزمان باشند
+  de: Beobachten Sie die aktiven Prozesse, wartende Prozesse sollten mehr als
+    gleichzeitiges Schreiben und Lesen sein
+  fa: مراقب فرآیندهای فعال باشید، فرآیندهای منتظر باید بیشتر از نوشتن و خواندن
+    همزمان باشند
 mainframe-widgets-serverstatistics-fields-connections_active:
   ru: Активные
   hy: Ակտիվ
