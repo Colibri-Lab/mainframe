@@ -55,8 +55,8 @@ class DashboardController extends WebController
         }
 
 
-        $result = Module::Instance()->RegisterStatusInfo();
-        $result->graph = Module::Instance()->GetStatusInfo();
+        // $result = Module::Instance()->RegisterStatusInfo();
+        // $result->graph = Module::Instance()->GetStatusInfo();
 
         // финишируем контроллер
         return $this->Finish(
