@@ -1,3 +1,9 @@
+/**
+ * FPM processes component
+ * @class
+ * @extends Colibri.UI.Widget
+ * @memberof App.Modules.MainFrame.Widgets
+ */
 App.Modules.MainFrame.Widgets.FpmProcesses = class extends Colibri.UI.Widget {
     
     constructor(name, container) {

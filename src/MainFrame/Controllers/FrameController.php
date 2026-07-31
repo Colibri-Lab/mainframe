@@ -8,6 +8,8 @@ use Colibri\Web\RequestCollection;
 
 /**
  * Main frame controller
+ * @class
+ * @extends Controller
  */
 class FrameController extends Controller
 {

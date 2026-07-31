@@ -13,8 +13,8 @@ use InvalidArgumentException;
 
 /**
  * Dashboard controller
- * @author self
- * @package App\Modules\MainFrame\Controllers
+ * @class
+ * @extends WebController
  */
 class DashboardController extends WebController
 {

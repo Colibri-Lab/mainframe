@@ -1,3 +1,9 @@
+/**
+ * Stats chart component
+ * @class
+ * @extends Colibri.UI.Widget
+ * @memberof App.Modules.MainFrame.Widgets
+ */
 App.Modules.MainFrame.Widgets.StatsChart = class extends Colibri.UI.Widget {
     
     constructor(name, container) {

@@ -1,3 +1,9 @@
+/**
+ * Main tabs component
+ * @class
+ * @extends Colibri.UI.Tabs
+ * @memberof App.Modules.MainFrame
+ */
 App.Modules.MainFrame.MainTabs = class extends Colibri.UI.Tabs {
     constructor(name, container, element) {
         super(name, container, Colibri.UI.Templates['App.Modules.MainFrame.MainTabs']);

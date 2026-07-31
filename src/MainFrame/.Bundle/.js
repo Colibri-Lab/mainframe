@@ -1,6 +1,8 @@
-
-
-
+/**
+ * @class
+ * @memberof App.Modules
+ * @extends Colibri.Modules.Module
+ */
 App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
     /** @constructor */

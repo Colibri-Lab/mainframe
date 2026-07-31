@@ -12,6 +12,11 @@ use CometApiClient\Client;
 use Colibri\App;
 use Throwable;
 
+/**
+ * Worker for sending status information to the frontend
+ * @class
+ * @extends BaseWorker
+ */
 class StatusWorker extends BaseWorker
 {
 

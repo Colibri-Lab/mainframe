@@ -1,3 +1,9 @@
+/**
+ * Main menu toolbar component
+ * @class
+ * @extends Colibri.UI.Toolbar
+ * @memberof App.Modules.MainFrame
+ */
 App.Modules.MainFrame.MainMenuToolbar = class extends Colibri.UI.Toolbar {
 
     _renderLevel(list, parent) {

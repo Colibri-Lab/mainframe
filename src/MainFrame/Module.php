@@ -26,7 +26,8 @@ use Colibri\Utils\Menu\Item;
 
 /**
  * Backend mainframe module
- * @package App\Modules\MainFrame
+ * @class
+ * @extends BaseModule
  */
 class Module extends BaseModule
 {

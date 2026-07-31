@@ -1,3 +1,9 @@
+/**
+ * Comet icon component
+ * @class
+ * @extends Colibri.UI.Icon
+ * @memberof App.Modules.MainFrame
+ */
 App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
     constructor(name, container) {
         super(name, container);

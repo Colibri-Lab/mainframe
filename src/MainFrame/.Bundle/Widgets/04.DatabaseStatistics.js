@@ -1,3 +1,9 @@
+/**
+ * Database statistics component
+ * @class
+ * @extends Colibri.UI.Widget
+ * @memberof App.Modules.MainFrame.Widgets
+ */
 App.Modules.MainFrame.Widgets.DatabaseStatistics = class extends Colibri.UI.Widget {
     
     constructor(name, container) {

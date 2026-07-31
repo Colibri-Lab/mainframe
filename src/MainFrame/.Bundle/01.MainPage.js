@@ -1,3 +1,9 @@
+/**
+ * Main page component
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.MainFrame
+ */
 App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
 
     constructor(name, container) {

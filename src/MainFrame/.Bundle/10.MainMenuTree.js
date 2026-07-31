@@ -1,3 +1,9 @@
+/**
+ * Main menu tree component
+ * @class
+ * @extends Colibri.UI.Tree
+ * @memberof App.Modules.MainFrame
+ */
 App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
     constructor(name, container) {
         super(name, container);

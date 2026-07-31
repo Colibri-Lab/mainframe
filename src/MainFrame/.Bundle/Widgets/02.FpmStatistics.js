@@ -1,3 +1,9 @@
+/**
+ * FPM statistics component
+ * @class
+ * @extends Colibri.UI.Widget
+ * @memberof App.Modules.MainFrame.Widgets
+ */
 App.Modules.MainFrame.Widgets.FpmStatistics = class extends Colibri.UI.Widget {
     
     constructor(name, container) {

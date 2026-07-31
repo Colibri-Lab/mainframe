@@ -1,3 +1,9 @@
+/**
+ * Dashboard component
+ * @class
+ * @extends Colibri.UI.Pane
+ * @memberof App.Modules.MainFrame
+ */
 App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
     
     constructor(name, container) {
