@@ -15,7 +15,6 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
     }
 
     _renderLevel(list, parent) {
-
         list.forEach((item) => {
             try {
 
