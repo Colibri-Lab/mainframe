@@ -6,6 +6,12 @@
  */
 App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
     
+    /**
+     * Constructor
+     * @param {string} name component name
+     * @param {Colibri.UI.Component} container component container
+     * @constructor
+     */
     constructor(name, container) {
         /* создаем компонент и передаем шаблон */
         super(name, container, Colibri.UI.Templates['App.Modules.MainFrame.Dashboard']);
@@ -22,6 +28,7 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
@@ -39,6 +46,7 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
@@ -58,6 +66,7 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
@@ -80,6 +89,10 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         }
     }
 
+    /**
+     * @ignore
+     * @private
+     */
     _saveWidgetsPositions() {
         let positions = [];
         this._container.ForEach((name, widget) => {
@@ -88,6 +101,10 @@ App.Modules.MainFrame.Dashboard = class extends Colibri.UI.Pane {
         App.Browser.Set('dashboard-widgets', positions);
     }
 
+    /**
+     * @ignore
+     * @private
+     */
     _loadWidgets() {
 
         let widgets = [];

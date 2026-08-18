@@ -6,6 +6,12 @@
  */
 App.Modules.MainFrame.Widgets.FpmProcessesListItem = class extends Colibri.UI.Pane {
     
+    /**
+     * Constructor
+     * @param {string} name component name
+     * @param {Colibri.UI.Component} container component container
+     * @constructor
+     */
     constructor(name, container) {
         /* создаем компонент и передаем шаблон */
         super(name, container, Colibri.UI.Templates['App.Modules.MainFrame.Widgets.FpmProcessesListItem']);

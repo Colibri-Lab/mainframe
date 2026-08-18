@@ -5,6 +5,13 @@
  * @memberof App.Modules.MainFrame
  */
 App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
+
+    /**
+     * Constructor
+     * @param {string} name component name
+     * @param {Colibri.UI.Component} container component container
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container);
         this.AddClass('app-mainframe-menu-tree');
@@ -14,6 +21,12 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
 
     }
 
+    /**
+     * @ignore
+     * @private
+     * @param {Array} list list of nodes
+     * @param {Colibri.UI.TreeNode} parent parent node
+     */
     _renderLevel(list, parent) {
         list.forEach((item) => {
             try {
@@ -39,10 +52,10 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
         });
 
     }
- 
 
     /**
      * Render bounded to component data
+     * @ignore
      * @protected
      * @param {*} data 
      * @param {String} path 
@@ -61,6 +74,7 @@ App.Modules.MainFrame.MainMenuTree = class extends Colibri.UI.Tree {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments

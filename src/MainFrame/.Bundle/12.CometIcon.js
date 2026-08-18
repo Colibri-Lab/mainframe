@@ -5,6 +5,12 @@
  * @memberof App.Modules.MainFrame
  */
 App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
+    /**
+     * Constructor
+     * @param {string} name component name
+     * @param {Colibri.UI.Component} container component container
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container);
         this.AddClass('app-comet-button-component');
@@ -52,6 +58,12 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
 
     }
 
+    /**
+     * @ignore
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __messageContainerClicked(event, args) {
         let exec = event.sender.data.message.exec;
         try {
@@ -69,6 +81,12 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
 
     }
 
+    /**
+     * @ignore
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __messageRemoveClicked(event, args) {
         App.Comet && App.Comet.RemoveMessage(data);
         args.domEvent.stopPropagation();
@@ -83,6 +101,7 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
      * @protected
      * @param {*} data 
      * @param {String} path 
+     * @ignore
      */
     __renderBoundedValues(data, path) {
         if (!data || !Object.isObject(data) || !Object.countKeys(data)) {
@@ -106,22 +125,32 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
 
     }
 
+    /**
+     * @ignore
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     _listShadowClicked(event, args) {
         this._list.hasShadow = false;
         this._list.Hide();
     }
 
-
+    /**
+     * @ignore
+     * @private
+     */
     _setListPosition() {
         const point = this.container.bounds();
         this._list.styles = { left: point.left + 'px', top: (point.top + point.outerHeight) + 'px' };
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */
+     */ 
     __iconClicked(event, args) {
 
         this._list.Show();
@@ -132,6 +161,10 @@ App.Modules.MainFrame.CometIcon = class extends Colibri.UI.Icon {
 
     }
 
+    /**
+     * @ignore
+     * @private
+     */
     _renderList() {
         this._group.Clear();
         for (const message of this._messages) {

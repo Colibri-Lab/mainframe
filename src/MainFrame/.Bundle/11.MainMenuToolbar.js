@@ -6,6 +6,10 @@
  */
 App.Modules.MainFrame.MainMenuToolbar = class extends Colibri.UI.Toolbar {
 
+    /**
+     * @private
+     * @ignore
+     */
     _renderLevel(list, parent) {
 
         list.forEach((item) => {
@@ -32,6 +36,7 @@ App.Modules.MainFrame.MainMenuToolbar = class extends Colibri.UI.Toolbar {
      * @protected
      * @param {*} data 
      * @param {String} path 
+     * @ignore
      */
     __renderBoundedValues(data, path) {
 

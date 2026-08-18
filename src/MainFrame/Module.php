@@ -31,17 +31,37 @@ use Colibri\Utils\Menu\Item;
  */
 class Module extends BaseModule
 {
+    /**
+     * The FPM status request URL
+     * @var ?string $fpmRequest  
+     */
     private ?string $_fpmRequest;
+    /**
+     * The server status request URL
+     * @var ?string $serverRequest  
+     */
     private ?string $_serverRequest;
+    /**
+     * The status worker timer
+     * @var int $timer  
+     */
     private int $_timer;
+    /**
+     * The status dump timer
+     * @var int $dumpTimer  
+     */
     private int $_dumpTimer;
 
-
+    /**
+     * The user module instance
+     * @var mixed $_userModule  
+     */
     private mixed $_userModule = null;
 
     /**
      * Initializes the module
      * @return void
+     * @public
      */
     public function InitializeModule(): void
     {
@@ -57,6 +77,7 @@ class Module extends BaseModule
     /**
      * Returns the User provider module
      * @return mixed
+     * @public
      */
     public function UserModule(): mixed
     {
@@ -75,6 +96,7 @@ class Module extends BaseModule
 
     /**
      * Returns a topmost menu for backend
+     * @public
      */
     public function GetTopmostMenu(bool $hideExecuteCommand = true): Item|array
     {
@@ -129,6 +151,7 @@ class Module extends BaseModule
     /**
      * Returns a permissions for module
      * @return array
+     * @public
      */
     public function GetPermissions(): array
     {
@@ -154,17 +177,28 @@ class Module extends BaseModule
      * @param Logger $logger
      * @param string $path
      * @return void
+     * @public
      */
     public function Backup(Logger $logger, string $path)
     {
         // Do nothing
     }
 
+    /**
+     * Returns the status worker timer
+     * @return int
+     * @public
+     */
     public function GetStatusWorkerTimer(): int
     {
         return $this->_timer;
     }
 
+    /**
+     * Returns the FPM status
+     * @return ?object
+     * @public
+     */
     public function GetFpmStatus(): ?object
     {
         if(!$this->_fpmRequest) {
@@ -203,6 +237,11 @@ class Module extends BaseModule
         return (object)$result;
     }
 
+    /**
+     * Returns the server status
+     * @return ?object
+     * @public
+     */
     public function GetServerStatus(): ?object
     {
         if(!$this->_serverRequest) {
@@ -220,6 +259,11 @@ class Module extends BaseModule
         return (object)$statusJson;
     }
 
+    /**
+     * Returns the database status
+     * @return ?array
+     * @public
+     */
     public function GetDatabaseStatus(): ?array
     {
 
@@ -264,6 +308,11 @@ class Module extends BaseModule
         return $objects;
     }
 
+    /**
+     * Returns the status info
+     * @return array
+     * @public
+     */
     public function GetStatusInfo(): array
     {
         $runtimePath = App::$appRoot . App::$config->Query('runtime')->GetValue();
@@ -280,6 +329,11 @@ class Module extends BaseModule
 
     }
 
+    /**
+     * Registers the status info
+     * @return object
+     * @public
+     */
     public function RegisterStatusInfo(): object
     {
         $runtimePath = App::$appRoot . App::$config->Query('runtime')->GetValue();

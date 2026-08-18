@@ -5,12 +5,19 @@
  */
 App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
-    /** @constructor */
+    /** 
+     * Construct the module
+     * @constructor
+     */
     constructor() {
         super('MainFrame');
         this._widgets = {};
     }
 
+    /**
+     * Initializes the module
+     * @public
+     */
     InitializeModule() {
         super.InitializeModule();
 
@@ -68,6 +75,7 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
@@ -90,6 +98,12 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         }
     }
 
+    /**
+     * @ignore
+     * @private
+     * @param {string} url url string
+     * @param {*} options options object
+     */
     __routeHandled(url, options) {
         if(!this._mainPage) {
             return;
@@ -100,6 +114,12 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         App.Router.Navigate('/', {}, true, true);
     }
 
+    /**
+     * Renders the module
+     * @param {HTMLElement} container container element
+     * @param {*} userData user data object
+     * @public
+     */
     Render(container, userData) {
         if(this._mainPage) {
             return;
@@ -114,18 +134,35 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
 
     }
 
+    /**
+     * Shows the main page
+     * @param {*} userData user data object
+     * @public
+     */
     ShowMainPage(userData) {
         this._mainPage.Show();
     }
 
+    /**
+     * Registers module events
+     * @public
+     */
     RegisterEvents() {
         console.log('Registering module events for MainFrame');
     }
 
+    /**
+     * Registers event handlers
+     * @public
+     */
     RegisterEventHandlers() {
         console.log('Registering event handlers for MainFrame');
     }
 
+    /**
+     * Calls the Frame Settings API and stores the result in the app store
+     * @public
+     */
     FrameSettings() {
         this.Call('Frame', 'Settings').then((response) => {
 
@@ -143,18 +180,38 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Opens a new tab in the main page
+     * @param {string} title tab title
+     * @param {string} route tab route
+     * @param {string} icon tab icon
+     * @param {Colibri.UI.Component} containerComponent tab container component
+     * @public
+     */
     OpenTab(title, route, icon, containerComponent) {
         this._mainPage.Tabs.AddTab(title, route, icon, containerComponent);
     }
 
+    /**
+     * Gets the main page
+     * @type {App.Modules.MainFrame.MainPage}
+     */
     get MainPage() {
         return this._mainPage;
     }
 
+    /**
+     * Gets the store
+     * @type {Colibri.Store}
+     */
     get Store() {
         return this._store;
     }
 
+    /**
+     * Calls the Dashboard Status API and stores the result in the app store
+     * @public
+     */
     Status() {
         return new Promise((resolve, reject) => {
             this.Call('Dashboard', 'Status', {}).then((response) => {
@@ -168,13 +225,28 @@ App.Modules.MainFrame = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Gets the registered widgets
+     * @type {Object}
+     */
     get registeredWidgets() {
         return this._widgets;
     }
 
+    /**
+     * Registers a widget
+     * @param {string} name widget name
+     * @param {Colibri.UI.Component} component widget component
+     * @public
+     */
     RegisterWidget(name, component) {
         this._widgets[name] = component;
     }
+    /**
+     * Unregisters a widget
+     * @param {string} name widget name
+     * @public
+     */
     UnregisterWidget(name) {
         delete this._widgets[name];
     }

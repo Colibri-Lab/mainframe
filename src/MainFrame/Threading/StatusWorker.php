@@ -24,6 +24,7 @@ class StatusWorker extends BaseWorker
      * Run the worker
      * @suppress PHP0420
      * @return void
+     * @public
      */
     public function Run(): void
     {

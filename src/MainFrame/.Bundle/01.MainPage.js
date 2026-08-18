@@ -6,6 +6,12 @@
  */
 App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
 
+    /**
+     * Constructor
+     * @param {string} name component name
+     * @param {Colibri.UI.Component} container component container
+     * @constructor
+     */
     constructor(name, container) {
         /* создаем компонент и передаем шаблон */
         super(name, container, Colibri.UI.Templates['App.Modules.MainFrame.MainPage']);
@@ -49,19 +55,32 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
 
     }
 
+    /**
+     * Sets the user
+     * @type {Colibri.UI.User}
+     */
     set user(value) {
         this._user.binding = value;   
     }
 
+    /**
+     * Gets the tabs
+     * @type {Colibri.UI.Tabs}
+     */
     get Tabs() {
         return this._tabs;
     }
 
+    /**
+     * Gets the menu
+     * @type {Colibri.UI.Tree}
+     */
     get Menu() {
         return this._menu;
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
@@ -78,10 +97,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __toolbarCollapseButtonClicked(event, args) {
         this._toolbarButtonCollapse.shown = false;
         this._toolbarButtonExpand.shown = true;
@@ -94,10 +114,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __menuSelectionChanged(event, args) {
         const node = args.node;
         if(!node) {
@@ -110,10 +131,11 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __toolbarButtonClicked(event, args) {
         const button = args.button;
         if(!button) {
@@ -130,24 +152,27 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __logoutClicked(event, args) {
         Security.Logout();
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __profileClicked(event, args) {
         Security.ShowProfileWindow();
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
@@ -157,6 +182,7 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
@@ -177,6 +203,7 @@ App.Modules.MainFrame.MainPage = class extends Colibri.UI.Component {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments

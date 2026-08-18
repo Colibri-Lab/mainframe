@@ -34,6 +34,7 @@ class Controller extends WebController
      * @param RequestCollection $post a request post data
      * @param mixed $payload payload object in POST/PUT request
      * @return object
+     * @public
      */
     public function Index(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {
@@ -84,6 +85,7 @@ class Controller extends WebController
      * @param RequestCollection $post
      * @param object|null $payload
      * @return object
+     * @public
      */
     public function Bundle(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload): object
     {

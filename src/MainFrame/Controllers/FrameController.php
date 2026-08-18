@@ -20,6 +20,7 @@ class FrameController extends Controller
      * @param RequestCollection $post
      * @param PayloadCopy|null $payload
      * @return object
+     * @public
      */
     public function Settings(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {
@@ -67,6 +68,7 @@ class FrameController extends Controller
      * @param RequestCollection $post
      * @param PayloadCopy|null $payload
      * @return object
+     * @public
      */
     public function Execute(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {

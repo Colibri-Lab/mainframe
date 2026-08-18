@@ -6,6 +6,12 @@
  */
 App.Modules.MainFrame.Widgets.ServerStatistics = class extends Colibri.UI.Widget {
     
+    /**
+     * Constructor
+     * @param {string} name component name
+     * @param {Colibri.UI.Component} container component container
+     * @constructor
+     */
     constructor(name, container) {
         /* создаем компонент и передаем шаблон */
         super(name, container, Colibri.UI.Templates['App.Modules.MainFrame.Widgets.ServerStatistics']);
@@ -46,6 +52,11 @@ App.Modules.MainFrame.Widgets.ServerStatistics = class extends Colibri.UI.Widget
 
     }
     
+    /**
+     * Gets the default parameters for the widget
+     * @static
+     * @public
+     */
     static Params() {
         return {
             defaultIndex: 0,
